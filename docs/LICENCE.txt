@@ -1,0 +1,53 @@
+TreeOfKnowledge Source-Available License 1.0
+===========================================
+
+Copyright (c) 2002–2025
+JAnica Tesla Zrinski
+All rights reserved.
+
+1. Definitions
+--------------
+"Software" means the source code, binaries, and all associated files
+contained in this repository and any derived archives marked as
+"TreeOfKnowledge" or "Tree of Knowledge".
+
+"Author" means JAnica Tesla Zrinski.
+
+2. Permitted use (non-commercial only)
+--------------------------------------
+You are allowed to:
+
+- Use the Software for personal, educational, and research purposes.
+- Study the source code to understand the underlying algorithms.
+- Modify the source code privately for your own non-commercial use.
+- Use the Software in university courses, lectures, seminars, or similar
+  educational contexts, provided that proper attribution is kept and this
+  license file remains included.
+
+3. Not permitted without explicit written permission
+----------------------------------------------------
+Without prior written permission of the Author, you are NOT allowed to:
+
+- Use the Software or any modified version for commercial purposes.
+- Redistribute the Software under a different license.
+- Remove or alter copyright / attribution.
+- Misrepresent the origin of the algorithm (“Tree of Knowledge”).
+
+4. Limited redistribution
+-------------------------
+You MAY redistribute unmodified copies if:
+- This LICENSE.txt is included,
+- Attribution is preserved,
+- Use remains non-commercial.
+
+5. No warranty
+--------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+6. Contact
+----------
+Email: janica.tesla.zrinski@gmail.com
+
+Official project website
+------------------------
+https://TreeOfKnowledge.eu

@@ -1,0 +1,24 @@
+TreeOfKnowledge – ORIGIN-2002
+==============================
+
+Author: JAnica Tesla Zrinski  
+Project: “Tree of Knowledge”
+
+Created around 2002–2004 as a Java logic-tree calculator that builds and
+analyses logical formulas using a clean recursive algorithm and a hand-written
+parser.
+
+The 2025 release focuses on packaging and distribution.
+The original source code is preserved (2004) and remains unchanged.
+
+The goal of publishing this source is to enable students and researchers to
+study the logic-tree methodology behind Tree of Knowledge.
+
+The official project website and current distribution point is:
+https://TreeOfKnowledge.eu
+
+License: See LICENSE.txt  
+Contact: janica.tesla.zrinski@gmail.com
+Project homepage: https://TreeOfKnowledge.eu
+
+© 2002–2025 JAnica Tesla Zrinski — All rights reserved.

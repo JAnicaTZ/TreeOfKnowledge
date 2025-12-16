@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.treeofknowledge</groupId>
+   <artifactId>TreeOfKnowledge</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Logging (ako ga koristiš) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- KOMPILACIJA -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+
+            <!-- LOKALNO POKRETANJE -->
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>3.6.0</version>
+
+    <executions>
+
+        <!-- 1) First-Order Logic kalkulator (isti kao do sada) -->
+        <execution>
+            <id>first-order-assembly</id>
+            <phase>package</phase>
+            <goals>
+                <goal>single</goal>
+            </goals>
+            <configuration>
+                <finalName>TreeOfKnowledge-1.0.0</finalName>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                <archive>
+                    <manifest>
+                        <mainClass>firstorder.Calc</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </execution>
+
+        <!-- 2) SIMPLE PROPOSITIONAL TREE – BEGINNER MODE -->
+        <execution>
+            <id>propositional-assembly</id>
+            <phase>package</phase>
+            <goals>
+                <goal>single</goal>
+            </goals>
+            <configuration>
+                <finalName>PropositionalTree-1.0.0</finalName>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                <archive>
+                    <manifest>
+                        <mainClass>propositional.Calc</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </execution>
+
+        <!-- 3) PROPOSITIONAL MINIMIZATION – NORMAL FORMS -->
+<execution>
+    <id>prop-minimization-assembly</id>
+    <phase>package</phase>
+    <goals>
+        <goal>single</goal>
+    </goals>
+    <configuration>
+        <finalName>PropositionalMinimization-1.0.0</finalName>
+        <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+        <archive>
+            <manifest>
+                <mainClass>propMinimization.Calc</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</execution>
+
+
+    </executions>
+</plugin>
+
+        </plugins>
+    </build>
+
+</project>
