@@ -3,8 +3,7 @@ package firstorder;
  * FIRST-ORDER LOGIC CALCULATOR
  * Part of the TreeOfKnowledge.eu project.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
  *
  * Th© BEST CORE of AI
  * Author: JAnica Tesla Zrinski
@@ -95,10 +94,10 @@ public class Calc extends JFrame implements ActionListener {
   static JButton formula4;
   static JButton formula5;
   static JButton formula6;
-  static JButton formula7;
+  /*static JButton formula7;
   static JButton formula8;
   static JButton formula9;
-  static JButton formula10;
+  static JButton formula10;*/
   static JButton formula11;
   static JButton formula12;
   static JButton formula13;
@@ -115,7 +114,7 @@ public class Calc extends JFrame implements ActionListener {
   static JPanel interpretacijePanel2NegiraneFormule;
     
   public Calc(){
-    super( "Kalkulator za LOGIKU Prvog Reda" );
+    super( "First-Order Logic (FOL) Calculator with EXPLICIT Abstract Syntax Tree (AST)" );
 		getContentPane().setLayout(new GridLayout( 1, 2));
     glavniPanel = new JPanel(new GridLayout( 2, 1));
 			calculatorPanel = new JPanel(new BorderLayout());
@@ -145,7 +144,7 @@ public class Calc extends JFrame implements ActionListener {
 					postoji = new JButton( new Character(POSTOJI_CHAR).toString() );
 						postoji.addActionListener(this);
 				keysPanel.add(postoji);
-					JLabel keys = new JLabel("KEYs", JLabel.CENTER);
+					JLabel keys = new JLabel("KEYS", JLabel.CENTER);
 						keys.setFont(new Font("Times Roman", Font.BOLD, 30));
 						keys.setForeground(Color.yellow);
 				keysPanel.add(keys);
@@ -166,7 +165,7 @@ public class Calc extends JFrame implements ActionListener {
 					QButton = new JButton(new Character(Q_CHAR).toString());
 						QButton.addActionListener(this);
 				keysPanel.add(QButton);
-					backSpace = new JButton("backSpace");
+					backSpace = new JButton("BACKSPACE");
 						backSpace.setFont(new Font("Times Roman", Font.BOLD, 12));
 						backSpace.setForeground(Color.blue);
 						backSpace.addActionListener(this);
@@ -177,7 +176,7 @@ public class Calc extends JFrame implements ActionListener {
 					or = new JButton( new Character(OR_CHAR).toString() );
 						or.addActionListener(this);
 				keysPanel.add(or);
-					negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + "(formula)");
+					negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + " ( FORMULA )");
 						negirajFormulu.setFont(new Font("Times Roman", Font.BOLD, 12));
 						negirajFormulu.setForeground(Color.blue);
 						negirajFormulu.addActionListener(this);
@@ -210,7 +209,8 @@ public class Calc extends JFrame implements ActionListener {
 					gbcTestFormule.fill = GridBagConstraints.BOTH;
 					gbcTestFormule.weightx = 0.1;
 					gbcTestFormule.weighty = 0.5;
-				JLabel testFormule = new JLabel( "PRIMJERI  formula  logike  Prvog  Reda :  ", JLabel.CENTER);
+				JLabel testFormule = new JLabel( "READY-made EXAMPLES of FOL formulas:  ", JLabel.CENTER);
+				//JLabel testFormule = new JLabel( "Ready-made examples of FOL formulas:  ", JLabel.CENTER);
 					testFormule.setFont(new Font("Times Roman", Font.BOLD, 18));
 				testFormulePanelGBLayout.setConstraints( testFormule, gbcTestFormule);
 			testFormulePanel.add(testFormule);
@@ -223,7 +223,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcOboriveFormule.fill = GridBagConstraints.BOTH;
 					gbcOboriveFormule.weightx = 0.1;
 					gbcOboriveFormule.weighty = 0.1;
-				JLabel oboriveFormule = new JLabel( " ISPUNJIVE / OBORIVE  formule :    ", JLabel.CENTER);
+				JLabel oboriveFormule = new JLabel( "Satisfiable / FALSIFIABLE formulas:", JLabel.CENTER);
 					oboriveFormule.setFont(new Font("Times Roman", Font.BOLD, 15));
 				testFormulePanelGBLayout.setConstraints( oboriveFormule, gbcOboriveFormule);
 			testFormulePanel.add(oboriveFormule);
@@ -236,7 +236,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula1.fill = GridBagConstraints.BOTH;
 					gbcFormula1.weightx = 0.1;
 					gbcFormula1.weighty = 0.1;
-				formula1 = new JButton("1 - oboriva form.");
+				formula1 = new JButton("1. falsifiable");
 					formula1.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula1, gbcFormula1);
 			testFormulePanel.add(formula1);
@@ -248,7 +248,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula2.gridheight = 1;
 					gbcFormula2.fill = GridBagConstraints.BOTH;
 					gbcFormula2.weightx = 0.1;
-				formula2 = new JButton("2 - oboriva form.");
+				formula2 = new JButton("2. falsifiable");
 					formula2.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula2, gbcFormula2);
 			testFormulePanel.add(formula2);
@@ -260,7 +260,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula3.gridheight = 1;
 					gbcFormula3.fill = GridBagConstraints.BOTH;
 					gbcFormula3.weightx = 0.1;
-				formula3 = new JButton("3 - oboriva form.");
+				formula3 = new JButton("3. falsifiable");
 					formula3.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula3, gbcFormula3);
 			testFormulePanel.add(formula3);
@@ -272,7 +272,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula4.gridheight = 1;
 					gbcFormula4.fill = GridBagConstraints.BOTH;
 					gbcFormula4.weighty = 0.1;
-				formula4 = new JButton("4 - oboriva form.");
+				formula4 = new JButton("4. falsifiable");
 					formula4.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula4, gbcFormula4);
 			testFormulePanel.add(formula4);
@@ -283,7 +283,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula5.gridwidth = 1;
 					gbcFormula5.gridheight = 1;
 					gbcFormula5.fill = GridBagConstraints.BOTH;
-				formula5 = new JButton("5 - oboriva form.");
+				formula5 = new JButton("5. falsifiable");
 					formula5.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula5, gbcFormula5);
 			testFormulePanel.add(formula5);
@@ -294,7 +294,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula6.gridwidth = 1;
 					gbcFormula6.gridheight = 1;
 					gbcFormula6.fill = GridBagConstraints.BOTH;
-				formula6 = new JButton("6 - oboriva form.");
+				formula6 = new JButton("6. falsifiable");
 					formula6.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula6, gbcFormula6);
 			testFormulePanel.add(formula6);
@@ -307,19 +307,19 @@ public class Calc extends JFrame implements ActionListener {
 					gbcTautologije.fill = GridBagConstraints.BOTH;
 					gbcTautologije.weightx = 0.1;
 					gbcTautologije.weighty = 0.1;
-				JLabel tautologije = new JLabel( " TAUTOLOGIJE / VALJANE  formule :    ", JLabel.CENTER);
+				JLabel tautologije = new JLabel( "TAUTOLOGIES / Valid formulas:", JLabel.CENTER);
 					tautologije.setFont(new Font("Times Roman", Font.BOLD, 15));
 				testFormulePanelGBLayout.setConstraints( tautologije, gbcTautologije);
 			testFormulePanel.add(tautologije);
 			
-				GridBagConstraints gbcFormula7 = new GridBagConstraints();
+				/*GridBagConstraints gbcFormula7 = new GridBagConstraints();
 					gbcFormula7.gridx = 0;
 					gbcFormula7.gridy = 5;
 					gbcFormula7.gridwidth = 1;
 					gbcFormula7.gridheight = 1;
 					gbcFormula7.fill = GridBagConstraints.BOTH;
 					gbcFormula7.weighty = 0.1;
-				formula7 = new JButton("7 - tautologija");
+				formula7 = new JButton("7 - tautology");
 					formula7.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula7, gbcFormula7);
 			testFormulePanel.add(formula7);
@@ -330,7 +330,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula8.gridwidth = 1;
 					gbcFormula8.gridheight = 1;
 					gbcFormula8.fill = GridBagConstraints.BOTH;
-				formula8 = new JButton("8 - tautologija");
+				formula8 = new JButton("8 - tautology");
 					formula8.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula8, gbcFormula8);
 			testFormulePanel.add(formula8);
@@ -341,7 +341,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula9.gridwidth = 1;
 					gbcFormula9.gridheight = 1;
 					gbcFormula9.fill = GridBagConstraints.BOTH;
-				formula9 = new JButton("9 - tautologija");
+				formula9 = new JButton("9 - tautology");
 					formula9.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula9, gbcFormula9);
 			testFormulePanel.add(formula9);
@@ -352,10 +352,10 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula10.gridwidth = 1;
 					gbcFormula10.gridheight = 1;
 					gbcFormula10.fill = GridBagConstraints.BOTH;
-				formula10 = new JButton("10 - tautologija");
+				formula10 = new JButton("10 - tautology");
 					formula10.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula10, gbcFormula10);
-			testFormulePanel.add(formula10);
+			testFormulePanel.add(formula10);*/
 			
 				GridBagConstraints gbcFormula11 = new GridBagConstraints();
 					gbcFormula11.gridx = 0;
@@ -364,7 +364,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula11.gridheight = 1;
 					gbcFormula11.fill = GridBagConstraints.BOTH;
 					gbcFormula11.weighty = 0.1;
-				formula11 = new JButton("11 - tautologija");
+				formula11 = new JButton("1. tautology");
 					formula11.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula11, gbcFormula11);
 			testFormulePanel.add(formula11);
@@ -375,7 +375,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula12.gridwidth = 1;
 					gbcFormula12.gridheight = 1;
 					gbcFormula12.fill = GridBagConstraints.BOTH;
-				formula12 = new JButton("12 - tautologija");
+				formula12 = new JButton("2. tautology");
 					formula12.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula12, gbcFormula12);
 			testFormulePanel.add(formula12);
@@ -386,7 +386,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula13.gridwidth = 1;
 					gbcFormula13.gridheight = 1;
 					gbcFormula13.fill = GridBagConstraints.BOTH;
-				formula13 = new JButton("13 - tautologija");
+				formula13 = new JButton("3. tautology");
 					formula13.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula13, gbcFormula13);
 			testFormulePanel.add(formula13);
@@ -397,7 +397,7 @@ public class Calc extends JFrame implements ActionListener {
 					gbcFormula14.gridwidth = 1;
 					gbcFormula14.gridheight = 1;
 					gbcFormula14.fill = GridBagConstraints.BOTH;
-				formula14 = new JButton("14 - tautologija");
+				formula14 = new JButton("4. tautology");
 					formula14.addActionListener(this);
 				testFormulePanelGBLayout.setConstraints( formula14, gbcFormula14);
 			testFormulePanel.add(formula14);
@@ -445,11 +445,15 @@ public class Calc extends JFrame implements ActionListener {
 		
     setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
     pack();
+	
+	//setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setSize( 1020, 690);
 		Dimension screenDim = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameDim = getSize();
 		setLocation( ( (int)screenDim.getWidth() - (int)frameDim.getWidth() ) / 2,
 									 ( (int)screenDim.getHeight() - (int)frameDim.getHeight() ) / 2 );
+	// MAXIMIZE the window								 
+	setExtendedState(JFrame.MAXIMIZED_BOTH);
     show();
   }//Calc()
 
@@ -587,7 +591,7 @@ public class Calc extends JFrame implements ActionListener {
     if ( action.equals(formula6)){
       display.setText( " " + FormuleZaTestiranje.formula6());
     }
-    if ( action.equals(formula7)){
+    /*if ( action.equals(formula7)){
       display.setText( " " + FormuleZaTestiranje.formula7());
     }
     if ( action.equals(formula8)){
@@ -598,7 +602,7 @@ public class Calc extends JFrame implements ActionListener {
     }
     if ( action.equals(formula10)){
       display.setText( " " + FormuleZaTestiranje.formula10());
-    }
+    }*/
     if ( action.equals(formula11)){
       display.setText( " " + FormuleZaTestiranje.formula11());
     }

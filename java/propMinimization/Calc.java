@@ -14,8 +14,7 @@ package propMinimization;
  *
  * All rights reserved.
  *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
+* 🕯 Dedicated to every unborn child lost to abortion — an estimated ~200 000 each day worldwide. (Based on WHO global estimates of ~73 million abortions per year.)
  *
  * Unauthorized reproduction, modification, redistribution,
  * commercial use, or AI-model training is strictly prohibited
@@ -94,7 +93,7 @@ class Calc extends JFrame implements ActionListener {
   static JPanel stablaPanel;
     
   public Calc(){
-    super( "MINIMALNE  NORMALNE  FORME  za formule logike sudova" );
+    super( "MINIMAL NORMAL  FORMs  of Propositional Logic Formulas (DNF/CNF)" );
 		getContentPane().setLayout(new BorderLayout());    
 			GridBagLayout calculatorPanelGBLayout = new GridBagLayout();
 			calculatorPanel = new JPanel();
@@ -121,21 +120,26 @@ class Calc extends JFrame implements ActionListener {
 					gbcKeyPanel.gridheight = 1;
 					gbcKeyPanel.fill = GridBagConstraints.BOTH;
 					JPanel keysPanel = new JPanel(new GridLayout( 5, 3));
-							negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + "(formula)");
-								negirajFormulu.setFont(new Font("Times Roman", Font.BOLD,12));
-								negirajFormulu.setForeground(Color.yellow);
-								negirajFormulu.addActionListener(this);
-						keysPanel.add(negirajFormulu);
+
+          	clear = new JButton(" CLEAR ");
+								clear.setFont(new Font("Times Roman", Font.PLAIN, 23));
+								clear.setForeground(Color.yellow);
+								clear.addActionListener(this);
+						keysPanel.add(clear);
+
+
 							backSpace = new JButton("BACKSPACE");
 								backSpace.setFont(new Font("Times Roman", Font.BOLD, 12));
 								backSpace.setForeground(Color.yellow);
 								backSpace.addActionListener(this);
 						keysPanel.add(backSpace);
-							clear = new JButton(" CLEAR ");
-								clear.setFont(new Font("Times Roman", Font.PLAIN, 23));
-								clear.setForeground(Color.yellow);
-								clear.addActionListener(this);
-						keysPanel.add(clear);
+
+ 							negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + " ( FORMULA )");
+								negirajFormulu.setFont(new Font("Times Roman", Font.BOLD,12));
+								negirajFormulu.setForeground(Color.yellow);
+								negirajFormulu.addActionListener(this);
+						keysPanel.add(negirajFormulu);
+           
 							negacija = new JButton( new Character(NEGACIJA_CHAR).toString() );
 								negacija.addActionListener(this);
 						keysPanel.add(negacija);
@@ -196,7 +200,7 @@ class Calc extends JFrame implements ActionListener {
 					gbcPrimjeriFormula.gridwidth = 1;
 					gbcPrimjeriFormula.gridheight = 1;
 					gbcPrimjeriFormula.fill = GridBagConstraints.HORIZONTAL;
-					JLabel primjeriFormula = new JLabel("       PRIMJERI  FORMULA  logike sudova:");
+					JLabel primjeriFormula = new JLabel("READY-made EXAMPLES of Propositional Logic Formulas:");
 					primjeriFormula.setForeground(Color.blue);
 					primjeriFormula.setFont(new Font("Times Roman", Font.BOLD,15));
 				calculatorPanelGBLayout.setConstraints( primjeriFormula, gbcPrimjeriFormula);
@@ -209,25 +213,25 @@ class Calc extends JFrame implements ActionListener {
 					gbcPrimjeriPanel.gridheight = 1;
 					gbcPrimjeriPanel.fill = GridBagConstraints.HORIZONTAL;//BOTH;
 					JPanel primjeriPanel = new JPanel(new GridLayout( 1, 7));
-							primjer0 = new JButton("taut.");
+							primjer0 = new JButton("1.");
 								primjer0.addActionListener(this);
 						primjeriPanel.add(primjer0);
-							primjer1 = new JButton("6.2.");
+							primjer1 = new JButton("2.");
 								primjer1.addActionListener(this);
 						primjeriPanel.add(primjer1);
-							primjer2 = new JButton("8.1.");
+							primjer2 = new JButton("3.");
 								primjer2.addActionListener(this);
 						primjeriPanel.add(primjer2);
-							primjer3 = new JButton("8.2.");
+							primjer3 = new JButton("4.");
 								primjer3.addActionListener(this);
 						primjeriPanel.add(primjer3);
-							primjer4 = new JButton("9.1.");
+							primjer4 = new JButton("5.");
 								primjer4.addActionListener(this);
 						primjeriPanel.add(primjer4);
-							primjer5 = new JButton("pr.");
+							primjer5 = new JButton("6.");
 								primjer5.addActionListener(this);
 						primjeriPanel.add(primjer5);
-							primjer6 = new JButton("pr.");
+							primjer6 = new JButton("7.");
 								primjer6.addActionListener(this);
 						primjeriPanel.add(primjer6);
 				calculatorPanelGBLayout.setConstraints( primjeriPanel, gbcPrimjeriPanel);
@@ -241,7 +245,7 @@ class Calc extends JFrame implements ActionListener {
 					gbcInterpretacijePanel.fill = GridBagConstraints.BOTH;
 				interpretacijePanel = new JPanel(new GridLayout(18,1));
 				interpretacijePanel.setBorder(BorderFactory.createLineBorder(Color.blue, 1));
-					JButton result = new JButton("SEMANTICKA TABLICA");
+					JButton result = new JButton("SEMANTIC TABLE");
 					result.setForeground(Color.blue);
 				interpretacijePanel.add(result);
 				for( int i = 1; i < 18; i++) {

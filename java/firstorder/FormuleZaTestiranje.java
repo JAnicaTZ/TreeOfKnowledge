@@ -3,8 +3,7 @@ package firstorder;
  * FIRST-ORDER LOGIC CALCULATOR
  * Part of the TreeOfKnowledge.eu project.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
  *
  * Th© BEST CORE of AI
  * Author: JAnica Tesla Zrinski
@@ -26,7 +25,39 @@ package firstorder;
 // © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
 public class FormuleZaTestiranje{
 	
-	public static String formula1(){
+		public static String formula1(){
+		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.OR_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.POSTOJI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.NEGACIJA_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.AND_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString();
+	}
+
+	public static String formula2(){
 		return	(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
@@ -48,8 +79,9 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString();
 	}
-	public static String formula2(){
-		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+	
+	public static String formula3(){
+		return	(/*new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.P_CHAR)).toString() + 
@@ -58,61 +90,80 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
 						(new Character(Calc.POSTOJI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.AND_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString();*/
+
+
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
 						(new Character(Calc.NEGACIJA_CHAR)).toString() + 
 						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.POVLACI_CHAR)).toString() + 
-						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.Q_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(')')).toString() + 
 						(new Character(')')).toString() + 
 						(new Character(Calc.POVLACI_CHAR)).toString() + 
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
 						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
 						(new Character(Calc.P_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.AND_CHAR)).toString() + 
-						(new Character(Calc.Q_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(')')).toString();
-	}
-	public static String formula3(){
-		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
-						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.P_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.OR_CHAR)).toString() + 
-						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
-						(new Character(Calc.POSTOJI_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.P_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.POVLACI_CHAR)).toString() + 
-						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.Q_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(')')).toString() + 
-						(new Character(')')).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
 						(new Character(Calc.POVLACI_CHAR)).toString() + 
 						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
-						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
 						(new Character(Calc.P_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(Calc.AND_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(')')).toString() +
+						(new Character(Calc.POVLACI_CHAR)).toString() +
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.Q_CHAR)).toString() + 
-						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(')')).toString();
+						(new Character(Calc.x_CHAR)).toString());
 	}
 	public static String formula4(){
-		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+		return	(
+									(new Character(Calc.POSTOJI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POSTOJI_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.y_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() +
+			new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.POSTOJI_CHAR)).toString() + 
@@ -168,7 +219,12 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.P_CHAR)).toString() + 
 						(new Character(Calc.y_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
-						(new Character(')')).toString();
+						(new Character(')')).toString() +
+						(new Character(Calc.POVLACI_CHAR)).toString() +
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString();
 	}
 	public static String formula6(){
 		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
@@ -220,7 +276,7 @@ public class FormuleZaTestiranje{
 						(new Character(')')).toString();
 	}
 	
-	public static String formula7(){
+	/*public static String formula7(){
 		return	(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.NEGACIJA_CHAR)).toString() + 
@@ -313,9 +369,9 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.Q_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(')')).toString();
-	}
+	}*/
 	public static String formula11(){
-		return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+		/*return	(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
 						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.POSTOJI_CHAR)).toString() + 
@@ -341,7 +397,30 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.AND_CHAR)).toString() + 
 						(new Character(Calc.Q_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString();*/
+
+								return	(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(')')).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.LIJEVA_ZAGRADA)).toString() + 
+						(new Character(Calc.POSTOJI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.P_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.POVLACI_CHAR)).toString() + 
+						(new Character(Calc.POSTOJI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(')')).toString();
+
 	}
 	public static String formula12(){
 		return	(new Character(Calc.ZASVAKI_CHAR)).toString() + 
@@ -395,7 +474,13 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.P_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.y_CHAR)).toString() + 
-						(new Character(')')).toString();
+						(new Character(')')).toString() +
+						(new Character(Calc.OR_CHAR)).toString() +
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString();
+
 	}
 	public static String formula14(){
 		return	(new Character(Calc.ZASVAKI_CHAR)).toString() + 
@@ -431,6 +516,12 @@ public class FormuleZaTestiranje{
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(Calc.x_CHAR)).toString() + 
 						(new Character(')')).toString() + 
-						(new Character(')')).toString();
+						(new Character(')')).toString() +
+						(new Character(Calc.OR_CHAR)).toString() +
+						(new Character(Calc.ZASVAKI_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString() + 
+						(new Character(Calc.Q_CHAR)).toString() + 
+						(new Character(Calc.x_CHAR)).toString();
+
 	}
 }

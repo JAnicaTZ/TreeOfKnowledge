@@ -42,23 +42,23 @@ public class MinimalneNormalneForme{
 			List primeImplicants = PrimeImplicants.primeImplicants(disjunktivnaNF);
 			System.out.println("--------------------------------------------------------------------------------------\n\nPRIME IMPLICANTS:\n\n" + primeImplicants);
 			
-			if (!primeImplicants.contains(new String("tautologija;)!)"))){
+			if (!primeImplicants.contains(new String("tautology;)!)"))){
 				List ireducibilneDNF = IreducibilneDNF.ireducibilneDNF(primeImplicants);
-				System.out.println("\n\nIREDUCIBILNE  DISJUNKTIVNE normalne forme:\n\n" + ispisDNFormi( true, ireducibilneDNF));
+				//System.out.println("\n\nIRREDUCIBLE  DISJUNCTIVE  NORMAL FORMS (DNF):\n\n" + ispisDNFormi( true, ireducibilneDNF));
 				List konjunktivnaNF = ((FormulaUNormalnoj) new Negacija((Formula) korijenStabla.clone()).eliminiramNegacije()).disjunktivnojFormi();
 				List ireducibilneKNF = IreducibilneDNF.ireducibilneDNF(PrimeImplicants.primeImplicants(konjunktivnaNF));
 				//System.out.println("\nIReducibilne KONJUNKTIVNE normalne forme:\n" + ispisDNFormi( false, ireducibilneKNF));
 				int minimalanBrojLiterala = minimalnaSlozenost( false, ireducibilneDNF);
 				int minimalanBrojLiteralaKNF = minimalnaSlozenost( false, ireducibilneKNF);
 				if (minimalanBrojLiterala > minimalanBrojLiteralaKNF) minimalanBrojLiterala = minimalanBrojLiteralaKNF;
-				String minimalneNormalneForme = "DISJUNKTIVNE NORMALNE FORME sa " + minimalanBrojLiterala + " literala:\n";
+				String minimalneNormalneForme = "DISJUNCTIVE  Normal Forms (DNFs) with " + minimalanBrojLiterala + " literals:\n";
 				for ( int i = 0; i < ireducibilneDNF.size(); i++){
 					int brojLiterala = slozenostDNForme( false, (List) ireducibilneDNF.get(i));
 					if(brojLiterala == minimalanBrojLiterala) minimalneNormalneForme += ispisDNForme( true, (List) ireducibilneDNF.get(i));
 				}
-				if (minimalneNormalneForme.equals("DISJUNKTIVNE  NORMALNE FORME sa " + minimalanBrojLiterala + " literala:\n")) minimalneNormalneForme = "";
+				if (minimalneNormalneForme.equals("DISJUNCTIVE  Normal Forms (DNFs) with " + minimalanBrojLiterala + " literals:\n")) minimalneNormalneForme = "";
 				else {
-					minimalneNormalneForme += "\nKONJUNKTIVNE NORMALNE FORME sa " + minimalanBrojLiterala + " literala:\n";
+					minimalneNormalneForme += "\nCONJUCTIVE Normal Forms (CNFs) with " + minimalanBrojLiterala + " literals:\n";
 					for ( int i = 0; i < ireducibilneKNF.size(); i++){
 						int brojLiterala = slozenostDNForme( false, (List) ireducibilneKNF.get(i));
 						if(brojLiterala == minimalanBrojLiterala) minimalneNormalneForme += ispisDNForme( false, (List) ireducibilneKNF.get(i));
@@ -70,7 +70,7 @@ public class MinimalneNormalneForme{
 				int minimalnaSlozenostKNF = minimalnaSlozenost( true, ireducibilneKNF);
 				if (minimalnaSlozenost > minimalnaSlozenostKNF) minimalnaSlozenost = minimalnaSlozenostKNF;
 		
-				minimalneNormalneForme += "MINIMALNE NORMALNE FORME :\n\n";
+				minimalneNormalneForme += "MINIMAL NORMAL FORMS :\n\n";
 				for ( int i = 0; i < ireducibilneDNF.size(); i++){
 					int slozenostDNForme = slozenostDNForme( true, (List) ireducibilneDNF.get(i));
 					if(slozenostDNForme == minimalnaSlozenost) minimalneNormalneForme += ispisDNForme( true, (List) ireducibilneDNF.get(i));
@@ -80,16 +80,16 @@ public class MinimalneNormalneForme{
 					if(slozenostDNForme == minimalnaSlozenost){
 						if (minimalneNormalneForme.charAt(minimalneNormalneForme.length() - 2) == ':') minimalneNormalneForme += "\n";
 						String minimalnaKonjunktivnaNormalnaForma = ispisDNForme( false, (List) ireducibilneKNF.get(i));
-						if (minimalneNormalneForme.substring(minimalneNormalneForme.lastIndexOf("MINIMALNE NORMALNE FORME")).indexOf(minimalnaKonjunktivnaNormalnaForma) < 0) 
+						if (minimalneNormalneForme.substring(minimalneNormalneForme.lastIndexOf("MINIMAL NORMAL FORMS")).indexOf(minimalnaKonjunktivnaNormalnaForma) < 0) 
 							minimalneNormalneForme += minimalnaKonjunktivnaNormalnaForma;
 					}
 				}
 				//minimalneNormalneForme += "--------------------------------------------------------------------------------------\n";
 				Calc.minimalneNormalneForme.append(minimalneNormalneForme);
 			}
-			else Calc.minimalneNormalneForme.append("\t              TAUTOLOGIJA\n");
+			else Calc.minimalneNormalneForme.append("\t              TAUTOLOGY\n");
 		}
-		else Calc.minimalneNormalneForme.append("\t          ANTITAUTOLOGIJA\n");
+		else Calc.minimalneNormalneForme.append("\t          ANTItautology\n");
 				Calc.minimalneNormalneForme.append("--------------------------------------------------------------------------------------\n");
 		//System.out.println();
   }

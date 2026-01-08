@@ -79,7 +79,7 @@ class Calc extends JFrame implements ActionListener {
   static JPanel stablaPanel;
     
   public Calc(){
-    super( "Kalkulator za LOGIKU SUDOVA" );
+    super( "Simple Tree – Propositional Logic Calculator" );
 		getContentPane().setLayout(new GridLayout( 1, 2));    
 			GridBagLayout calculatorPanelGBLayout = new GridBagLayout();
 			calculatorPanel = new JPanel();
@@ -106,11 +106,11 @@ class Calc extends JFrame implements ActionListener {
 					gbcKeyPanel.fill = GridBagConstraints.BOTH;
 					gbcKeyPanel.weighty = 0.1;
 					JPanel keysPanel = new JPanel(new GridLayout( 5, 3));
-					JButton keys = new JButton("KEYs");
+					JButton keys = new JButton("KEYS");
 						keys.setFont(new Font("Times Roman", Font.BOLD,25));
 						keys.setForeground(Color.blue);
 				keysPanel.add(keys);
-					backSpace = new JButton("backspace");
+					backSpace = new JButton("BACKSPACE");
 						backSpace.setFont(new Font("Times Roman", Font.BOLD, 12));
 						backSpace.setForeground(Color.yellow);
 						backSpace.addActionListener(this);
@@ -144,7 +144,7 @@ class Calc extends JFrame implements ActionListener {
 					or = new JButton( new Character(OR_CHAR).toString() );
 						or.addActionListener(this);
 				keysPanel.add(or);
-					negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + "(formula)");
+					negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + " ( FORMULA )");
 						negirajFormulu.setFont(new Font("Times Roman", Font.BOLD,12));
 						negirajFormulu.setForeground(Color.yellow);
 						negirajFormulu.addActionListener(this);

@@ -4,8 +4,7 @@ package propMinimization;
  * Minimal Normal Forms & Prime Implicants
  * Part of the TreeOfKnowledge.eu project.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * 🕯 Dedicated to every unborn child lost to abortion — an estimated ~200 000 each day worldwide. (Based on WHO global estimates of ~73 million abortions per year.)
  *
  * Th© BEST CORE of AI
  * Author: JAnica Tesla Zrinski
