@@ -1,4 +1,4 @@
-# TreeOfKnowledge – Propositional & First-Order Logic (FOL) Tree Calculator
+# TreeOfKnowledge – Propositional & First-Order LOGIC (FOL) Tree CALCULATOR
 
 **Author:** JAnica Tesla Zrinski  
 **Project:** “Tree of Knowledge” — original Java logic tree calculator (2002–2025).
