@@ -14,6 +14,11 @@ TreeOfKnowledge is a symbolic reasoning engine that constructs an explicit
 **Abstract Syntax Tree (AST)** for propositional and first-order logic formulas
 and applies **De Morgan–based transformations** to normalize them.
 
+Internally, formulas are transformed into **De Morgan Negation Normal Form (NNF)**
+and represented as an explicit **Abstract Syntax Tree (AST)**, where all negations
+are systematically pushed down to the atomic level using De Morgan’s laws and
+quantifier dualities.
+
 Parsing, evaluation, and visualization follow the same recursive structure,
 making the reasoning **transparent and auditable** — not a black box.
 
@@ -98,19 +103,19 @@ The project includes:
 For the public-facing calculators and downloads, see the official website:
 https://TreeOfKnowledge.eu
 
-
 ---
 
-## Distribution note
+## Distribution
 
-This DevKit is distributed as a ZIP for simplicity; a public repository may follow.
+Source code and releases are maintained on GitHub.
+Executable JARs are provided on the official website.
 
 ---
 
 ## 3. Requirements
 
-- Java **21+**  
-- Any IDE
+- Java **21+** (LTS recommended): https://adoptium.net/temurin/releases/?version=21  
+- Any Java IDE or build tool (Maven / CLI)
 
 ---
 
