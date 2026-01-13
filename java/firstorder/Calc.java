@@ -5,7 +5,7 @@ package firstorder;
  *
  * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
  *
- * Th© BEST CORE of AI
+ *  BEST CORE of AI
  * Author: JAnica Tesla Zrinski
  * Domain: https://TreeOfKnowledge.eu
  * Years: 2002–2025
@@ -184,8 +184,10 @@ public class Calc extends JFrame implements ActionListener {
 					povlaci = new JButton( new Character(POVLACI_CHAR).toString() );
 						povlaci.addActionListener(this);
 				keysPanel.add(povlaci);
-					akko = new JButton( " "/* new Character(AKKO_CHAR).toString() */ );
-						//akko.addActionListener( this );
+
+					akko = new JButton( new Character(AKKO_CHAR).toString() );
+						akko.addActionListener( this );
+
 				keysPanel.add(akko);
 					enter = new JButton( "ENTER" );
 					//enter.setBorder(BorderFactory.createLineBorder( Color.blue, 5));
@@ -311,51 +313,6 @@ public class Calc extends JFrame implements ActionListener {
 					tautologije.setFont(new Font("Times Roman", Font.BOLD, 15));
 				testFormulePanelGBLayout.setConstraints( tautologije, gbcTautologije);
 			testFormulePanel.add(tautologije);
-			
-				/*GridBagConstraints gbcFormula7 = new GridBagConstraints();
-					gbcFormula7.gridx = 0;
-					gbcFormula7.gridy = 5;
-					gbcFormula7.gridwidth = 1;
-					gbcFormula7.gridheight = 1;
-					gbcFormula7.fill = GridBagConstraints.BOTH;
-					gbcFormula7.weighty = 0.1;
-				formula7 = new JButton("7 - tautology");
-					formula7.addActionListener(this);
-				testFormulePanelGBLayout.setConstraints( formula7, gbcFormula7);
-			testFormulePanel.add(formula7);
-			
-				GridBagConstraints gbcFormula8 = new GridBagConstraints();
-					gbcFormula8.gridx = 1;
-					gbcFormula8.gridy = 5;
-					gbcFormula8.gridwidth = 1;
-					gbcFormula8.gridheight = 1;
-					gbcFormula8.fill = GridBagConstraints.BOTH;
-				formula8 = new JButton("8 - tautology");
-					formula8.addActionListener(this);
-				testFormulePanelGBLayout.setConstraints( formula8, gbcFormula8);
-			testFormulePanel.add(formula8);
-			
-				GridBagConstraints gbcFormula9 = new GridBagConstraints();
-					gbcFormula9.gridx = 2;
-					gbcFormula9.gridy = 5;
-					gbcFormula9.gridwidth = 1;
-					gbcFormula9.gridheight = 1;
-					gbcFormula9.fill = GridBagConstraints.BOTH;
-				formula9 = new JButton("9 - tautology");
-					formula9.addActionListener(this);
-				testFormulePanelGBLayout.setConstraints( formula9, gbcFormula9);
-			testFormulePanel.add(formula9);
-			
-				GridBagConstraints gbcFormula10 = new GridBagConstraints();
-					gbcFormula10.gridx = 3;
-					gbcFormula10.gridy = 5;
-					gbcFormula10.gridwidth = 1;
-					gbcFormula10.gridheight = 1;
-					gbcFormula10.fill = GridBagConstraints.BOTH;
-				formula10 = new JButton("10 - tautology");
-					formula10.addActionListener(this);
-				testFormulePanelGBLayout.setConstraints( formula10, gbcFormula10);
-			testFormulePanel.add(formula10);*/
 			
 				GridBagConstraints gbcFormula11 = new GridBagConstraints();
 					gbcFormula11.gridx = 0;
@@ -591,18 +548,6 @@ public class Calc extends JFrame implements ActionListener {
     if ( action.equals(formula6)){
       display.setText( " " + FormuleZaTestiranje.formula6());
     }
-    /*if ( action.equals(formula7)){
-      display.setText( " " + FormuleZaTestiranje.formula7());
-    }
-    if ( action.equals(formula8)){
-      display.setText( " " + FormuleZaTestiranje.formula8());
-    }
-    if ( action.equals(formula9)){
-      display.setText( " " + FormuleZaTestiranje.formula9());
-    }
-    if ( action.equals(formula10)){
-      display.setText( " " + FormuleZaTestiranje.formula10());
-    }*/
     if ( action.equals(formula11)){
       display.setText( " " + FormuleZaTestiranje.formula11());
     }

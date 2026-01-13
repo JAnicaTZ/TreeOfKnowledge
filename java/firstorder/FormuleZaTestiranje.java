@@ -5,7 +5,7 @@ package firstorder;
  *
  * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
  *
- * Th© BEST CORE of AI
+ *  BEST CORE of AI
  * Author: JAnica Tesla Zrinski
  * Domain: https://TreeOfKnowledge.eu
  * Years: 2002–2025

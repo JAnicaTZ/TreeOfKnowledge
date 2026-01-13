@@ -5,7 +5,7 @@ package firstorder;
  *
  * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
  *
- * Th© BEST CORE of AI
+ *  BEST CORE of AI
  * Author: JAnica Tesla Zrinski
  * Domain: https://TreeOfKnowledge.eu
  * Years: 2002–2025
@@ -69,9 +69,22 @@ public class Parser{
 					break;
 				/* case Calc.AKKO_CHAR:  // IMPLEMENTIRATI!!
 					Formula drugiFaktor = faktor(prefix);
-					binarniVeznik = new Konjukcija(	new Disjunkcija( new Negacija( prefix, prviFaktor), drugiFaktor), 
+					binarniVeznik = new Konjukcija(	 Disjunkcija( new Negacija( prefix, prviFaktor), drugiFaktor), 
 									new Disjunkcija( (Formula) prviFaktor.clone(), new Negacija( prefix, (Formula) drugiFaktor.clone())));
 					break; */
+// by ChatGPT:
+case Calc.AKKO_CHAR: {
+    Formula drugiFaktor = faktor(prefix);
+
+    Formula imp1 = new Disjunkcija(new Negacija(prefix, (Formula) prviFaktor.clone()),
+                                   (Formula) drugiFaktor.clone());   // A -> B
+    Formula imp2 = new Disjunkcija(new Negacija(prefix, (Formula) drugiFaktor.clone()),
+                                   (Formula) prviFaktor.clone());    // B -> A
+
+    binarniVeznik = new Konjukcija(imp1, imp2);
+    break;
+}
+
 			}
 			prviFaktor = binarniVeznik;
 		}
