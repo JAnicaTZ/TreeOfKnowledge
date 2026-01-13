@@ -1,32 +1,32 @@
 package firstorder;
+
 /**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
+ * Atomic predicate node (leaf) in the FOL formula tree.
  *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
+ * <p>Represents an atomic formula with:
+ * <ul>
+ *   <li>a polarity (positive / negated literal),</li>
+ *   <li>a predicate “body” stored in a compact string form (e.g. Pxy),</li>
+ *   <li>a quantifier prefix encoded as a compact string (e.g. ∀x∃y...).</li>
+ * </ul>
  *
- *  BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
+ * <p>This class performs the engine's crucial “finite-domain expansion” step in
+ * {@link #glavniTest(int)}:
+ * depending on the leading quantifier in the prefix, it expands the formula into a conjunction
+ * (for ∀) or a disjunction (for ∃) over concrete domain elements (e.g., a,b,c,d), recursively
+ * continuing until the prefix is exhausted.
  *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>The helper {@link #reducirajPrefix(String, String)} reduces/simplifies the prefix with respect
+ * to the variables actually occurring in the atomic predicate, preventing irrelevant quantifiers
+ * from bloating the expansion.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import java.util.*; // List, ArrayList, Map, HashMap
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class AtomarnaFormula extends FormulaUNF{
   boolean istinitost;
 	String propozicionalnaVarijabla;

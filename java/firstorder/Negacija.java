@@ -1,32 +1,27 @@
 package firstorder;
+
 /**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
+ * Negation node (NOT, ¬) in the FOL formula tree.
  *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
+ * <p>This class is a key transformation step in the engine:
+ * it pushes negation inward and normalizes the formula structure. In particular, it supports:
+ * <ul>
+ *   <li>Double-negation elimination (¬¬A → A),</li>
+ *   <li>De Morgan transformations (¬(A ∧ B) → (¬A ∨ ¬B), ¬(A ∨ B) → (¬A ∧ ¬B)),</li>
+ *   <li>Quantifier flipping under negation by transforming the quantifier prefix
+ *       (∀ ↔ ∃) via {@link #suprotanPrefix(String)}.</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>The engine encodes quantifiers in a compact “prefix” string (e.g., ∀x∃y...), and negation
+ * updates this prefix so that the normalized formula remains semantically equivalent.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import java.util.List;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class Negacija extends Formula{
   Formula podStablo;
     

@@ -1,25 +1,28 @@
 package firstorder;
+
 /**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
+ * Solution search and result-highlighting utilities for the FOL engine.
  *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
+ * <p>This class performs the “search layer” on top of the normalized formula tree:
+ * it generates candidate interpretations over a finite domain (carrier size),
+ * checks which assignments satisfy the formula, and prepares output suitable for
+ * visualization and explanation.
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
+ * <p>Core responsibilities:
+ * <ul>
+ *   <li>Collecting and expanding used variables into concrete ground instances
+ *       (based on the chosen domain size).</li>
+ *   <li>Building and reducing a normal-form oriented representation to make testing efficient
+ *       (e.g., reducing redundant parts before evaluation).</li>
+ *   <li>Checking whether a candidate interpretation satisfies the formula
+ *       ({@code zadovoljavaInterpretaciju}).</li>
+ *   <li>Generating canonical / “perfect” conjunctive forms for systematic analysis
+ *       ({@code savrsenaKonjuktivnaForma}).</li>
+ *   <li>Highlighting found solutions in the UI / tree output ({@code osvijetliRjesenja}).</li>
+ * </ul>
  *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>In short: {@code Parser} builds the tree, {@code Formula/FormulaUNF} normalize and test it,
+ * and {@code PronalazenjeRjesenja} searches the finite model space and presents satisfying assignments.
  */
 
 import javax.swing.*; // JTree, JScrollPane, JPanel, JButton
@@ -28,12 +31,25 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.*; // List, ArrayList, Map, HashMap
 import java.awt.Color;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class PronalazenjeRjesenja{
   public static TreeMap mapKoristeneVarijable;
 	public static int velicinaNosaca;
   public static ArrayList koristeneVarijable; //pojavljuje se u Konjukcija!!
 
+  /**
+ * Builds an ordered list of actually-used variables for the current formula and carrier size.
+ *
+ * <p>Uses {@link #mapKoristeneVarijable} (filled by the parser) and constructs {@link #koristeneVarijable}
+ * containing only variables that occur in the input formula. The method also sets {@link #velicinaNosaca}.
+ *
+ * <p>This list defines the dimension of the interpretation space explored later:
+ * if there are N used variables and the carrier has K elements, then there are K^N possible
+ * assignments to test.
+ *
+ * @param brojElemenataNosaca size of the finite carrier/domain used by the calculator
+ */
   public static void napraviKoristeneVarijable(int brojElemenataNosaca){
 		Object[] nizKoristenihVarijabli = mapKoristeneVarijable.keySet().toArray();
 		koristeneVarijable = new ArrayList();
@@ -54,6 +70,24 @@ public class PronalazenjeRjesenja{
 			}
 		}
 	}
+
+	/**
+ * Top-level driver for solution search on a given formula tree.
+ *
+ * <p>Initializes the solution-search state (used variables, carrier size, etc.), transforms the
+ * input formula through the main FOL pipeline (normalization / main test), and then triggers the
+ * evaluation/search procedure over a finite carrier.
+ *
+ * <p>Conceptually:
+ * <ul>
+ *   <li>{@code Parser} builds the AST,</li>
+ *   <li>{@code Formula/FormulaUNF} normalize/test it,</li>
+ *   <li>{@code PronalazenjeRjesenja} explores candidate interpretations and collects solutions.</li>
+ * </ul>
+ *
+ * @param korijenStabla root of the parsed formula AST
+ * @param mapKoristeneVarijable variables actually used in the formula (from the parser)
+ */
   public static void paralelnaAnaliza( Formula korijenStabla, TreeMap mapKoristeneVarijable) throws Clear{
 		PronalazenjeRjesenja.mapKoristeneVarijable = mapKoristeneVarijable;
 		FormulaUNF glavniTestLogikePrvogReda = (FormulaUNF) ((Formula) korijenStabla.clone()).glavniTestLogikePrvogReda();
@@ -91,6 +125,16 @@ public class PronalazenjeRjesenja{
 		System.out.println();
 	}
 	
+	/**
+ * Runs the solution search for a specific finite carrier size.
+ *
+ * <p>Sets {@link #velicinaNosaca} and prepares the internal representation of the formula for testing
+ * over this domain. Typically used to compare behavior across different carrier sizes (e.g. 2, 3, 4),
+ * and to print/collect solutions per carrier.
+ *
+ * @param formulaUNF formula prepared for the normal-form / testing workflow
+ * @param brojElemenataNosaca size of the carrier/domain (number of elements)
+ */
   public static void paralelnaAnalizaZaNosac( List konjuktivnaForma, List negiranaKonjuktivnaForma){
     boolean[] semantickaTablica = savrsenaKonjuktivnaForma(konjuktivnaForma);
 		int brojIstinitihInterpretacija = 0;
@@ -110,6 +154,17 @@ public class PronalazenjeRjesenja{
     }
   }
   
+  /**
+ * Simplifies a conjunction-oriented list representation by removing redundancies.
+ *
+ * <p>Given a list representing a conjunctive normal-form-like structure (list of clauses / conjuncts),
+ * this method removes duplicates and performs lightweight reductions that shrink the search space.
+ *
+ * <p>The goal is not full theorem-proving, but practical pruning before interpretation testing.
+ *
+ * @param konjuktivnaForma list representation (typically produced by {@code konjuktivnaForma()})
+ * @return reduced list with redundant parts removed
+ */
   public static List reducirajNormalnuFormu(List konjuktivnaForma){
     boolean ukloniTekuci = false;
     int i = 0;
@@ -134,6 +189,19 @@ public class PronalazenjeRjesenja{
     }
 		return konjuktivnaForma;
   }
+
+  /**
+ * Checks whether a candidate interpretation satisfies the reduced normal-form representation.
+ *
+ * <p>The interpretation is encoded as an array of truth values for all generated ground instances
+ * (derived from {@link #koristeneVarijable} and {@link #velicinaNosaca}). The method evaluates the
+ * conjunction/list structure and returns {@code true} if the interpretation satisfies all required
+ * constraints.
+ *
+ * @param interpretacija encoded truth assignment for the current carrier and variable list
+ * @param konjuktivnaForma reduced conjunction-oriented structure to be tested
+ * @return {@code true} if the interpretation satisfies the formula under this carrier size
+ */
   public static boolean zadovoljavaInterpretaciju( int[] interpretacija, Map konjukt){
     boolean zadovoljavaInterpretaciju = true;
     int i = 0;
@@ -147,6 +215,17 @@ public class PronalazenjeRjesenja{
     }
     return zadovoljavaInterpretaciju;
   }
+
+  /**
+ * Converts a decimal index into a fixed-width binary vector.
+ *
+ * <p>Used to systematically enumerate candidate interpretations. The returned array has a fixed length
+ * {@code brojBinarnihZnamenki} and represents the binary form of {@code dekadski}.
+ *
+ * @param dekadski decimal number to convert
+ * @param brojBinarnihZnamenki fixed width of the resulting binary vector
+ * @return binary vector (most-significant bit first)
+ */
   public static int[] dekadskiUBinarni( int dekadski, int brojBinarnihZnamenki/* koristeneVarijable.size() */){
 		int[] binarni = new int[brojBinarnihZnamenki];
 		for ( int i = brojBinarnihZnamenki - 1; i >= 0  ; i--){
@@ -157,6 +236,20 @@ public class PronalazenjeRjesenja{
 		}
 		return binarni;
 	}
+
+	/**
+ * Searches for a satisfying interpretation by exhaustive enumeration (finite model search).
+ *
+ * <p>Enumerates all candidate interpretations for the current carrier size and used variables,
+ * tests each candidate via {@link #zadovoljavaInterpretaciju(boolean[], List)}, and returns whether
+ * at least one satisfying interpretation exists.
+ *
+ * <p>This method effectively answers “is the formula satisfiable over the chosen finite carrier?”
+ * for the calculator's internal normal-form representation.
+ *
+ * @param konjuktivnaForma reduced conjunction-oriented representation of the formula
+ * @return {@code true} if at least one satisfying interpretation exists
+ */
   public static boolean[] savrsenaKonjuktivnaForma(List konjuktivnaForma){
     List reduciranaKonjuktivnaForma = reducirajNormalnuFormu(konjuktivnaForma);
     boolean[] semantickaTablica = new boolean[ (int) Math.pow( (double)2, (double) koristeneVarijable.size())];
@@ -172,6 +265,17 @@ public class PronalazenjeRjesenja{
     }
 		return semantickaTablica;
   }
+
+  /**
+ * Highlights the found solutions in the GUI.
+ *
+ * <p>Takes the encoded solution vector and applies visual highlighting to UI components
+ * (typically variable/predicate buttons or table entries) so that the user can see which
+ * assignments make the formula true under the current carrier.
+ *
+ * @param panel UI container whose components are highlighted
+ * @param savrsenaKonjuktivnaForma encoded solution vector (from the satisfiability search)
+ */
   public static void osvijetliRjesenja( List konjuktivnaForma, JPanel panel, String maliRazmak, String razmak){
 		boolean[] semantickaTablica = savrsenaKonjuktivnaForma(konjuktivnaForma);
     String varijable = "";

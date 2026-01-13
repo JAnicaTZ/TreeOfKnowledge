@@ -22,13 +22,34 @@ package firstorder;
  * Provided solely for personal study and educational insight.
  */
 
+/**
+ * Main entry point and GUI controller for the First-Order Logic (FOL) calculator.
+ *
+ * <p>This class provides the interactive Swing UI used on TreeOfKnowledge.eu:
+ * it lets the user build a formula (quantifiers, variables, predicates and connectives),
+ * shows the typed expression, and triggers parsing + the engine pipeline.
+ *
+ * <p>Core responsibilities:
+ * <ul>
+ *   <li>UI construction: buttons for ∀/∃, variables, predicates, connectives, parentheses, etc.</li>
+ *   <li>Input handling: appending symbols, backspace/clear, and loading prepared examples.</li>
+ *   <li>Parsing: delegates the current input string to {@link Parser#parsiraj(String)}.</li>
+ *   <li>Execution pipeline: runs the recursive engine (normalization / main test) and coordinates
+ *       solution search / visualization (via {@link PronalazenjeRjesenja}).</li>
+ * </ul>
+ *
+ * <p>Conceptually, {@code Calc} is the orchestrator: it does not implement FOL semantics itself,
+ * but wires together the parser, the recursive tree engine, and the presentation of results.
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 //java.lang.* se automatski dodaje
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class Calc extends JFrame implements ActionListener {
   public static String razmak = "                      ";
   public static final char ZASVAKI_CHAR = '\u2200';

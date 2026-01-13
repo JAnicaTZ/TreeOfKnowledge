@@ -1,30 +1,21 @@
 package firstorder;
-/**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
- *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
- *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
- */
 
+/**
+ * Conjunction node (AND, ∧) in the FOL formula tree.
+ *
+ * <p>Represents {@code left ∧ right}. In the normal-form workflow, conjunction acts as a structural
+ * “collector”: it merges conjunctive contributions produced by its subtrees into a single list
+ * representation returned by {@link #konjuktivnaForma()}.
+ *
+ * <p>This class also provides a utility predicate {@link #neKontradiktorni(java.util.Map, java.util.Map)}
+ * used during solution search: it checks whether two partial assignments (maps) are compatible
+ * (i.e., do not assign different values to the same variable).
+ */
+ 
 import java.util.*; // List, ArrayList, Map, HashMap
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class Konjukcija extends BinarnaFormula{
   public String toString(){
     return (new Character(Calc.AND_CHAR)).toString();

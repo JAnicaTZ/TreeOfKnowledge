@@ -1,30 +1,24 @@
 package firstorder;
+
 /**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
+ * Common base class for binary FOL connectives (two-child AST nodes).
  *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
+ * <p>Stores left and right subtrees and provides shared recursive behavior:
+ * <ul>
+ *   <li>Visualization: {@link #prikazFormule()} creates a binary node in the output tree,</li>
+ *   <li>Normalization/testing pipeline: {@link #glavniTestLogikePrvogReda()} applies the same process
+ *       recursively to both children,</li>
+ *   <li>Domain evaluation: {@link #glavniTest(int)} delegates the domain-bounded test to both children.</li>
+ * </ul>
  *
- *  BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>Concrete subclasses (e.g. conjunction/disjunction) define only the operator semantics and how
+ * list-based normal-form structures are combined.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public abstract class BinarnaFormula extends FormulaUNF{
   Formula lijevoPodStablo;
   Formula desnoPodStablo;

@@ -1,28 +1,24 @@
 package firstorder;
-/**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
- *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
- *
- *  BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
- */
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+/**
+ * Library of ready-to-run example formulas for the FOL calculator UI.
+ *
+ * <p>Provides a curated set of static factory methods (e.g. {@code formula1()}, {@code formula2()}, …)
+ * that return syntactically valid test strings using the calculator's Unicode operator constants.
+ *
+ * <p>Used by {@link Calc} to:
+ * <ul>
+ *   <li>Populate the input field with representative examples,</li>
+ *   <li>Demonstrate supported syntax (quantifiers, predicates, connectives),</li>
+ *   <li>Offer regression tests during development (parser + engine pipeline).</li>
+ * </ul>
+ *
+ * <p>This class contains no logic-engine implementation; it is intentionally kept as a “test catalogue”
+ * to keep the UI code clean and to make demonstrations reproducible.
+ */
+ 
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class FormuleZaTestiranje{
 	
 		public static String formula1(){

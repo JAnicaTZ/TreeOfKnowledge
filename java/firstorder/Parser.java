@@ -1,25 +1,22 @@
 package firstorder;
+
 /**
- * FIRST-ORDER LOGIC CALCULATOR
- * Part of the TreeOfKnowledge.eu project.
+ * Parser for the TreeOfKnowledge First-Order Logic input syntax.
  *
- * 🕯 Dedicated to every child who dies from starvation — 1 every 10 seconds, around 10,000 each day.
+ * <p>Converts a compact user input string into an Abstract Syntax Tree (AST) of {@link Formula}
+ * objects (atomic predicates, negation, conjunction/disjunction and other supported connectives).
  *
- *  BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
+ * <p>Key features of this parser:
+ * <ul>
+ *   <li>Supports a compact prefix notation for quantifiers (e.g., ∀x∃y...) used by the engine.</li>
+ *   <li>Tracks variables that actually occur in the formula (stored in {@code mapKoristeneVarijable}).</li>
+ *   <li>Implements a recursive-descent style grammar: factors, unary negation, binary operators.</li>
+ *   <li>Builds the internal tree structure used by the normalization and testing pipeline.</li>
+ * </ul>
  *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>The parser is intentionally strict and throws small, domain-specific exceptions
+ * (e.g. wrong input / missing bracket / backspace / clear) to keep the UI responsive
+ * and to allow immediate error handling without crashing the application.
  */
 
 import java.util.Map;
@@ -30,7 +27,8 @@ class ZatvoriZagradu extends Exception{}
 class BackSpace extends Exception{}
 class Clear extends Exception{}
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — FIRST-ORDER Logic (FOL) engine
+
 public class Parser{
   public static String formula;
   public static int duljinaFormule;
