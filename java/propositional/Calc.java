@@ -46,6 +46,22 @@ package propositional;
  * in propositional logic.
  */
 
+/* AtomarnaFormula → AtomicFormula
+
+BinarnaFormula → BinaryFormula
+
+Negacija → Negation
+
+Konjunkcija → Conjunction
+
+Disjunkcija → Disjunction
+
+StabloFormule → FormulaTree
+
+PronalazenjeRjesenja → SolutionFinder
+
+OsvjetljivanjeRjesenja → SolutionHighlighter */
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
