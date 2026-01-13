@@ -1,27 +1,20 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * UI/driver pipeline for building and using the Disjunctive Normal Form (DNF).
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>This class orchestrates a typical workflow:
+ * <ol>
+ *   <li>Parse the input string into an AST ({@link Formula})</li>
+ *   <li>Visualize the AST in a Swing {@code JTree}</li>
+ *   <li>Clone and rewrite the AST by eliminating negations (De Morgan + double negation)</li>
+ *   <li>Compute DNF as a list-of-lists of literals</li>
+ *   <li>Reduce the normal form (remove redundant clauses)</li>
+ *   <li>Highlight satisfying valuations in the truth-table style panel</li>
+ * </ol>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>The intention is "explainable logic": the same input is shown simultaneously as
+ * text, a transformation tree, and a semantic table of valuations.
  */
 
 import javax.swing.*; // JTree, JScrollPane
@@ -32,7 +25,8 @@ class FaktorExpected extends Exception{}
 class Pocetak extends Exception{}
 class ZatvoriZagradu extends Exception{}
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public class DisjunktivnaFormaZaLS{
   public static ArrayList koristeneVarijable; 
   public static String formula;
@@ -117,6 +111,10 @@ public class DisjunktivnaFormaZaLS{
     return izFaktora;
   }
   
+      /**
+     * Removes redundant conjunctive clauses from a DNF.
+     * If clause A is a subset of clause B, then B is redundant (A implies B).
+     */
   public static List reducirajNormalnuFormu(List forma) {
     boolean ukloniTekuci = false;
     int i = 0;

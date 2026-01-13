@@ -1,32 +1,21 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Abstract base class for binary connectives (two-child AST nodes).
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
- *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>Examples: conjunction (AND), disjunction (OR), implication-like expansions, etc.
+ * Stores references to the left and right subtrees and provides common behavior:
+ * <ul>
+ *   <li>deep cloning (clone both subtrees),</li>
+ *   <li>recursive transformations applied to children,</li>
+ *   <li>standard tree visualization with two child nodes.</li>
+ * </ul>
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public abstract class BinarnaFormula extends FormulaUNormalnoj{
   Formula lPodStablo;
   Formula dPodStablo;

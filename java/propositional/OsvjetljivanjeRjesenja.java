@@ -1,27 +1,17 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Highlights satisfying valuations (assignments) for a computed normal form.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>Given:
+ * <ul>
+ *   <li>a set of used variables, and</li>
+ *   <li>a DNF represented as a list of conjunctive clauses (each a list of literals),</li>
+ * </ul>
+ * this component evaluates which binary assignments satisfy at least one clause.
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>It bridges symbolic representation (DNF clauses) and semantic evaluation
+ * (truth table rows), producing UI-friendly results (highlighted rows).
  */
 
 import java.util.*; // List, ArrayList, Map, HashMap
@@ -29,7 +19,8 @@ import javax.swing.*; // JButton, JPanel, BorderFactory
 import java.awt.Font;
 import java.awt.Color;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public class OsvjetljivanjeRjesenja {
   public static List koristeneVarijable;
   public static String[] semantickaTablica;
@@ -77,6 +68,11 @@ public class OsvjetljivanjeRjesenja {
       }
     }
   }
+
+      /**
+     * @return true iff the binary assignment is compatible with the given conjunctive clause.
+     * Compatibility means: all required literals match the assignment, and no literal contradicts it.
+     */
   public static boolean zadovoljavaInterpretaciju( String nuleJedinice, List konjukt){
     int i = 0;
     while (i < koristeneVarijable.size()) {

@@ -1,33 +1,23 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Disjunction (OR, ∨) node.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>Dual to {@link Konjunkcija}:
+ * <ul>
+ *   <li>DNF: concatenates DNF clause lists (OR of clauses)</li>
+ *   <li>CNF: performs a Cartesian product of CNF clauses (OR distributes over AND)</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>Also filters tautological/contradictory clauses during CNF product merging
+ * using complement checks.
  */
 
 import java.util.List;
 import java.util.ArrayList;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public class Disjunkcija extends BinarnaFormula{
   public String toString(){
     return (new Character(Calc.OR_CHAR)).toString();
@@ -49,7 +39,7 @@ public class Disjunkcija extends BinarnaFormula{
     List dKonjunktivnaForma = ((FormulaUNormalnoj) dPodStablo).konjunktivnojFormi();
 		for ( int i = 0; i < lKonjunktivnaForma.size(); i++){
 			for ( int j = 0; j < dKonjunktivnaForma.size(); j++){
-				List pDisjunkt = new ArrayList((List) lKonjunktivnaForma.get(i)); //ovdje bila GRESKA!!
+				List pDisjunkt = new ArrayList((List) lKonjunktivnaForma.get(i));
 				List dDisjunkt = new ArrayList((List) dKonjunktivnaForma.get(j));
 				if (neKontradiktorni( pDisjunkt, dDisjunkt)){
 					pDisjunkt.addAll(dDisjunkt);

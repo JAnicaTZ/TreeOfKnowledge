@@ -1,33 +1,24 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Atomic formula (literal) in propositional logic.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>Represents a propositional variable (e.g. {@code P}, {@code Q}, {@code R}) with an optional negation.
+ * This implementation stores the polarity as a boolean:
+ * <ul>
+ *   <li>{@code istinitost == true}  → positive literal (P)</li>
+ *   <li>{@code istinitost == false} → negated literal (¬P)</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>Atoms are leaves of the syntax tree (AST) and the basic building blocks for normal forms
+ * (CNF/DNF) used by the calculator.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.*; // List, ArrayList
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public class AtomarnaFormula extends FormulaUNormalnoj{
   boolean istinitost;
   char propozicionalnaVarijabla;
@@ -55,6 +46,10 @@ public class AtomarnaFormula extends FormulaUNormalnoj{
 		}
 		return false;
 	}
+
+      /**
+     * @return the complementary literal (P ↔ ¬P). Useful for contradiction checks.
+     */
   public AtomarnaFormula suprotnaFormula(){
 		AtomarnaFormula a = (AtomarnaFormula) this.clone();
 		a.istinitost = !a.istinitost;
@@ -69,10 +64,5 @@ public class AtomarnaFormula extends FormulaUNormalnoj{
   }
   public List konjunktivnojFormi(){
 		return this.disjunktivnojFormi();
-    /* List atom = new ArrayList();
-		atom.add(this);
-    List konjunktivnaForma = new ArrayList();
-		konjunktivnaForma.add(atom);
-    return konjunktivnaForma; */
   }
 }

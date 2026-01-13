@@ -1,32 +1,24 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Negation (NOT) node: a unary AST connective.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>This node is responsible for "pushing negations down" using classic rewrite rules:
+ * <ul>
+ *   <li>¬(¬A) → A (double negation elimination)</li>
+ *   <li>¬(A ∧ B) → (¬A ∨ ¬B) (De Morgan)</li>
+ *   <li>¬(A ∨ B) → (¬A ∧ ¬B) (De Morgan)</li>
+ *   <li>¬P → (flip literal sign)</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>This transformation is a key preprocessing step before normal-form conversion
+ * and evaluation.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public class Negacija extends Formula{
   Formula podStablo;
     
@@ -48,17 +40,23 @@ public class Negacija extends Formula{
     ((Negacija) klon).podStablo = (Formula) podStablo.clone();
     return klon;
   }
+
+      /**
+     * Eliminates negations by rewriting the subtree so that negations apply only to atoms.
+     * @return transformed formula (may return a different node type than {@code Negacija}).
+     */
+    @Override
   public Formula eliminiramNegacije(){
     if (podStablo instanceof AtomarnaFormula){
       ((AtomarnaFormula) podStablo).istinitost = !((AtomarnaFormula) podStablo).istinitost;
     }
-    else if (podStablo instanceof Negacija){// eliminacijaNegacije();
+    else if (podStablo instanceof Negacija){ // eliminacijaNegacije();
 			podStablo = ((Negacija) podStablo).podStablo;
     }
-    else if (podStablo instanceof Konjunkcija){// deMorgan()!!
+    else if (podStablo instanceof Konjunkcija){ // deMorgan()!!
       podStablo = new Disjunkcija( new Negacija(((BinarnaFormula) podStablo).lPodStablo), new Negacija(((BinarnaFormula) podStablo).dPodStablo));
     }
-    else if (podStablo instanceof Disjunkcija){// deMorgan()!!
+    else if (podStablo instanceof Disjunkcija){ // deMorgan()!!
       podStablo = new Konjunkcija( new Negacija(((BinarnaFormula) podStablo).lPodStablo), new Negacija(((BinarnaFormula) podStablo).dPodStablo));
     }
     return podStablo.eliminiramNegacije();

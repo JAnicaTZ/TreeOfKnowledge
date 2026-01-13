@@ -1,32 +1,26 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Base class for all propositional formulas (AST nodes).
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>This project represents formulas as a tree (Abstract Syntax Tree).
+ * Each concrete subclass implements:
+ * <ul>
+ *   <li>String rendering (pretty printing),</li>
+ *   <li>tree rendering for Swing {@code JTree} visualization,</li>
+ *   <li>structural transformations (e.g., pushing negations down),</li>
+ *   <li>optional conversion to normal forms (DNF/CNF) where applicable.</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>The core idea: build a formula tree once, then reuse it for:
+ * visualization, normalization, evaluation over valuations, and highlighting
+ * satisfying assignments.
  */
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public abstract class Formula implements Cloneable{
   public abstract String toString();
   public abstract DefaultMutableTreeNode prikazFormule();
@@ -40,5 +34,5 @@ public abstract class Formula implements Cloneable{
     }
     return klon;
   }
-  public abstract Formula eliminiramNegacije();// || deMorgan()!!
+  public abstract Formula eliminiramNegacije(); // || deMorgan()!!
 }

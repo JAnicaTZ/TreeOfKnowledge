@@ -7,7 +7,7 @@ package propositional;
  * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
  * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
  *
- * Th© BEST CORE of AI
+ * BEST CORE of AI
  * Author: JAnica Tesla Zrinski
  * Domain: https://TreeOfKnowledge.eu
  * Years: 2002–2025
@@ -24,13 +24,36 @@ package propositional;
  * Provided solely for personal study and educational insight.
  */
 
+/**
+ * Main entry point of the Simple Propositional Logic Calculator (Beginner Mode).
+ *
+ * <p>This class initializes the application, parses the user input formula,
+ * builds its abstract syntax tree (AST), and triggers the recursive evaluation
+ * and visualization of the propositional tree.
+ *
+ * <p>Its responsibilities include:
+ * <ul>
+ *   <li>Reading and validating the input formula.</li>
+ *   <li>Invoking the parser to construct the internal tree representation.</li>
+ *   <li>Starting the evaluation of the formula under all truth assignments.</li>
+ *   <li>Coordinating the display of the logical tree and results (GUI / console).</li>
+ * </ul>
+ *
+ * <p>Conceptually, this class represents the “root” of the calculator:
+ * it does not implement logical operators itself, but orchestrates the entire
+ * process from syntax (parsing) through semantics (truth evaluation) to
+ * visualization, making it suitable as a didactic entry point for beginners
+ * in propositional logic.
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 //java.lang.* se automatski dodaje
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 class Calc extends JFrame implements ActionListener {
   public static final char NEGACIJA_CHAR  = '\u00AC';
   public static final char LIJEVA_ZAGRADA = '(';
@@ -79,7 +102,7 @@ class Calc extends JFrame implements ActionListener {
   static JPanel stablaPanel;
     
   public Calc(){
-    super( "Simple Tree – Propositional Logic Calculator" );
+    super( "SIMPLE TREE – Propositional Logic Calculator" );
 		getContentPane().setLayout(new GridLayout( 1, 2));    
 			GridBagLayout calculatorPanelGBLayout = new GridBagLayout();
 			calculatorPanel = new JPanel();

@@ -1,32 +1,23 @@
 package propositional;
 
 /**
- * SIMPLE PROPOSITIONAL TREE – Beginner Mode
- * Part of the TreeOfKnowledge.eu project.
+ * Marker/contract for formulas that can be converted to normal forms.
  *
- * 🕯 Dedicated to the victims of Vukovar, Škabrnja, and the Homeland War.
- * 🕯 Posvećeno žrtvama Vukovara, Škabrnje i Domovinskog rata.
+ * <p>Some nodes (like literals/atoms and boolean connectives) naturally support
+ * conversion to:
+ * <ul>
+ *   <li>DNF (Disjunctive Normal Form) - OR of AND-clauses,</li>
+ *   <li>CNF (Conjunctive Normal Form) - AND of OR-clauses.</li>
+ * </ul>
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>This abstraction keeps "formula as syntax tree" separate from
+ * "formula as a normal-form list-of-lists representation".
  */
 
 import java.util.List;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
+
 public abstract class FormulaUNormalnoj extends Formula{
   public abstract List disjunktivnojFormi();
   public abstract List konjunktivnojFormi();
