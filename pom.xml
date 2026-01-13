@@ -4,112 +4,92 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>eu.treeofknowledge</groupId>
-   <artifactId>TreeOfKnowledge</artifactId>
-    <version>1.0.0</version>
+  <groupId>eu.treeofknowledge</groupId>
+  <artifactId>TreeOfKnowledge</artifactId>
+  <version>1.0.0</version>
 
-    <properties>
-        <maven.compiler.release>21</maven.compiler.release>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
-    <dependencies>
-        <!-- Logging (ako ga koristiš) -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.12</version>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <!-- prazno, kako si htjela -->
+  </dependencies>
 
-    <build>
-        <plugins>
+  <build>
+    <!-- ovo određuje bazno ime svih jar-ova -->
+    <finalName>TreeOfKnowledge-1.0.0</finalName>
 
-            <!-- KOMPILACIJA -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                </configuration>
-            </plugin>
+    <plugins>
 
-            <!-- LOKALNO POKRETANJE -->
- <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <version>3.6.0</version>
+      <!-- KOMPILACIJA -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+        </configuration>
+      </plugin>
 
-    <executions>
+      <!-- JAR-ovi (3 kom) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
 
-        <!-- 1) First-Order Logic kalkulator (isti kao do sada) -->
-        <execution>
-            <id>first-order-assembly</id>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-            <configuration>
-                <finalName>TreeOfKnowledge-1.0.0</finalName>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-                <archive>
-                    <manifest>
-                        <mainClass>firstorder.Calc</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </execution>
-
-        <!-- 2) SIMPLE PROPOSITIONAL TREE – BEGINNER MODE -->
-        <execution>
-            <id>propositional-assembly</id>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-            <configuration>
-                <finalName>PropositionalTree-1.0.0</finalName>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-                <archive>
-                    <manifest>
-                        <mainClass>propositional.Calc</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </execution>
-
-        <!-- 3) PROPOSITIONAL MINIMIZATION – NORMAL FORMS -->
-<execution>
-    <id>prop-minimization-assembly</id>
-    <phase>package</phase>
-    <goals>
-        <goal>single</goal>
-    </goals>
-    <configuration>
-        <finalName>PropositionalMinimization-1.0.0</finalName>
-        <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-        <archive>
+        <!-- DEFAULT JAR = FOL -->
+        <configuration>
+          <archive>
             <manifest>
-                <mainClass>propMinimization.Calc</mainClass>
+              <mainClass>firstorder.Calc</mainClass>
             </manifest>
-        </archive>
-    </configuration>
-</execution>
+          </archive>
+        </configuration>
 
+        <executions>
 
-    </executions>
-</plugin>
+          <!-- 2) PROPOSITIONAL TREE -->
+          <execution>
+            <id>propositional-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>propositional</classifier>
+              <archive>
+                <manifest>
+                  <mainClass>propositional.Calc</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+          </execution>
 
-        </plugins>
-    </build>
+          <!-- 3) PROPOSITIONAL MINIMIZATION -->
+          <execution>
+            <id>propMinimization-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>propMinimization</classifier>
+              <archive>
+                <manifest>
+                  <mainClass>propMinimization.Calc</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
 
 </project>
