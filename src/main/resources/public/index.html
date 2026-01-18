@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator for 1. ORDER LOGIC formulas ⇒ Best CORE OF XAI</title>
+
+  <!-- Google tag (gtag.js) ✅ Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-559QZJ3JC8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-559QZJ3JC8');
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="TreeOfKnowledge.eu – Best CORE OF XAI">
+  <meta property="og:description"
+    content="Original logical tree engines (2002–2025). Explore First-Order Logic, propositional trees, and minimal forms.">
+  <meta property="og:image" content="https://treeofknowledge.eu/assets/og-CoreOfXAI.png">
+  <meta property="og:url" content="https://treeofknowledge.eu">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="JAnica Tesla Zrinski" />
+  <meta property="article:published_time" content="2025-01-01T00:00:00+01:00" />
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TreeOfKnowledge.eu – Best CORE OF XAI" />
+  <meta name="twitter:description"
+    content="Original logical tree engines (2002–2025). Explore First-Order Logic, propositional trees, and minimal forms." />
+  <meta name="twitter:image" content="https://treeofknowledge.eu/assets/og-StabloSpoznaje2002.png" />
+  <meta name="twitter:url" content="https://treeofknowledge.eu/" />
+
+  <style>
+    :root {
+      --bg: #070b0a;
+      --panel: #0d1412;
+      --grid: #0f1c17;
+      --fg: #e8ffe8;
+      --muted: #9dd6a6;
+      --matrix: #00e676;
+      --accent: #c6a700;
+      --shadow: 0 30px 80px rgba(0, 230, 118, .08), 0 8px 24px rgba(198, 167, 0, .12);
+      --radius: 16px;
+      --highlight: #ffff00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.6 ui-sans-serif, system-ui, Segoe UI, Roboto, Arial;
+      color: var(--fg);
+      background:
+        radial-gradient(1200px 600px at 30% -10%, rgba(0, 230, 118, .08), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(198, 167, 0, .08), transparent 55%),
+        var(--bg);
+      letter-spacing: .2px;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 40px auto 56px;
+      padding: 0 20px;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      text-align: center;
+      margin: 0 0 18px 0;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: clamp(22px, 3.2vw, 32px);
+      line-height: 1.2;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 28px;
+      align-items: center;
+      background: linear-gradient(180deg, var(--panel), #0b120f);
+      border: 1px solid rgba(0, 230, 118, .25);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid rgba(198, 167, 0, .35);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .35);
+      background: #000;
+    }
+
+    .hero h1,
+    .hero h2 {
+      font-size: clamp(22px, 3.2vw, 32px);
+      line-height: 1.2;
+      margin: 0 0 10px 0;
+    }
+
+    .hero .sub {
+      font-size: 16px;
+      margin: 0 0 14px 0;
+      color: var(--muted);
+    }
+
+    .matrix {
+      color: var(--matrix);
+      text-shadow: 0 0 12px rgba(0, 230, 118, .45);
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      background: linear-gradient(180deg, #0f1c17, #0c1713);
+      color: var(--fg);
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      user-select: none;
+      transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 2px 0 rgba(198, 167, 0, .35);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      box-shadow: 0 6px 22px rgba(198, 167, 0, .18);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn[disabled] {
+      opacity: .55;
+      cursor: not-allowed;
+      filter: grayscale(.2);
+      border-style: dashed;
+    }
+
+    .btn.primary {
+      background: linear-gradient(180deg, #15281f, #112018);
+      border-color: var(--matrix);
+      box-shadow: 0 2px 0 rgba(0, 230, 118, .35);
+    }
+
+    .btn.primary:hover {
+      box-shadow: 0 8px 26px rgba(0, 230, 118, .22);
+    }
+
+    /* Footer layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      font-size: .85rem;
+      color: #ccc;
+      border-top: 1px solid #333;
+      margin-top: .5rem;
+      padding-top: .7rem;
+    }
+
+    @media (max-width:820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero img {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      footer {
+        text-align: center;
+      }
+    }
+
+    @media (max-width:700px) {
+      footer {
+        flex-direction: column;
+        gap: .25rem;
+      }
+    }
+
+    .left,
+    .right {
+      color: #cfead6;
+    }
+
+    .mid {
+      justify-self: center;
+    }
+
+    .right {
+      justify-self: end;
+    }
+
+    /* WARNING / YELLOW HIGHLIGHT */
+    .warning,
+    .warn-highlight {
+      color: var(--highlight);
+      font-weight: 700;
+      text-shadow:
+        0 0 6px rgba(255, 255, 0, .35),
+        0 0 14px rgba(255, 255, 0, .18);
+    }
+
+    /* INSTRUCTIONS */
+    .instructions {
+      text-align: center;
+    }
+
+    .instructions h2 {
+      text-align: center;
+      margin: 0 0 2px 0;
+      /* smanjen razmak ispod naslova */
+    }
+
+    .instructions ol {
+      text-align: left;
+      max-width: 720px;
+      margin: 0 auto;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .instructions p,
+    .instructions li {
+      font-size: 16px;
+    }
+
+    .instruction-hint {
+      margin-top: 16px;
+      text-align: left;
+      color: #00e676;
+      font-weight: 700;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* OPEN SOURCE / SOURCE SECTION */
+    #source.hero {
+      grid-template-columns: 1fr;
+      padding: 22px;
+      max-width: 1080px;
+      margin: 40px auto 20px;
+      text-align: center;
+    }
+
+    #source .small {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    /* “priljubljivanje” – kontrolirano, bez gušenja posvete */
+    #source .source-line {
+      margin: 0 0 1px 0;
+      color: var(--muted);
+    }
+
+    #source .repo-line {
+      margin: 2px 0 1px 0;
+      color: var(--muted);
+    }
+
+    #source .btn {
+      margin: 0 auto;
+    }
+
+    /* gumbi ne plutaju */
+    #source .btn+.repo-line {
+      margin-top: 1px;
+    }
+
+    /* Academic lines (NE žuta, tiho) */
+    #source .badge-academic {
+      display: block;
+      margin: 16px 0 1px 0;
+      /* malo zraka prije akademskog bloka */
+      color: var(--fg);
+      opacity: 0.95;
+    }
+
+    #source .academic-note {
+      margin: 0 0 1px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.85;
+      /* dogovoreni manji opacity */
+    }
+
+    /* Dedication (žuta) */
+    .dedication {
+      margin: 14px 0 0 0;
+      color: var(--highlight) !important;
+    }
+
+    @media (max-width:700px) {
+      #source.hero {
+        padding: 18px;
+      }
+
+      #source .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="page-header">
+      <h1>
+        <span class="matrix">Calculator for 1. ORDER LOGIC formulas</span>
+        <span style="opacity:.72">⇒</span>
+        Best CORE OF XAI
+      </h1>
+    </header>
+
+    <!-- HERO MAIN CALCULATOR -->
+    <section class="hero">
+      <img src="assets/TreeOfKnowledge.png" alt="Tree Of Knowledge — preview" />
+      <div>
+        <p class="sub">
+          Originally designed for teaching and learning <strong>mathematical logic</strong>.
+        </p>
+
+        <p class="security-note">
+          <span class="warning">⚠</span>
+          It will work <span class="warning">only if</span> you have installed Java:<!--br-->
+          <a href="https://adoptium.net/temurin/releases/?version=21&package=jdk" target="_blank" rel="noopener">
+            Download recommended version <!--(Temurin 21 LTS) -->
+          </a>
+        </p>
+
+        <div class="actions">
+          <a id="dl-firstorder-jar" class="btn primary" href="downloads/TreeOfKnowledge-1.0.0.jar" download>
+            💻 Download on PC &amp; RUN
+          </a>
+
+        </div>
+
+        <p class="note-security">
+          Don’t trust me, but scan downloaded JARs on:
+          <a href="https://www.virustotal.com" target="_blank" rel="noopener">VirusTotal</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- INSTRUCTIONS BLOCK -->
+    <section class="hero instructions" style="margin-top:40px; border-color:rgba(198,167,0,.35)">
+      <div style="grid-column: span 2;">
+        <h2><span class="matrix">Instructions</span></h2>
+      </div>
+
+      <div style="padding:12px 4px; grid-column: span 2;">
+        <ol>
+          <li>
+            Select any of the <strong>READY-MADE EXAMPLE</strong> formulas of First-Order Logic and press
+            <strong>ENTER</strong>.
+          </li>
+
+          <li style="margin-top:12px;">
+            <p>Try to <strong>FOLLOW THE PATTERN</strong> you observe in the example formulas.</p>
+
+            <p>
+              <strong>Note:</strong> Predicate <strong>P</strong> may take <strong>two variables</strong>,
+              while <strong>Q</strong> takes <strong>only one</strong>.
+            </p>
+
+            <p style="color:#00e676; font-weight:700;">
+              <strong>Valid examples:</strong>
+              ∀x∃y&nbsp;Pxy, ∀y&nbsp;Qy, ∃x&nbsp;Qx
+            </p>
+
+            <p class="warn-highlight">
+              <strong>Invalid example:</strong>
+              ∃x∀y&nbsp;Qxy
+            </p>
+
+            <p>
+              If you make a mistake, the <strong>INVALID</strong> part of the input will be automatically removed.
+            </p>
+
+            <p style="margin-top:10px; color:var(--muted);">
+              <strong>[Note on syntax:</strong>
+              Logical grouping parentheses are intentionally omitted for practical simplicity.
+              Predicates are written in compact form:
+              <span class="warning">Pxy instead of P(x,y)</span>.]
+            </p>
+          </li>
+
+          <li style="margin-top:12px;">
+            Try the <strong>“−(formula)”</strong> button — it negates the entire formula.
+            Then press <strong>ENTER</strong> again and observe the changes in the calculator window.
+          </li>
+        </ol>
+
+        <!-- TECHNICAL / WORKING EXPLANATION (PRE-END) -->
+        <div style="
+  max-width:720px;
+  margin:24px auto 10px auto;
+  padding:14px 16px;
+  border:1px dashed rgba(0,230,118,.35);
+  border-radius:12px;
+  background:rgba(0,0,0,.25);
+">
+
+          <p style="margin:0 0 8px 0; font-weight:700; color:var(--matrix);">
+            Technical &amp; Working Explanation
+          </p>
+
+          <p style="margin:0 0 8px 0; color:var(--muted); font-size:15px;">
+            This calculator is based on recursive decomposition of logical formulas into
+            primitive connectives, represented as exact syntax trees.
+          </p>
+
+          <p style="margin:0 0 8px 0; color:var(--muted); font-size:15px;">
+            Internally, the representation corresponds to a
+            <strong>De Morgan Negation Normal Form (NNF) Abstract Syntax Tree (AST)</strong>,
+            where negations are systematically pushed down to the atomic level.
+          </p>
+
+          <p style="font-size:13px; opacity:0.8;">
+            [ChatGPT observation: “This looks like the DNA of common sense.”]
+          </p>
+
+          <p style="margin:0; font-size:14px;">
+            👉 Full technical description:
+            <a href="https://github.com/JAnicaTZ/TreeOfKnowledge#readme" target="_blank" rel="noopener"
+              style="color:var(--accent); font-weight:700;">
+              README on GitHub
+            </a>
+          </p>
+
+        </div>
+
+
+        <p class="instruction-hint">
+          IF THIS SEEMS TOO COMPLICATED AT FIRST, PLEASE PROCEED TO THE MUCH SIMPLER PROPOSITIONAL TREE BELOW (Beginner
+          mode).
+        </p>
+      </div>
+    </section>
+
+    <!-- HERO PROPOSITIONAL CALCULATOR -->
+    <section class="hero">
+      <img src="assets/PropositionalTree.png" alt="SIMPLE Tree Of Knowledge — preview" decoding="async" />
+      <div>
+        <h1><span class="matrix">🟦 SIMPLE TREE</span></h1>
+        <p class="sub">THE BLUE COLOR WILL GUIDE YOU STEP BY STEP.</p>
+
+        <div class="actions">
+          <a id="dl-simpleprop-jar" class="btn primary" href="downloads/TreeOfKnowledge-1.0.0-propositional.jar"
+            download>
+            💻 Download on PC &amp; RUN
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPOSITIONAL MINIMIZATION BLOCK -->
+    <section class="hero" style="margin-top:40px; border-color:rgba(198,167,0,.35)">
+      <img src="assets/PropositionalMinimization.png" alt="Minimization calculator for propositional logic — preview"
+        decoding="async" />
+      <div>
+        <h2 style="margin:0 0 6px 0; line-height:1.2;">
+          <span class="matrix">PROPOSITIONAL logic </span>
+          <span style="opacity:.72">⇒</span>
+          MINIMAL NORMAL FORMS
+        </h2>
+
+        <div class="actions">
+          <a id="dl-minimization-jar" class="btn primary" href="downloads/TreeOfKnowledge-1.0.0-propMinimization.jar"
+            download>
+            💻 Download on PC &amp; RUN
+          </a>
+        </div>
+
+        <p class="small-note">
+          🔄 Calculators last updated: 12. 1. 2026.
+        </p>
+
+      </div>
+    </section>
+
+
+    <hr>
+
+    <!-- OPEN SOURCE / GITHUB / ACADEMIC / DEDICATION -->
+    <section id="source" class="hero">
+      <p class="source-line">
+        Licenced open-source project. Full source code and releases are maintained on GitHub.
+      </p>
+
+      <a id="gh-source" class="btn" href="https://github.com/JAnicaTZ/TreeOfKnowledge" target="_blank" rel="noopener"
+        style="display:inline-flex; align-items:center; gap:8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"
+          style="fill: var(--matrix); opacity:0.8;">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+        </svg>
+        View source on GitHub
+      </a>
+
+      <span class="badge-academic">
+        🎓 Academic / Educational use: PMF, University of Zagreb (2002) · Public release: 2025
+      </span>
+
+      <p class="academic-note">
+        Please contact the author for long-term or institutional use.
+      </p>
+
+      <p class="dedication">
+        Dedicated to every child who dies from starvation —
+        1 every 10 seconds, around 10,000 each day.
+      </p>
+      <p class="small-note" style="margin-top:12px;">
+        ❤️ So if you like this project, please consider supporting a meal for a child:
+        <a href="https://marysmeals.org" target="_blank" rel="noopener">https://marysmeals.org</a>
+      </p>
+
+    </section>
+
+    <div style="margin-top:30px; text-align:center; opacity:0.85;">
+      <button id="copy-link-btn" class="btn">
+        🔗 Copy link
+      </button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container">
+      <footer>
+        <div style="flex:1;"></div>
+        <div class="mid" style="text-align:center;">
+          © 2002–2025 JAnica Tesla Zrinski — All rights reserved.
+        </div>
+        <div class="right" style="flex:1; text-align:right;">
+          Contact: janica.tesla.zrinski@gmail.com
+        </div>
+      </footer>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
