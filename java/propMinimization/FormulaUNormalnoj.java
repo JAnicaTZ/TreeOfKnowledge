@@ -1,32 +1,24 @@
 package propMinimization;
-/**
- * PROPOSITIONAL LOGIC – MINIMIZATION CALCULATOR
- * Minimal Normal Forms & Prime Implicants
- * Part of the TreeOfKnowledge.eu project.
- *
-* 🕯 Dedicated to every unborn child lost to abortion — an estimated ~200 000 each day worldwide. (Based on WHO global estimates of ~73 million abortions per year.)
- *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
- */
 
+/**
+ * Marker/contract for formulas that can be converted to normal forms.
+ *
+ * <p>Some nodes (like literals/atoms and boolean connectives) naturally support conversion to:
+ *
+ * <ul>
+ *   <li>DNF (Disjunctive Normal Form) - OR of AND-clauses,
+ *   <li>CNF (Conjunctive Normal Form) - AND of OR-clauses.
+ * </ul>
+ *
+ * <p>This abstraction keeps "formula as syntax tree" separate from "formula as a normal-form
+ * list-of-lists representation".
+ */
 import java.util.List;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
-public abstract class FormulaUNormalnoj extends Formula{
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
+
+public abstract class FormulaUNormalnoj extends Formula {
   public abstract List disjunktivnojFormi();
+
   public abstract List konjunktivnojFormi();
 }

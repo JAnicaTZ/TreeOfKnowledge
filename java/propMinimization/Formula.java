@@ -1,43 +1,39 @@
 package propMinimization;
-/**
- * PROPOSITIONAL LOGIC – MINIMIZATION CALCULATOR
- * Minimal Normal Forms & Prime Implicants
- * Part of the TreeOfKnowledge.eu project.
- *
-* 🕯 Dedicated to every unborn child lost to abortion — an estimated ~200 000 each day worldwide. (Based on WHO global estimates of ~73 million abortions per year.)
- *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
- *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
- */
 
+/**
+ * Base class for all propositional formulas (AST nodes).
+ *
+ * <p>This project represents formulas as a tree (Abstract Syntax Tree). Each concrete subclass
+ * implements:
+ *
+ * <ul>
+ *   <li>String rendering (pretty printing),
+ *   <li>tree rendering for Swing {@code JTree} visualization,
+ *   <li>structural transformations (e.g., pushing negations down),
+ *   <li>optional conversion to normal forms (DNF/CNF) where applicable.
+ * </ul>
+ *
+ * <p>The core idea: build a formula tree once, then reuse it for: visualization, normalization,
+ * evaluation over valuations, and highlighting satisfying assignments.
+ */
 import javax.swing.tree.DefaultMutableTreeNode;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
-public abstract class Formula implements Cloneable{
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
+
+public abstract class Formula implements Cloneable {
   public abstract String toString();
+
   public abstract DefaultMutableTreeNode prikazFormule();
 
-  public Object clone(){
+  public Object clone() {
     Object klon = null;
-    try{
+    try {
       klon = super.clone();
-    } catch(CloneNotSupportedException e){
+    } catch (CloneNotSupportedException e) {
       System.err.println("Kloniranje nije moguce!");
     }
     return klon;
   }
-  public abstract Formula eliminiramNegacije();// || deMorgan()!!
+
+  public abstract Formula eliminiramNegacije(); // || deMorgan()!!
 }

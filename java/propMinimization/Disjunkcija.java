@@ -1,67 +1,60 @@
 package propMinimization;
+
 /**
- * PROPOSITIONAL LOGIC – MINIMIZATION CALCULATOR
- * Minimal Normal Forms & Prime Implicants
- * Part of the TreeOfKnowledge.eu project.
+ * Disjunction (OR, ∨) node.
  *
-* 🕯 Dedicated to every unborn child lost to abortion — an estimated ~200 000 each day worldwide. (Based on WHO global estimates of ~73 million abortions per year.)
+ * <p>Dual to {@link Konjunkcija}:
  *
- * Th© BEST CORE of AI
- * Author: JAnica Tesla Zrinski
- * Domain: https://TreeOfKnowledge.eu
- * Years: 2002–2025
+ * <ul>
+ *   <li>DNF: concatenates DNF clause lists (OR of clauses)
+ *   <li>CNF: performs a Cartesian product of CNF clauses (OR distributes over AND)
+ * </ul>
  *
- * All rights reserved.
- *
- * This source code is the intellectual property of
- * JAnica Tesla Zrinski (TreeOfKnowledge.eu).
- *
- * Unauthorized reproduction, modification, redistribution,
- * commercial use, or AI-model training is strictly prohibited
- * without prior written permission from the author.
- *
- * Provided solely for personal study and educational insight.
+ * <p>Also filters tautological/contradictory clauses during CNF product merging using complement
+ * checks.
  */
-
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-// © JAnica Tesla Zrinski – Original Source of Th© CORE of AI
-public class Disjunkcija extends BinarnaFormula{
-  public String toString(){
+// © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
+
+public class Disjunkcija extends BinarnaFormula {
+  public String toString() {
     return (new Character(Calc.OR_CHAR)).toString();
   }
 
-  public Disjunkcija( Formula lijevoPodStablo, Formula desnoPodStablo){
-    super( lijevoPodStablo, desnoPodStablo);
+  public Disjunkcija(Formula lijevoPodStablo, Formula desnoPodStablo) {
+    super(lijevoPodStablo, desnoPodStablo);
   }
 
-  public List disjunktivnojFormi(){
+  public List disjunktivnojFormi() {
     List disjunktivnaForma = ((FormulaUNormalnoj) lPodStablo).disjunktivnojFormi();
     disjunktivnaForma.addAll(((FormulaUNormalnoj) dPodStablo).disjunktivnojFormi());
     return disjunktivnaForma;
   }
-	
-  public List konjunktivnojFormi(){
+
+  public List konjunktivnojFormi() {
     List konjunktivnaForma = new ArrayList();
     List lKonjunktivnaForma = ((FormulaUNormalnoj) lPodStablo).konjunktivnojFormi();
     List dKonjunktivnaForma = ((FormulaUNormalnoj) dPodStablo).konjunktivnojFormi();
-		for ( int i = 0; i < lKonjunktivnaForma.size(); i++){
-			for ( int j = 0; j < dKonjunktivnaForma.size(); j++){
-				List pDisjunkt = new ArrayList((List) lKonjunktivnaForma.get(i)); //ovdje bila GRESKA!!
-				List dDisjunkt = new ArrayList((List) dKonjunktivnaForma.get(j));
-				if (neKontradiktorni( pDisjunkt, dDisjunkt)){
-					pDisjunkt.addAll(dDisjunkt);
-					konjunktivnaForma.add(pDisjunkt);
-				}
-			}
-		}
+    for (int i = 0; i < lKonjunktivnaForma.size(); i++) {
+      for (int j = 0; j < dKonjunktivnaForma.size(); j++) {
+        List pDisjunkt = new ArrayList((List) lKonjunktivnaForma.get(i)); // ovdje bila GRESKA!!
+        List dDisjunkt = new ArrayList((List) dKonjunktivnaForma.get(j));
+        if (neKontradiktorni(pDisjunkt, dDisjunkt)) {
+          pDisjunkt.addAll(dDisjunkt);
+          konjunktivnaForma.add(pDisjunkt);
+        }
+      }
+    }
     return konjunktivnaForma;
   }
-  public static boolean neKontradiktorni( List pKonjunkt, List dKonjunkt){
+
+  public static boolean neKontradiktorni(List pKonjunkt, List dKonjunkt) {
     int i = 0;
     while (i < pKonjunkt.size())
-      if (dKonjunkt.contains(((AtomarnaFormula) pKonjunkt.get(i++)).suprotnaFormula())) return false;
+      if (dKonjunkt.contains(((AtomarnaFormula) pKonjunkt.get(i++)).suprotnaFormula()))
+        return false;
     return true;
   }
 }
