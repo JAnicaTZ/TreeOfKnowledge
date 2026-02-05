@@ -96,9 +96,7 @@ Tested with:
 
 Compile all sources and run the GUI launcher class from the desired package.
 
-Examples:
-java propositional.Calc
-java propMinimization.Calc
+Example: java propositional.Calc
 
 You can also run the project directly from any Java IDE by launching the  
 corresponding `Calc` class.
