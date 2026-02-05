@@ -1,124 +1,111 @@
-# TreeOfKnowledge – Propositional & First-Order LOGIC (FOL) Tree CALCULATOR
+# TreeOfKnowledge – Propositional & First-Order Logic Tree Calculator
 
 **Author:** JAnica Tesla Zrinski  
-**Project:** “Tree of Knowledge” — original Java logic tree calculator (2002–2025).
+Original Java logic tree engine (2002–2004).  
+Originally developed as a university diploma project (PMF, Zagreb).
 
-This repository contains the **core Java source code** of a logic
-calculator first developed around 2002 (source preserved as originally written, 2004).
-Packaging/build scripts may evolve over time.
+This repository contains the **core Java source code** of a symbolic logic
+calculator originally developed around 2002 (source preserved from the 2004 version).
 
 
 ## How it works (technical)
 
-TreeOfKnowledge is a symbolic reasoning engine that constructs an explicit
-**Abstract Syntax Tree (AST)** for propositional and first-order logic formulas
-and applies **De Morgan–based transformations** to normalize them.
+TreeOfKnowledge is a symbolic reasoning engine that constructs an explicit  
+**Abstract Syntax Tree (AST)** for propositional and first-order logic formulas.
 
-Internally, formulas are transformed into **De Morgan Negation Normal Form (NNF)**
-and represented as an explicit **Abstract Syntax Tree (AST)**, where all negations
-are systematically pushed down to the atomic level using De Morgan’s laws and
-quantifier dualities.
+Formulas are recursively decomposed into primitive connectives  
+{¬ (NOT), ∧ (AND), ∨ (OR)} and transformed via **De Morgan’s laws** into a  
+**Negation Normal Form (NNF)** AST, with negations pushed down to the atomic level.
 
-Parsing, evaluation, and visualization follow the same recursive structure,
-making the reasoning **transparent and auditable** — not a black box.
+Parsing, evaluation, and visualization follow the same recursive structure —  
+making the reasoning **transparent, inspectable, and auditable** rather than a black box.
 
 
 ## Official website
 
-The website presents the same core logic through interactive calculators
-and beginner-friendly visualizations.
-
-The public-facing version of the project, including ready-to-run calculators,
-examples, and usage information, is available at:
+Interactive calculators, runnable demos, and user-oriented explanations:
 
 🌳 **https://TreeOfKnowledge.eu**
 
-This repository contains the **core Java logic engine** behind the website.
+This repository contains the **core Java logic engine** behind the website.  
+The website itself is maintained as a separate static project.
 
 
 ## Core idea
 
-The goal is not just to produce results, but to expose
-**auditable, step-by-step reasoning traces** through explicit tree transformations.
+The goal is not only to compute logical results, but to expose  
+**step-by-step reasoning through explicit tree transformations.**
 
 
-## Relevance to education
+## Educational relevance
 
-TreeOfKnowledge is designed primarily as a **pedagogical tool** for teaching
-propositional and first-order logic.
+Designed as a **pedagogical tool** for propositional and first-order logic.
 
-By exposing the **Abstract Syntax Tree (AST)** explicitly, the system helps
-students move beyond linear symbolic notation and understand:
-- the hierarchical structure of formulas  
-- the scope and nesting of quantifiers  
-- the role of logical connectives  
-- step-by-step transformations such as normalization to NNF  
+The explicit AST representation helps learners understand:
 
-The tree representation turns logical reasoning into a **concrete and inspectable object**, which can be especially helpful in introductory logic, discrete mathematics, and computer science courses.
+- hierarchical formula structure  
+- quantifier scope and nesting  
+- logical connective roles  
+- normalization steps (e.g. NNF)
 
-The same explicit AST representation that supports learning and teaching also illustrates core ideas behind transparent and explainable reasoning systems.
+Logical reasoning becomes a **concrete, visual, inspectable structure**, useful in  
+logic, discrete mathematics, and computer science education.
 
 
-## Relevance to explainable AI (XAI)
+## Explainable AI relevance (XAI)
 
-By making logical structure explicit through Abstract Syntax Trees (ASTs) and step-by-step transformations, TreeOfKnowledge exposes
-**transparent and auditable reasoning traces**.
+By exposing structure and transformation steps through ASTs,  
+the engine demonstrates principles aligned with **symbolic and explainable AI** —  
+where reasoning paths are visible and verifiable.
 
-This naturally aligns with symbolic approaches to **explainable AI (XAI)**,
-where understanding *how* a conclusion is reached is as important as the
-conclusion itself.
-
+TreeOfKnowledge illustrates how symbolic logic trees can serve as a minimal,  
+fully inspectable model of explainable reasoning.
 
 
 ---
 
-The project includes:
+## Included in this repository
 
-- Parsing propositional & first-order logic formulas  
-- Building a **tree representation**  
-- Simple Swing GUI  
-- Pure Java logic engine (no frameworks)
+- Formula parsing and AST construction  
+- Propositional & first-order logic support  
+- Tree-based transformations  
+- Simple Swing GUI demo  
+- Pure Java engine (no external frameworks)
 
----
+Documentation files:
 
-## 1. Contents
+- `LICENSE.txt`  
+- `ORIGIN-2002.txt`  
+- `README.md`
 
-- Core algorithm for formula parsing & tree construction  
-- Java source files of the logic engine  
-- GUI launcher  
-- Documentation:
-  - `LICENSE.txt`  
-  - `ORIGIN-2002.txt`  
-  - `README.md`
 
 ---
 
-## 2. Not included
+## Requirements
 
-- No HTML/CSS/JS  
-- No website code  
-- No server/backend (Javalin, Nginx, etc.)  
-- No frontend from TreeOfKnowledge.eu  
+- Java 8+ (the core engine was originally developed on much earlier Java versions)
 
-For the public-facing calculators and downloads, see the official website:
-https://TreeOfKnowledge.eu
+Tested with:
+
+- Java 21 (Temurin)
+- VS Code
+- IntelliJ IDEA
+
+
+## Running
+
+Compile all sources and run the GUI launcher class from the desired package.
+
+Examples:
+java propositional.Calc
+java propMinimization.Calc
+
+You can also run the project directly from any Java IDE by launching the  
+corresponding `Calc` class.
+
 
 ---
 
-## Distribution
+## Contact
 
-Source code and releases are maintained on GitHub.
-Executable JARs are provided on the official website.
-
----
-
-## 3. Requirements
-
-- Java **21+** (LTS recommended): https://adoptium.net/temurin/releases/?version=21  
-- Any Java IDE or build tool (Maven / CLI)
-
----
-
-## 4. Running the program
-
-Compile all sources and run:
+For academic collaboration or licensing inquiries — please contact the author.
