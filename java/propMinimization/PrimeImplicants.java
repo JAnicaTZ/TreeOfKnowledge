@@ -10,17 +10,17 @@ package propMinimization;
  */
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 // © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
 
 public class PrimeImplicants {
-  public static List normalnaForma = new ArrayList();
-  ;
+  public static List normalnaForma = new ArrayList();;
 
   public static List primeImplicants(List forma) {
     if (!forma.isEmpty() && !forma.contains(new String("tautologija;)!)"))) {
       normalnaForma = forma;
-      izbaciUkljuceneDisjunkte();
+      reduceBySubsumption();
       List prethodnoSuglasje = new ArrayList();
       List suglasje = suglasje(prethodnoSuglasje);
       if (suglasje.contains(new AtomarnaFormula('T'))) {
@@ -33,7 +33,7 @@ public class PrimeImplicants {
           && !suglasje.contains(new AtomarnaFormula('T'))
           && (!suglasje.equals(prethodnoSuglasje))) {
         normalnaForma.add(suglasje);
-        izbaciUkljuceneDisjunkte();
+        reduceBySubsumption();
         prethodnoSuglasje = suglasje;
         suglasje = suglasje(prethodnoSuglasje);
         if (suglasje.contains(new AtomarnaFormula('T'))) {
@@ -72,23 +72,45 @@ public class PrimeImplicants {
                 literal = (AtomarnaFormula) suglasje.get(k - 1);
                 if (suglasje.indexOf(literal) != suglasje.lastIndexOf(literal))
                   suglasje.remove(suglasje.lastIndexOf(literal));
-                if (suglasje.contains(literal.suprotnaFormula())) suglasje = new ArrayList();
+                if (suglasje.contains(literal.suprotnaFormula()))
+                  suglasje = new ArrayList();
               }
             }
           }
         }
-        if (suglasje.equals(prethodnoSuglasje)) suglasje = new ArrayList();
+        if (suglasje.equals(prethodnoSuglasje))
+          suglasje = new ArrayList();
         else {
           int n = 0;
           while (!suglasje.isEmpty() && ++n <= normalnaForma.size()) // cool
-          if (suglasje.containsAll((List) normalnaForma.get(n - 1))) suglasje = new ArrayList();
+            if (suglasje.containsAll((List) normalnaForma.get(n - 1)))
+              suglasje = new ArrayList();
         }
       }
     }
     return suglasje;
   }
 
-  public static void izbaciUkljuceneDisjunkte() { // vrlo osjetljiv dio koda!
+  /**
+   * Reduces a set of implicants by subsumption (absorption).
+   * <p>
+   * An implicant I1 subsumes implicant I2 if the set of literals of I1 is a
+   * subset
+   * of the literals of I2. In that case, I2 is redundant and can be removed
+   * without
+   * changing the Boolean function represented by the disjunction of implicants.
+   *
+   * This corresponds to the logical law:
+   *
+   * <pre>
+   * I1 ∨ I2  =  I1   if  I1 ⊆ I2
+   * </pre>
+   *
+   * @param implicants a list of implicants, each represented as a set of literals
+   */
+  // private static void reduceBySubsumption(List<Set<Literal>> implicants)
+
+  public static void reduceBySubsumption() { // vrlo osjetljiv dio koda!
     int i = 0;
     while (i < normalnaForma.size()) {
       List pDisjunkt = (List) normalnaForma.get(i);
@@ -98,13 +120,16 @@ public class PrimeImplicants {
         List dDisjunkt = (List) normalnaForma.get(j);
         if (dDisjunkt.containsAll(pDisjunkt)) {
           normalnaForma.remove(j);
-        } else j++;
+        } else
+          j++;
         if (pDisjunkt.containsAll(dDisjunkt) && (pDisjunkt.size() != dDisjunkt.size()))
           ukloniTekuci = true;
       }
       if (ukloniTekuci) {
         normalnaForma.remove(i);
-      } else i++;
+      } else
+        i++;
     }
   }
+
 }

@@ -58,6 +58,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
+
+import common.UIStrings;
 
 // java.lang.* se automatski dodaje
 
@@ -66,10 +71,12 @@ import javax.swing.*;
 class Calc extends JFrame implements ActionListener {
   public static final char NEGACIJA_CHAR = '\u00AC';
   public static final char LIJEVA_ZAGRADA = '(';
+  // @MIN Enigma
   public static final char P_CHAR = 'A';
   public static final char Q_CHAR = 'B';
   public static final char R_CHAR = 'C';
   public static final char S_CHAR = 'D';
+
   static ArrayList propozicVarijable = new ArrayList();
 
   static {
@@ -130,7 +137,8 @@ class Calc extends JFrame implements ActionListener {
   static JPanel stablaPanel;
 
   public Calc() {
-    super("MINIMAL NORMAL  FORMS  of Propositional Logic Formulas (DNF/CNF)");
+    // super("MINIMAL NORMAL FORMS of Propositional Logic Formulas (DNF/CNF)");
+    super(UIStrings.TITLE_MINIMIZATION);
 
     // @MIN LOOK Nice
     getContentPane().setLayout(new GridLayout(1, 2));
@@ -153,16 +161,10 @@ class Calc extends JFrame implements ActionListener {
     calculatorPanelGBLayout.setConstraints(displayPanel, gbcDisplayPanel);
     calculatorPanel.add(displayPanel);
 
-    GridBagConstraints gbcKeyPanel = new GridBagConstraints();
-    gbcKeyPanel.gridx = 0;
-    gbcKeyPanel.gridy = 1;
-    gbcKeyPanel.gridwidth = 1;
-    gbcKeyPanel.gridheight = 1;
-    gbcKeyPanel.fill = GridBagConstraints.BOTH;
     JPanel keysPanel = new JPanel(new GridLayout(5, 3));
 
     clear = new JButton(" CLEAR ");
-    clear.setFont(new Font("Times Roman", Font.PLAIN, 23));
+    clear.setFont(new Font("Times Roman", Font.PLAIN, 21));
     clear.setForeground(Color.yellow);
     clear.addActionListener(this);
     keysPanel.add(clear);
@@ -213,14 +215,23 @@ class Calc extends JFrame implements ActionListener {
     akko.addActionListener(this);
     keysPanel.add(akko);
     enter = new JButton(" ENTER ");
-    enter.setFont(new Font("Times Roman", Font.PLAIN, 33));
+    enter.setFont(new Font("Times Roman", Font.PLAIN, 27));
     enter.setForeground(Color.yellow);
     enter.setBorder(BorderFactory.createLineBorder(Color.yellow, 2));
     enter.addActionListener(this);
     keysPanel.add(enter);
+
+    GridBagConstraints gbcKeyPanel = new GridBagConstraints();
+    gbcKeyPanel.gridx = 0;
+    gbcKeyPanel.gridy = 1;
+    gbcKeyPanel.gridwidth = 1;
+    gbcKeyPanel.gridheight = 1;
+    gbcKeyPanel.fill = GridBagConstraints.BOTH;
+
     calculatorPanelGBLayout.setConstraints(keysPanel, gbcKeyPanel);
     calculatorPanel.add(keysPanel);
 
+    // @MIN LOOK Nice
     GridBagConstraints gbcMinimalneNormalneForme = new GridBagConstraints();
     gbcMinimalneNormalneForme.gridx = 0;
     gbcMinimalneNormalneForme.gridy = 2;
@@ -228,10 +239,17 @@ class Calc extends JFrame implements ActionListener {
     gbcMinimalneNormalneForme.gridheight = 1;
     gbcMinimalneNormalneForme.fill = GridBagConstraints.BOTH;
     gbcMinimalneNormalneForme.weighty = 1;
+
     minimalneNormalneForme = new JTextArea("");
     JScrollPane minimalneNormalneFormeView = new JScrollPane(minimalneNormalneForme);
-    calculatorPanelGBLayout.setConstraints(minimalneNormalneFormeView, gbcMinimalneNormalneForme);
+    calculatorPanelGBLayout.setConstraints(minimalneNormalneFormeView,
+        gbcMinimalneNormalneForme);
     calculatorPanel.add(minimalneNormalneFormeView);
+    // GPT
+    // minimalneNormalneForme = new JTextArea(10, 28); // izaberi brojke po ukusu
+    // minimalneNormalneForme.setLineWrap(true);
+    // minimalneNormalneForme.setWrapStyleWord(true);
+    // minimalneNormalneForme.setEditable(false);
 
     GridBagConstraints gbcPrimjeriFormula = new GridBagConstraints();
     gbcPrimjeriFormula.gridx = 0;
@@ -295,22 +313,11 @@ class Calc extends JFrame implements ActionListener {
 
     getContentPane().add(calculatorPanel, BorderLayout.WEST);
 
-    stablaPanel = new JPanel(new GridLayout(1, 2));
-    stablaPanel.add(new JLabel("FORMULA", JLabel.CENTER));
-    stablaPanel.add(new JLabel("glavni test", JLabel.CENTER));
-
+    stablaPanel = new JPanel(new GridLayout(1, 2, 20, 0));
     // @MIN SHOW Tree
     getContentPane().add(stablaPanel, BorderLayout.EAST); // ! ZEC JE U GRMU
 
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    pack();
-    Dimension screenDim = Toolkit.getDefaultToolkit().getScreenSize();
-    Dimension frameDim = getSize();
-    setLocation(
-        ((int) screenDim.getWidth() - (int) frameDim.getWidth()) / 2,
-        ((int) screenDim.getHeight() - (int) frameDim.getHeight()) / 2);
-    show();
-    brojNezatvorenihZagrada = 0;
+    // @MIN Matrica unosa - LOOK Nice
     matricaUnosa = new JButton[][] {
         { negirajFormulu, backSpace, clear },
         { negacija, lijevaZagrada, desnaZagrada },
@@ -318,7 +325,28 @@ class Calc extends JFrame implements ActionListener {
         { SButton, and, or },
         { povlaci, akko, enter }
     };
-    osvijetliKorakUnosa("pocetak");
+
+    resetToInitialState();
+
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    pack();
+
+    Dimension screenDim = Toolkit.getDefaultToolkit().getScreenSize();
+    Dimension frameDim = getSize();
+    setLocation(
+        ((int) screenDim.getWidth() - (int) frameDim.getWidth()) / 2,
+        ((int) screenDim.getHeight() - (int) frameDim.getHeight()) / 2);
+    show();
+    // brojNezatvorenihZagrada = 0;
+
+    // osvijetliKorakUnosa("pocetak");
+
+    /*
+     * setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     * 
+     * setVisible(true);
+     * pack();
+     */
   } // Calc()
 
   public void actionPerformed(ActionEvent event) {
@@ -397,16 +425,16 @@ class Calc extends JFrame implements ActionListener {
           action = backSpace;
         }
 
-        // @MIN SHOW Tree
-        switch (stablaPanel.getComponentCount()) {
-          case 0:
-            stablaPanel.add(new JLabel("FORMULA", JLabel.CENTER));
-            stablaPanel.add(new JLabel("glavni test", JLabel.CENTER));
-            break;
-          case 1: // mozde se ne moze dogoditi?; case 2:?
-            stablaPanel.add(new JLabel("glavni test", JLabel.CENTER));
-            break;
-        }
+        // @MIN SHOW Tree - BRIJEM da ovo NE treba!-.-?
+        // switch (stablaPanel.getComponentCount()) {
+        // case 0:
+        // stablaPanel.add(new JLabel("FORMULA", JLabel.CENTER));
+        // stablaPanel.add(new JLabel("glavni test", JLabel.CENTER));
+        // break;
+        // case 1: // mozde se ne moze dogoditi?; case 2:?
+        // stablaPanel.add(new JLabel("glavni test", JLabel.CENTER));
+        // break;
+        // }
       }
     }
     if (action.equals(backSpace)) {
@@ -459,18 +487,13 @@ class Calc extends JFrame implements ActionListener {
         formulaLS = (formulaLS.substring(0, duljina - 2));
       }
     }
+    // @MIN CLEAR
     if (action.equals(clear)) {
-      formulaLS = " ";
-      for (int i = 1; i < 18; i++) {
-        JButton gumb = (JButton) interpretacijePanel.getComponent(i);
-        gumb.setText("");
-        gumb.setBackground(new Color(204, 204, 204));
-      }
-      brojNezatvorenihZagrada = 0;
-      osvijetliKorakUnosa("pocetak");
-      minimalneNormalneForme.setText("");
+      resetToInitialState();
     }
-    if (action.equals(negacija)) {
+    if (action.equals(negacija))
+
+    {
       formulaLS = (formulaLS + negacija.getText());
       osvijetliKorakUnosa("faktor expected");
     }
@@ -575,4 +598,33 @@ class Calc extends JFrame implements ActionListener {
         Calc.matricaUnosa[4][2].setBackground(Color.blue); // enter
     }
   }
+
+  private void resetToInitialState() {
+    display.setText(" ");
+    // for (int i = 1; i < 10; i++) {
+    for (int i = 1; i < 18; i++) {
+      JButton gumb = (JButton) interpretacijePanel.getComponent(i);
+      gumb.setText("");
+      gumb.setBackground(new Color(204, 204, 204));
+      // @GPT
+      // gumb.setBackground(NEUTRAL_BG);
+    }
+    stablaPanel.removeAll();
+
+    // @SIMPLE SHOW Tree
+    stablaPanel.add(UIStrings.NNF_INFO_HTML, JLabel.CENTER);
+    stablaPanel.add(UIStrings.FORMULA_INFO_HTML, JLabel.CENTER);
+    // @GPT
+    // stablaPanel.revalidate();
+    stablaPanel.repaint();
+
+    brojNezatvorenihZagrada = 0;
+    // osvijetliKorakUnosa("pocetak");
+
+    // @GPT
+    if (matricaUnosa != null) {
+      osvijetliKorakUnosa("pocetak");
+    }
+  }
+
 } // class

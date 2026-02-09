@@ -11,6 +11,7 @@ package propMinimization;
  */
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 // © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
 
@@ -21,11 +22,31 @@ public class IreducibilneDNF {
   public static List ireducibilneDNF(List primeImplicants) {
     IreducibilneDNF.primeImplicants = primeImplicants;
     ireducibilneDNF = new ArrayList(); // !!
-    eliminirajSuvisneDisjunkte(primeImplicants);
+    pruneBySubsumption(primeImplicants);
     return ireducibilneDNF;
   }
 
-  public static void eliminirajSuvisneDisjunkte(List primeImplicants) {
+  /**
+   * Eliminates redundant disjunctive terms from the solution space by
+   * subsumption.
+   * <p>
+   * A disjunct D1 makes a disjunct D2 redundant if every valuation satisfying D2
+   * also satisfies D1, i.e. if the set of literals of D1 is a subset of the set
+   * of
+   * literals of D2.
+   *
+   * This method applies the absorption principle to the set of candidate
+   * solutions
+   * in order to keep only irreducible disjunctive normal forms.
+   *
+   * @param solutions a list of candidate disjuncts (implicants or prime
+   *                  implicants)
+   * @return a pruned list in which no element is subsumed by another
+   */
+  // public static List<Set<Literal>> pruneBySubsumption(List<Set<Literal>>
+  // solutions)
+
+  public static void pruneBySubsumption(List primeImplicants) {
     boolean iReducibilna = true;
     for (int i = 0; i < primeImplicants.size(); i++) {
       List bezDisjunkta = kopirajListuListi(primeImplicants);
@@ -39,23 +60,29 @@ public class IreducibilneDNF {
         boolean ukloniTekuci = false;
         while (!bezDisjunkta.isEmpty() && k < parcijalnaInterpretacija.size()) {
           AtomarnaFormula literal = (AtomarnaFormula) parcijalnaInterpretacija.get(k);
-          if (disjunkt.contains(literal)) ((List) bezDisjunkta.get(j)).remove(literal);
-          if (disjunkt.contains(literal.suprotnaFormula())) ukloniTekuci = true;
+          if (disjunkt.contains(literal))
+            ((List) bezDisjunkta.get(j)).remove(literal);
+          if (disjunkt.contains(literal.suprotnaFormula()))
+            ukloniTekuci = true;
           k++;
         }
-        if (ukloniTekuci) bezDisjunkta.remove(j);
-        else j++;
+        if (ukloniTekuci)
+          bezDisjunkta.remove(j);
+        else
+          j++;
       }
-      if (!bezDisjunkta.isEmpty()) bezDisjunkta = PrimeImplicants.primeImplicants(bezDisjunkta);
+      if (!bezDisjunkta.isEmpty())
+        bezDisjunkta = PrimeImplicants.primeImplicants(bezDisjunkta);
       if (bezDisjunkta.contains(new String("tautologija;)!)"))) {
         iReducibilna = false;
         List rekurzivno = kopirajListuListi(primeImplicants);
         rekurzivno.remove(i);
-        eliminirajSuvisneDisjunkte(rekurzivno);
+        pruneBySubsumption(rekurzivno);
       }
     } // for i
     if (iReducibilna) {
-      if (!ireducibilneDNF.contains(primeImplicants)) ireducibilneDNF.add(primeImplicants);
+      if (!ireducibilneDNF.contains(primeImplicants))
+        ireducibilneDNF.add(primeImplicants);
       // else System.out.println("dupla IReducibilna");
     }
   }
