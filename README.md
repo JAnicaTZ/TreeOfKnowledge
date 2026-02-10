@@ -1,109 +1,177 @@
-# TreeOfKnowledge – Propositional & First-Order Logic Tree Calculator
+# TreeOfKnowledge – Propositional & First-Order Logic Tree Engine
 
 **Author:** JAnica Tesla Zrinski  
-Original Java logic tree engine (2002–2004).  
-Originally developed as a university diploma project (PMF, Zagreb).
+Original Java symbolic logic tree engine (2002–2004)  
+Originally developed as a university diploma project (PMF, Zagreb)
+
+It is designed for education, formal logic exploration, and explainable symbolic reasoning experiments.
 
 This repository contains the **core Java source code** of a symbolic logic
-calculator originally developed around 2002 (source preserved from the 2004 version).
+reasoning engine that builds and transforms explicit logic trees (ASTs) for:
+
+- propositional logic  
+- first-order logic  
+- normal-form transformations  
+
+The focus is on **transparent, inspectable symbolic reasoning — not black-box evaluation.**
+
+---
+
+**Status:** Stable legacy academic engine, preserved and modernized for educational and explainable-AI use.
+
+**Current packaged release:** 1.0.0
 
 
-## How it works (technical)
 
-TreeOfKnowledge is a symbolic reasoning engine that constructs an explicit  
-**Abstract Syntax Tree (AST)** for propositional and first-order logic formulas.
+## 🌳 Official website
 
-Formulas are recursively decomposed into primitive connectives  
-{¬ (NOT), ∧ (AND), ∨ (OR)} and transformed via **De Morgan’s laws** into a  
-**Negation Normal Form (NNF)** AST, with negations pushed down to the atomic level.
+Interactive calculators, runnable demos, and explanations:
+
+**https://TreeOfKnowledge.eu**
+
+This repository contains the core Java engine behind the calculators.  
+The website itself is maintained separately as a static project.
+
+---
+
+## 🔬 How it works (technical overview)
+
+TreeOfKnowledge constructs an explicit **Abstract Syntax Tree (AST)** for each formula.
+
+Formulas are recursively decomposed into primitive connectives:
+
+- ¬ NOT  
+- ∧ AND  
+- ∨ OR  
+
+Using recursive transformations and **De Morgan’s laws**, formulas are converted into:
+
+- Negation Normal Form (NNF)  
+- Disjunctive Normal Form (DNF)  
+- Conjunctive Normal Form (CNF)  
+- minimal normal forms (where applicable)
 
 Parsing, evaluation, and visualization follow the same recursive structure —  
-making the reasoning **transparent, inspectable, and auditable** rather than a black box.
+so every step of reasoning remains **traceable and auditable**.
 
+---
 
-## Official website
+## 🎯 Core idea
 
-Interactive calculators, runnable demos, and user-oriented explanations:
+The goal is not only to compute logical truth values —  
+but to expose **step-by-step reasoning through explicit tree transformations.**
 
-🌳 **https://TreeOfKnowledge.eu**
+Each formula becomes a concrete tree structure that can be:
 
-This repository contains the **core Java logic engine** behind the website.  
-The website itself is maintained as a separate static project.
+- inspected  
+- evaluated  
+- transformed  
+- visualized  
 
+---
 
-## Core idea
+## 🎓 Educational relevance
 
-The goal is not only to compute logical results, but to expose  
-**step-by-step reasoning through explicit tree transformations.**
-
-
-## Educational relevance
-
-Designed as a **pedagogical tool** for propositional and first-order logic.
+Designed as a pedagogical tool for logic and discrete mathematics.
 
 The explicit AST representation helps learners understand:
 
 - hierarchical formula structure  
+- connective precedence  
 - quantifier scope and nesting  
-- logical connective roles  
-- normalization steps (e.g. NNF)
+- normalization procedures  
+- recursive evaluation  
 
-Logical reasoning becomes a **concrete, visual, inspectable structure**, useful in  
-logic, discrete mathematics, and computer science education.
+Logical reasoning becomes a **visible structure**, not an abstract procedure.
 
+Suitable for:
 
-## Explainable AI relevance (XAI)
-
-By exposing structure and transformation steps through ASTs,  
-the engine demonstrates principles aligned with **symbolic and explainable AI** —  
-where reasoning paths are visible and verifiable.
-
-TreeOfKnowledge illustrates how symbolic logic trees can serve as a minimal,  
-fully inspectable model of explainable reasoning.
-
+- logic courses  
+- CS foundations  
+- recursion teaching  
+- symbolic reasoning demos  
 
 ---
 
-## Included in this repository
+## 🤖 Explainable AI relevance (XAI)
 
-- Formula parsing and AST construction  
-- Propositional & first-order logic support  
-- Tree-based transformations  
-- Simple Swing GUI demo  
-- Pure Java engine (no external frameworks)
+By exposing structure and transformation steps explicitly,  
+the engine illustrates principles of **symbolic and explainable AI**:
 
-Documentation files:
+- visible reasoning paths  
+- rule-based transformations  
+- auditable inference structure  
 
-- `LICENSE.txt`  
-- `ORIGIN-2002.txt`  
-- `README.md`
-
+It serves as a minimal, fully inspectable symbolic reasoning core  
+that can complement modern AI systems.
 
 ---
 
-## Requirements
+## 📦 Included in this repository
 
-- Java 8+ (the core engine was originally developed on much earlier Java versions)
+### Core features
+
+- formula parsing  
+- AST construction  
+- propositional logic engine  
+- first-order logic engine  
+- normalization transformations  
+- semantic table evaluation  
+- Swing GUI demo calculators  
+
+### Technical properties
+
+- pure Java  
+- no external frameworks  
+- recursive algorithms  
+- source-level transparency  
+
+### Documentation
+
+- LICENSE  
+- ORIGIN-2002.txt  
+- README.md  
+
+---
+
+## ⚙️ Requirements
+
+- Java 8 or newer  
 
 Tested with:
 
-- Java 21 (Temurin)
-- VS Code
-- IntelliJ IDEA
-
-
-## Running
-
-Compile all sources and run the GUI launcher class from the desired package.
-
-Example: java propositional.Calc
-
-You can also run the project directly from any Java IDE by launching the  
-corresponding `Calc` class.
-
+- Java 21 (Temurin)  
+- IntelliJ IDEA  
+- VS Code  
+- standard Java CLI tools  
 
 ---
 
-## Contact
+## ▶ Running
 
-For academic collaboration or licensing inquiries — please contact the author.
+### Quick start (CLI)
+
+```bash
+javac propositional/*.java
+java propositional.Calc
+```
+
+Compile sources and run a calculator launcher class.
+
+Or run directly from an IDE by launching the desired `Calc` class.
+
+---
+
+## 🏫 Origin note
+
+The core algorithms originate from academic work developed  
+during a university diploma project at **PMF Zagreb (2002–2004)**.
+
+This repository preserves and modernizes that original logic tree engine.
+
+---
+
+## 📬 Contact
+
+For academic collaboration, educational use, or licensing inquiries —  
+please contact the author.
