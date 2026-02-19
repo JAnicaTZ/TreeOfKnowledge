@@ -41,17 +41,7 @@ package propositional;
  * beginners in propositional logic.
  */
 
-/* AtomarnaFormula → AtomicFormula
-
-BinarnaFormula → BinaryFormula
-
-Negacija → Negation
-
-Konjunkcija → Conjunction
-
-Disjunkcija → Disjunction
-
-StabloFormule → FormulaTree
+/* Terminology:
 
 PronalazenjeRjesenja → SolutionFinder
 
@@ -62,44 +52,19 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-// import propCommon.NormalFormFormula;
+import propCommon.Formula;
+import propCommon.FormulaTreeParser;
 import propCommon.PropAnalysisResult;
+import propCommon.PropParseException;
 import propCommon.SemanticTableHighlighter;
 import propCommon.UIStrings;
+import propMinimization.MinimalneNormalneForme;
 
 // © JAnica Tesla Zrinski — TreeOfKnowledge.eu — PROPOSITIONAL logic calculator (Beginner Mode)
 
 class Calc extends JFrame implements ActionListener {
 
-  public static final char LIJEVA_ZAGRADA = '(';
-  public static final char P_CHAR = 'P';
-  public static final char Q_CHAR = 'Q';
-  public static final char R_CHAR = 'R';
-
-  private static final char NEGACIJA_CHAR = UIStrings.NEGACIJA_CHAR;
-  private static final char AND_CHAR = UIStrings.AND_CHAR;
-  private static final char OR_CHAR = UIStrings.OR_CHAR;
-  private static final char IMPLIES_CHAR = UIStrings.IMPLIES_CHAR;
-  private static final char EQUIV_CHAR = UIStrings.EQUIV_CHAR;
-
-  static ArrayList propozicVarijable = new ArrayList();
-
-  static {
-    propozicVarijable.add(new Character(NEGACIJA_CHAR));
-    propozicVarijable.add(new Character(LIJEVA_ZAGRADA));
-    propozicVarijable.add(new Character(P_CHAR));
-    propozicVarijable.add(new Character(Q_CHAR));
-    propozicVarijable.add(new Character(R_CHAR));
-  }
-
-  static ArrayList binarniVeznici = new ArrayList();
-
-  static {
-    binarniVeznici.add(new Character(AND_CHAR));
-    binarniVeznici.add(new Character(OR_CHAR));
-    binarniVeznici.add(new Character(IMPLIES_CHAR));
-    binarniVeznici.add(new Character(EQUIV_CHAR));
-  }
+  static final Set<Character> propozicVarijable = UIStrings.PROP_INPUT_CHARS;
 
   static JLabel display;
   static JButton backSpace;
@@ -166,39 +131,39 @@ class Calc extends JFrame implements ActionListener {
     clear.setForeground(Color.yellow);
     clear.addActionListener(this);
     keysPanel.add(clear);
-    negacija = new JButton(new Character(NEGACIJA_CHAR).toString());
+    negacija = new JButton(new Character(UIStrings.NEGACIJA_CHAR).toString());
     negacija.addActionListener(this);
     keysPanel.add(negacija);
-    lijevaZagrada = new JButton(new Character(LIJEVA_ZAGRADA).toString());
+    lijevaZagrada = new JButton(new Character(UIStrings.LIJEVA_ZAGRADA).toString());
     lijevaZagrada.addActionListener(this);
     keysPanel.add(lijevaZagrada);
-    desnaZagrada = new JButton(")");
+    desnaZagrada = new JButton(new Character(UIStrings.DESNA_ZAGRADA).toString());
     desnaZagrada.addActionListener(this);
     keysPanel.add(desnaZagrada);
-    PButton = new JButton(new Character(P_CHAR).toString());
+    PButton = new JButton(new Character(UIStrings.P_CHAR).toString());
     PButton.addActionListener(this);
     keysPanel.add(PButton);
-    QButton = new JButton(new Character(Q_CHAR).toString());
+    QButton = new JButton(new Character(UIStrings.Q_CHAR).toString());
     QButton.addActionListener(this);
     keysPanel.add(QButton);
-    RButton = new JButton(new Character(R_CHAR).toString());
+    RButton = new JButton(new Character(UIStrings.R_CHAR).toString());
     RButton.addActionListener(this);
     keysPanel.add(RButton);
-    and = new JButton(new Character(AND_CHAR).toString());
+    and = new JButton(new Character(UIStrings.AND_CHAR).toString());
     and.addActionListener(this);
     keysPanel.add(and);
-    or = new JButton(new Character(OR_CHAR).toString());
+    or = new JButton(new Character(UIStrings.OR_CHAR).toString());
     or.addActionListener(this);
     keysPanel.add(or);
-    negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + " ( FORMULA )");
+    negirajFormulu = new JButton(new Character(UIStrings.NEGACIJA_CHAR).toString() + " ( FORMULA )");
     negirajFormulu.setFont(new Font("Times Roman", Font.BOLD, 12));
     negirajFormulu.setForeground(Color.yellow);
     negirajFormulu.addActionListener(this);
     keysPanel.add(negirajFormulu);
-    povlaci = new JButton(new Character(IMPLIES_CHAR).toString());
+    povlaci = new JButton(new Character(UIStrings.IMPLIES_CHAR).toString());
     povlaci.addActionListener(this);
     keysPanel.add(povlaci);
-    akko = new JButton(new Character(EQUIV_CHAR).toString());
+    akko = new JButton(new Character(UIStrings.EQUIV_CHAR).toString());
     akko.addActionListener(this);
     keysPanel.add(akko);
     enter = new JButton(" ENTER");
@@ -268,37 +233,58 @@ class Calc extends JFrame implements ActionListener {
       Calc.stablaPanel.removeAll();
       try {
         // @SIMPLE PARSE and SHOW Tree
-        PropAnalysisResult result = DisjunktivnaFormaZaLS.disjunktivnaFormaZaLS();
+        PropAnalysisResult propAnalysisResult = FormulaTreeParser.parsiraj(getCanonicalFormula());
+
+        stablaPanel.removeAll();
+
+        JTree stabloFormule = new JTree(propAnalysisResult.getAst().prikazFormule());
+        expandAllNodes(stabloFormule);
+        Calc.stablaPanel.add(new JScrollPane(stabloFormule));
+
+        Formula nnf = propAnalysisResult.getNnfAst();
+        if (nnf != null) {
+          JTree nnfTree = new JTree(nnf.prikazFormule());
+          expandAllNodes(nnfTree);
+          JScrollPane nnfScroll = new JScrollPane(nnfTree);
+          Calc.stablaPanel.add(nnfScroll);
+        }
 
         SemanticTableHighlighter.osvijetliRjesenja(
-            result.getKoristeneVarijable(),
-            result.dnf, Calc.interpretacijePanel);
+            propAnalysisResult.getKoristeneVarijable(),
+            propAnalysisResult.getDnf(),
+            interpretacijePanel);
 
-      } catch (FaktorExpected exception) {
+      } catch (PropParseException.FaktorExpected exception) {
         osvijetliKorakUnosa("faktor expected");
         // exception.printStackTrace();
-      } catch (Pocetak exception) {
+      } catch (PropParseException.Pocetak exception) {
         osvijetliKorakUnosa("pocetak");
-      } catch (ZatvoriZagradu exception) {
+      } catch (PropParseException.ZatvoriZagradu exception) {
         desnaZagrada.setBackground(Color.yellow);
+
+      } catch (PropParseException e) {
+        // TODO Auto-generated catch block - NOVO - RAZMOTRITI
+        System.out.println("Parsing UNKNOWN error: " + e.getMessage());
+        e.printStackTrace();
+
       } finally {
-        if (display.getText().length() > 1
-            && (DisjunktivnaFormaZaLS.i + 1) < display.getText().length()) {
-          int i = DisjunktivnaFormaZaLS.i + 1;
+        if (display.getText().length() > 1 && (FormulaTreeParser.i + 1) < display.getText().length()) {
+          int i = FormulaTreeParser.i + 1;
+
           if ((i + 1) < display.getText().length()) {
             String smece = display.getText().substring(i);
             for (int j = 0; j < smece.length(); j++) {
-              if (smece.charAt(j) == LIJEVA_ZAGRADA)
+              if (smece.charAt(j) == UIStrings.LIJEVA_ZAGRADA)
                 brojNezatvorenihZagrada -= 1;
-              if (smece.charAt(j) == ')')
+              if (smece.charAt(j) == UIStrings.DESNA_ZAGRADA)
                 brojNezatvorenihZagrada += 1;
             }
           }
           char trik = display.getText().charAt(i);
           display.setText(display.getText().substring(0, i) + trik);
-          if (trik == LIJEVA_ZAGRADA)
+          if (trik == UIStrings.LIJEVA_ZAGRADA)
             brojNezatvorenihZagrada += 1;
-          if (trik == ')')
+          if (trik == UIStrings.DESNA_ZAGRADA)
             brojNezatvorenihZagrada -= 1;
           action = backSpace;
         }
@@ -310,41 +296,41 @@ class Calc extends JFrame implements ActionListener {
         action = clear;
       }
       if (duljina > 2) {
-        if (display.getText().charAt(duljina - 1) == LIJEVA_ZAGRADA)
+        if (display.getText().charAt(duljina - 1) == UIStrings.LIJEVA_ZAGRADA)
           brojNezatvorenihZagrada -= 1;
-        if (display.getText().charAt(duljina - 1) == ')')
+        if (display.getText().charAt(duljina - 1) == UIStrings.DESNA_ZAGRADA)
           brojNezatvorenihZagrada += 1;
         switch (display.getText().charAt(duljina - 2)) {
-          case NEGACIJA_CHAR:
+          case UIStrings.NEGACIJA_CHAR:
             action = negacija;
             break;
-          case LIJEVA_ZAGRADA:
+          case UIStrings.LIJEVA_ZAGRADA:
             action = lijevaZagrada;
             brojNezatvorenihZagrada -= 1;
             break;
-          case ')':
+          case UIStrings.DESNA_ZAGRADA:
             action = desnaZagrada;
             brojNezatvorenihZagrada += 1;
             break;
-          case P_CHAR:
+          case UIStrings.P_CHAR:
             action = PButton;
             break;
-          case Q_CHAR:
+          case UIStrings.Q_CHAR:
             action = QButton;
             break;
-          case R_CHAR:
+          case UIStrings.R_CHAR:
             action = RButton;
             break;
-          case AND_CHAR:
+          case UIStrings.AND_CHAR:
             action = and;
             break;
-          case OR_CHAR:
+          case UIStrings.OR_CHAR:
             action = or;
             break;
-          case IMPLIES_CHAR:
+          case UIStrings.IMPLIES_CHAR:
             action = povlaci;
             break;
-          case EQUIV_CHAR:
+          case UIStrings.EQUIV_CHAR:
             action = akko;
             break;
         }
@@ -356,14 +342,6 @@ class Calc extends JFrame implements ActionListener {
       resetToInitialState();
     }
 
-    if (action.equals(negirajFormulu)) {
-      display.setText(
-          " "
-              + new Character(NEGACIJA_CHAR).toString()
-              + new Character(LIJEVA_ZAGRADA).toString()
-              + display.getText().substring(1)
-              + new Character(')').toString());
-    }
     if (action.equals(negacija)) {
       display.setText(display.getText() + negacija.getText());
       osvijetliKorakUnosa("faktor expected");
@@ -406,6 +384,16 @@ class Calc extends JFrame implements ActionListener {
       display.setText(display.getText() + akko.getText());
       osvijetliKorakUnosa("faktor expected");
     }
+
+    if (action.equals(negirajFormulu)) {
+      display.setText(
+          " "
+              + new Character(UIStrings.NEGACIJA_CHAR).toString()
+              + new Character(UIStrings.LIJEVA_ZAGRADA).toString()
+              + display.getText().substring(1)
+              + new Character(UIStrings.DESNA_ZAGRADA).toString());
+    }
+
   } // actionPerformed
 
   public static void main(String args[]) throws Exception {
@@ -463,7 +451,6 @@ class Calc extends JFrame implements ActionListener {
     if (stablaPanel.getComponentCount() > 0) {
       stablaPanel.removeAll();
     }
-    // stablaPanel.removeAll();
 
     // @SIMPLE LOOK Nice
     stablaPanel.add(new JLabel(UIStrings.Html.FORMULA_INFO_HTML, JLabel.CENTER));
@@ -483,6 +470,15 @@ class Calc extends JFrame implements ActionListener {
 
   public static String getCanonicalFormula() {
     return display == null ? "" : display.getText().substring(1); // bez početnog razmaka
+  }
+
+  private static void expandAllNodes(JTree tree) {
+    // ponekad rowCount raste dok expandamo, zato while
+    int row = 0;
+    while (row < tree.getRowCount()) {
+      tree.expandRow(row);
+      row++;
+    }
   }
 
 } // class

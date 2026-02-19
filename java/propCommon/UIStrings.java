@@ -52,6 +52,12 @@ public final class UIStrings {
         // kasnije lako proširiš
         );
 
+        // Sva dopuštena “slova/znakovi” za unos propozicijske formule
+        public static final Set<Character> PROP_INPUT_CHARS = Set.of(
+                        NEGACIJA_CHAR,
+                        LIJEVA_ZAGRADA,
+                        P_CHAR, Q_CHAR, R_CHAR, S_CHAR);
+
         public static boolean isBinaryOp(char c) {
                 return BIN_OPS.contains(c);
         }

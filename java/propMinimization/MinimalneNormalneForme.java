@@ -9,13 +9,11 @@ package propMinimization;
  * <p>This class encapsulates the final optimization step of the minimization pipeline.
  */
 import java.util.*; // List, ArrayList
-// import javax.swing.*; // JTree, JScrollPane
 
 import propCommon.AtomicFormula;
 import propCommon.Formula;
 import propCommon.NormalFormFormula;
 import propCommon.Negation;
-import propCommon.SemanticTableHighlighter;
 import propCommon.FormulaTreeParser;
 import propCommon.UIStrings;
 
@@ -28,9 +26,6 @@ public class MinimalneNormalneForme {
     eliminiramNegacije = eliminiramNegacije.eliminiramNegacije();
 
     List disjunktivnaNF = ((NormalFormFormula) eliminiramNegacije).disjunktivnojFormi();
-    // System.out.println(disjunktivnaNF);
-    SemanticTableHighlighter.osvijetliRjesenja(
-        FormulaTreeParser.koristeneVarijable, disjunktivnaNF, Calc.interpretacijePanel);
 
     if (!disjunktivnaNF.isEmpty()) {
       List primeImplicants = PrimeImplicants.primeImplicants(disjunktivnaNF);

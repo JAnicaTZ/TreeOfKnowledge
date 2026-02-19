@@ -17,73 +17,19 @@ package propCommon;
 import java.util.*; // List, ArrayList
 import javax.swing.*; // JTree, JScrollPane
 
-import firstorder.AtomarnaFormula;
-
-// import propCommon.PropParseException;
-// © JAnica Tesla Zrinski — TreeOfKnowledge.eu
-
-// class FaktorExpected extends Exception {
-// }
-
-// class Pocetak extends Exception {
-// }
-
-// class ZatvoriZagradu extends Exception {
-// }
-
 // © JAnica Tesla Zrinski — TreeOfKnowledge.eu
 
 public class FormulaTreeParser {
-  public static ArrayList koristeneVarijable;
+  public static ArrayList<Character> koristeneVarijable;
   public static String formula;
   public static int duljina;
   public static int i;
-
-  // public static Formula parsiraj() throws FaktorExpected, Pocetak,
-  // ZatvoriZagradu {
-  // koristeneVarijable = new ArrayList();
-  // // formula = Calc.formulaLS.substring(1);
-  // formula = Calc.getCanonicalFormula();
-  // // System.out.println(formula);
-  // d = formula.length();
-  // if (d == 0)
-  // throw new Pocetak();
-  // i = 0;
-  // // return term();
-
-  // Formula korijenStabla = term();
-
-  // // @MIN SHOW Tree - Ovo bi trebalo PRORADITI, a iskoprano je iz:
-  // // @SIMPLE SHOW Tree
-  // JTree stabloFormule = new JTree(korijenStabla.prikazFormule());
-  // for (int i = 0; i < stabloFormule.getRowCount(); i++) {
-  // stabloFormule.expandRow(i);
-  // }
-  // JScrollPane stabloFormuleView = new JScrollPane(stabloFormule);
-
-  // // Postavljanje stabla u panel
-  // Calc.stablaPanel.add(stabloFormuleView);
-
-  // Formula eliminiramNegacije = (Formula) korijenStabla.clone();
-  // eliminiramNegacije = eliminiramNegacije.eliminiramNegacije();
-  // JTree stabloGlavnogTesta = new JTree(eliminiramNegacije.prikazFormule());
-  // for (int i = 0; i < stabloGlavnogTesta.getRowCount(); i++) {
-  // stabloGlavnogTesta.expandRow(i);
-  // }
-  // JScrollPane stabloGlavnogTestaView = new JScrollPane(stabloGlavnogTesta);
-  // Calc.stablaPanel.add(stabloGlavnogTestaView);
-
-  // return korijenStabla;
-  // // }
-  // }
-  // public static PropAnalysisResult parsiraj(String input) throws
-  // FaktorExpected, Pocetak, ZatvoriZagradu {
 
   public static PropAnalysisResult parsiraj(String input) throws PropParseException {
 
     FormulaTreeParser.formula = input; // <-- KRITIČNO: napuni statičko polje koje koristi term()
 
-    koristeneVarijable = new ArrayList();
+    koristeneVarijable = new ArrayList<>();
     // formula = Calc.formulaLS.substring(1);
     // formula = Calc.getCanonicalFormula();
     // System.out.println(formula);
@@ -114,9 +60,7 @@ public class FormulaTreeParser {
     for (int i = 0; i < stabloGlavnogTesta.getRowCount(); i++) {
       stabloGlavnogTesta.expandRow(i);
     }
-    // JScrollPane stabloGlavnogTestaView = new JScrollPane(stabloGlavnogTesta);
-    // Calc.stablaPanel.add(stabloGlavnogTestaView);
-    System.out.println("BEFORE return: " + eliminiramNegacije);
+    // System.out.println("BEFORE return: " + eliminiramNegacije);
 
     return new PropAnalysisResult(
         formula, // input
@@ -127,16 +71,13 @@ public class FormulaTreeParser {
         ((NormalFormFormula) eliminiramNegacije).disjunktivnojFormi(), // dnf
         ((NormalFormFormula) eliminiramNegacije).konjunktivnojFormi() // cnf
     );
-
-    // return korijenStabla;
   }
 
   public static Formula term() throws PropParseException.FaktorExpected, PropParseException.ZatvoriZagradu {
-    System.out.println("Parsing term starting at index " + i + ": " + formula.substring(i));
+    // System.out.println("Parsing term starting at index " + i + ": " +
+    // formula.substring(i));
     Formula prviFaktor = faktor();
-    // System.out.println("Parsed first factor: " + prviFaktor);
-    // while ((i < d) && Calc.binarniVeznici.contains(new
-    // Character(formula.charAt(i)))) {
+
     while ((i < duljina) && UIStrings.isBinaryOp(formula.charAt(i))) {
       Formula binarniVeznik = new Conjunction(null, null); // razmotriti!
       if (i + 1 >= duljina)
@@ -165,22 +106,20 @@ public class FormulaTreeParser {
   }
 
   public static Formula faktor() throws PropParseException.FaktorExpected, PropParseException.ZatvoriZagradu {
-    System.out.println("Parsing factor starting at index " + i + ": " + formula.substring(i));
-    System.out.println("duljina: " + duljina);
+    // System.out.println("Parsing factor starting at index " + i + ": " +
+    // formula.substring(i));
+    // System.out.println("duljina: " + duljina);
     if ((i >= duljina) /* || !MINIMIZATION_CHARACTERS.contains(new Character(formula.charAt(i))) */)
       throw new PropParseException.FaktorExpected();
     Formula izFaktora = new Negation(null); // razmotriti!
 
     char ch = formula.charAt(i);
     switch (ch) {
-
-      // case UIStrings.A_CHAR:
-      // case UIStrings.B_CHAR:
-      // case UIStrings.C_CHAR:
-      // case UIStrings.D_CHAR:
-      // if (!koristeneVarijable.contains(new Character(formula.charAt(i))))
-      // koristeneVarijable.add(new Character(formula.charAt(i)));
-      // return new AtomicFormula(formula.charAt(i++));
+      // case UIStrings.NEGACIJA_CHAR:
+      // i++;
+      // if (i >= duljina)
+      // throw new PropParseException.FaktorExpected();
+      // return new Negation(faktor());
 
       default:
         if (UIStrings.PROP_VARS.contains(ch)) {

@@ -98,4 +98,5 @@ public class IrreducibleDNF {
     }
     return glavnaLista;
   }
+
 }

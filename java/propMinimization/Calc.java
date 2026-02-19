@@ -54,32 +54,9 @@ import propCommon.*;
 // © JAnica Tesla Zrinski — TreeOfKnowledge.eu — Propositional MINIMIZATION (CNF/DNF)
 
 class Calc extends JFrame implements ActionListener {
-  private static final char NEGACIJA_CHAR = UIStrings.NEGACIJA_CHAR;
+  // private static final char NEGACIJA_CHAR = UIStrings.NEGACIJA_CHAR;
 
-  static ArrayList propozicVarijable = new ArrayList();
-
-  static {
-    propozicVarijable.add(new Character(UIStrings.NEGACIJA_CHAR));
-    propozicVarijable.add(new Character(UIStrings.LIJEVA_ZAGRADA));
-    propozicVarijable.add(new Character(UIStrings.P_CHAR));
-    propozicVarijable.add(new Character(UIStrings.Q_CHAR));
-    propozicVarijable.add(new Character(UIStrings.R_CHAR));
-    propozicVarijable.add(new Character(UIStrings.S_CHAR));
-  }
-
-  // private static final char AND_CHAR = UIStrings.AND_CHAR;
-  // private static final char OR_CHAR = UIStrings.OR_CHAR;
-  // private static final char IMPLIES_CHAR = UIStrings.IMPLIES_CHAR;
-  // private static final char EQUIV_CHAR = UIStrings.EQUIV_CHAR;
-
-  // static ArrayList binarniVeznici = new ArrayList();
-
-  // static {
-  // binarniVeznici.add(new Character(AND_CHAR));
-  // binarniVeznici.add(new Character(OR_CHAR));
-  // binarniVeznici.add(new Character(IMPLIES_CHAR));
-  // binarniVeznici.add(new Character(EQUIV_CHAR));
-  // }
+  static final Set<Character> propozicVarijable = UIStrings.PROP_INPUT_CHARS;
 
   static JLabel display;
   static String formulaLS;
@@ -113,7 +90,6 @@ class Calc extends JFrame implements ActionListener {
   public static JPanel interpretacijePanel;
   static JTextArea minimalneNormalneForme;
   static JPanel primjeriPanel;
-  // static JPanel primjeriPanel2;
   static JPanel stablaPanel;
 
   public Calc() {
@@ -154,13 +130,13 @@ class Calc extends JFrame implements ActionListener {
     backSpace.addActionListener(this);
     keysPanel.add(backSpace);
 
-    negirajFormulu = new JButton(new Character(NEGACIJA_CHAR).toString() + " ( FORMULA )");
+    negirajFormulu = new JButton(new Character(UIStrings.NEGACIJA_CHAR).toString() + " ( FORMULA )");
     negirajFormulu.setFont(new Font("Times Roman", Font.BOLD, 12));
     negirajFormulu.setForeground(Color.yellow);
     negirajFormulu.addActionListener(this);
     keysPanel.add(negirajFormulu);
 
-    negacija = new JButton(new Character(NEGACIJA_CHAR).toString());
+    negacija = new JButton(new Character(UIStrings.NEGACIJA_CHAR).toString());
     negacija.addActionListener(this);
     keysPanel.add(negacija);
     lijevaZagrada = new JButton(new Character(UIStrings.LIJEVA_ZAGRADA).toString());
@@ -362,36 +338,13 @@ class Calc extends JFrame implements ActionListener {
       Calc.stablaPanel.removeAll();
       try {
         // @MIN PARSE and SHOW Tree
-        // MinimalneNormalneForme.minimalneNormalneForme(StabloFormule.parsiraj());
-        // MinimalneNormalneForme.minimalneNormalneForme(((StabloFormule.parsiraj(getCanonicalFormula()))).getKorijenStabla());
-
-        System.out.println("getCanonicalFormula(): " + getCanonicalFormula());
-
         PropAnalysisResult propAnalysisResult = FormulaTreeParser.parsiraj(getCanonicalFormula());
-
-        // System.out.println("Original formula: " +
-        // propAnalysisResult.getOriginalFormula());
-        System.out.println("Parsed formula: " + propAnalysisResult.getAst());
-        System.out.println("NNF formula: " + propAnalysisResult.getNnfAst());
 
         stablaPanel.removeAll();
 
         JTree stabloFormule = new JTree(propAnalysisResult.getAst().prikazFormule());
         expandAllNodes(stabloFormule);
-        // JScrollPane stabloFormuleView = new JScrollPane(stabloFormule);
-        // JScrollPane stabloFormuleView = new JScrollPane(stabloFormule);
-        // Postavljanje stabla u panel
         Calc.stablaPanel.add(new JScrollPane(stabloFormule));
-
-        // Formula ast = propAnalysisResult.getAst();
-        // if (ast != null) {
-        // JTree astTree = new JTree(ast.prikazFormule());
-        // JScrollPane astScroll = new JScrollPane(astTree);
-        // Calc.stablaPanel.add(astScroll);
-        // }
-
-        // JScrollPane stabloGlavnogTestaView = new
-        // JScrollPane(propAnalysisResult.getNnfAst().prikazFormule());
 
         Formula nnf = propAnalysisResult.getNnfAst();
         if (nnf != null) {
@@ -401,14 +354,13 @@ class Calc extends JFrame implements ActionListener {
           Calc.stablaPanel.add(nnfScroll);
         }
 
-        // Calc.stablaPanel.add(stabloGlavnogTestaView);
-
-        // @MIN MINIMIZATION: DOBRO razmotriti
-        // MinimalneNormalneForme.minimalneNormalneForme(((StabloFormule.parsiraj(getCanonicalFormula()))).getKorijenStabla());
+        // @MIN MINIMIZATION
         MinimalneNormalneForme.minimalneNormalneForme(propAnalysisResult.getAst());
 
+        SemanticTableHighlighter.osvijetliRjesenja(
+            FormulaTreeParser.koristeneVarijable, propAnalysisResult.getDnf(), Calc.interpretacijePanel);
+
       } catch (PropParseException.FaktorExpected exception) {
-        System.out.println("MIN CALC - Parsing error: Factor expected at index " + FormulaTreeParser.i);
         osvijetliKorakUnosa("faktor expected");
         // exception.printStackTrace();
       } catch (PropParseException.Pocetak exception) {
@@ -420,7 +372,6 @@ class Calc extends JFrame implements ActionListener {
         System.out.println("Parsing UNKNOWN error: " + e.getMessage());
         e.printStackTrace();
       } finally {
-        System.out.println("Final formulaLS: " + formulaLS);
         if (formulaLS.length() > 1 && (FormulaTreeParser.i + 1) < formulaLS.length()) {
           int i = FormulaTreeParser.i + 1;
           if ((i + 1) < formulaLS.length()) {
@@ -453,7 +404,7 @@ class Calc extends JFrame implements ActionListener {
         if (formulaLS.charAt(duljina - 1) == UIStrings.DESNA_ZAGRADA)
           brojNezatvorenihZagrada += 1;
         switch (formulaLS.charAt(duljina - 2)) {
-          case NEGACIJA_CHAR:
+          case UIStrings.NEGACIJA_CHAR:
             action = negacija;
             break;
           case UIStrings.LIJEVA_ZAGRADA:
@@ -494,12 +445,10 @@ class Calc extends JFrame implements ActionListener {
     }
     // @MIN CLEAR
     if (action.equals(clear)) {
-      System.out.println("Clearing formula and resetting state.");
+      // System.out.println("Clearing formula and resetting state.");
       resetToInitialState();
     }
-    if (action.equals(negacija))
-
-    {
+    if (action.equals(negacija)) {
       formulaLS = (formulaLS + negacija.getText());
       osvijetliKorakUnosa("faktor expected");
     }
@@ -619,10 +568,7 @@ class Calc extends JFrame implements ActionListener {
     }
     stablaPanel.removeAll();
 
-    // @SIMPLE SHOW Tree
-    // stablaPanel.add(new JLabel(UIStrings.Html.NNF_INFO_HTML, JLabel.CENTER));
-    // stablaPanel.add(new JLabel(UIStrings.Html.FORMULA_INFO_HTML, JLabel.CENTER));
-    // @MIN Privremeni TWIST
+    // @MIN SHOW Tree
     stablaPanel.add(new JLabel(UIStrings.Html.FORMULA_INFO_HTML, JLabel.CENTER));
     stablaPanel.add(new JLabel(UIStrings.Html.NNF_INFO_HTML, JLabel.CENTER));
 

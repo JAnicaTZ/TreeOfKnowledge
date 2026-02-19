@@ -2,8 +2,6 @@ package propCommon;
 
 import java.util.List;
 
-import javax.swing.JTree;
-
 public class PropAnalysisResult {
     public final String input; // canonical input string
     public final Formula ast; // parsed AST
@@ -56,5 +54,9 @@ public class PropAnalysisResult {
 
     public Formula getNnfAst() {
         return nnfAst;
+    }
+
+    public List<List<AtomicFormula>> getDnf() {
+        return dnf;
     }
 }
