@@ -175,3 +175,10 @@ This repository preserves and modernizes that original logic tree engine.
 
 For academic collaboration, educational use, or licensing inquiries —  
 please contact the author.
+
+
+## Collaboration Principles
+
+Before proposing a new interface, demonstration or architecture, please read our **[3 + 1 Design Principles for Collaborators](COLLABORATION-PRINCIPLES.md)**.
+
+🕶️ MATRIX • 🧠 SIMPLE • 🎮 INTERESTING • 🔐 SAFE
