@@ -176,9 +176,28 @@ This repository preserves and modernizes that original logic tree engine.
 For academic collaboration, educational use, or licensing inquiries —  
 please contact the author.
 
-
+-----
 ## Collaboration Principles
 
 Before proposing a new interface, demonstration or architecture, please read our **[3 + 1 Design Principles for Collaborators](COLLABORATION-PRINCIPLES.md)**.
 
 🕶️ MATRIX • 🧠 SIMPLE • 🎮 INTERESTING • 🔐 SAFE
+
+
+## Current Project Status
+
+For the current technical, evidence and collaboration boundaries, see:
+
+* **[Where We Are Now](PROJECT-STATUS.md)**
+* **[3 + 1 Design Principles for Collaborators](COLLABORATION-PRINCIPLES.md)**
+
+Current direction:
+
+> **Reasoning → Admissibility → Bounded Enforcement → Provenance**
+
+The documented multi-layer workflow is presently a **synthetic reference architecture**. No completed runtime integration or formal multi-party partnership is claimed.
+
+Constructive participation is welcome through GitHub Issues, forks and Pull Requests.
+
+🕶️ MATRIX • 🧠 SIMPLE • 🎮 INTERESTING • 🔐 SAFE
+
