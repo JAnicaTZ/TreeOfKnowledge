@@ -102,6 +102,3 @@ Everything else is negotiable—subject to evidence, security, clearly separated
 **πJAnica🏂 Tesla⚡ Zrinski⚔️**
 [TreeOfKnowledge.eu](https://TreeOfKnowledge.eu) by **MacroHARD™**
 
----
-
-*PS. Me before I succeed 🏆 in DOUBLEing mySelf. 🥲*
