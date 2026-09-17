@@ -244,6 +244,45 @@ Constructive technical participation is welcome through:
 * documented use cases;
 * security observations submitted responsibly.
 
+11. Light Collaboration and Language Notes
+
+This project values precision without unnecessary pressure.
+
+A modest rule concerning the word “MUST”
+
+Please reserve MUST for circumstances involving immediate mortal danger, serious risk of death, or another genuinely unavoidable requirement. ⚰️
+
+In ordinary technical and collaborative discussion, more accurate alternatives are usually available:
+
+- should — a strong recommendation;
+- may — an available option;
+- is proposed — an idea awaiting review;
+- is requested — something being asked for;
+- is expected — an agreed or reasonably anticipated result;
+- is required by a defined contract, law or safety condition — a requirement whose source is explicitly identified.
+
+Urgency does not make a statement true, and capital letters do not transform a preference into a technical requirement.
+
+Additional reminders
+
+- SLOWly + RELAXed == EXPERIENCEd.
+- Complex reasoning does not require unnecessarily complicated communication.
+- Questions and disagreement are welcome.
+- Humor is welcome too, but technical claims still require evidence. 😹
+- Silence is not consent.
+- Participation remains voluntary unless a separate written agreement explicitly states otherwise.
+- One bounded and verifiable step is preferable to seventeen impressive but unverifiable promises.
+- Human beings are allowed to pause, think, sleep and return later. 🌳
+
+Further context and lighter reflections
+
+These posts are included as informal reflections on the project’s human and cultural tone—not as technical specifications or evidence:
+
+- "Misli svatko da je meni lako?" (https://lnkd.in/p/ex8XiKzj)
+- "SLOWly + RELAXed == EXPERIENCEd" (https://lnkd.in/p/eF6qA_hd)
+- "One additional light reminder" (https://lnkd.in/p/eyAspTGn)
+
+
 Please read:
 
 [3 + 1 Design Principles for Collaborators](COLLABORATION-PRINCIPLES.md)
