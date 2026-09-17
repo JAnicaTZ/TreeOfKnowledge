@@ -163,18 +163,18 @@ The proposed TREE boundary includes:
 
 ### Important implementation distinction
 
-These proposed fields must be mapped individually to the existing TREE implementation as:
+Each proposed field is intended to be mapped individually to the existing TREE implementation as:
 
 * **EXISTS NATIVELY**
 * **DERIVABLE**
 * **REQUIRES ADAPTER**
 * **NOT YET IMPLEMENTED**
 
-The proposed interface must not be described as a native current capability until that mapping and implementation have been verified.
+The proposed interface should not be described as a native current capability until that mapping and implementation have been verified.
 
 ---
 
-## 7. TREE Must Remain Closed or Undetermined When
+## 7. When TREE Should Remain Closed or Undetermined
 
 At minimum:
 
@@ -189,7 +189,7 @@ At minimum:
 
 TREE may report whether a conclusion follows.
 
-TREE must never convert that conclusion into a claim that an action is authorized, admissible or executable.
+TREE does not convert a logical conclusion into a claim that an action is authorized, admissible or executable.
 
 ---
 
@@ -208,7 +208,7 @@ At the date of this document:
 
 Public listing of any person or organization should require explicit consent and an accurate description of scope.
 
-Conversation membership, profile visibility, enthusiasm or silence must not be interpreted as proof of participation or consent.
+Conversation membership, profile visibility, enthusiasm or silence should not be interpreted as proof of participation or consent.
 
 ---
 
