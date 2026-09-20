@@ -265,7 +265,7 @@ Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
 Ana Kovačević πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
-"🌳 TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
+🌴 https://TreeOfKnowledge.eu
 Core of XAI — Explainable AI
 
 📧 JAnicaTZ@TreeOfKnowledge.eu
