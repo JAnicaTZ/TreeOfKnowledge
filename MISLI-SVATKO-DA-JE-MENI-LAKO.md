@@ -1,4 +1,6 @@
 🎵 Misli svatko 👤 da je 🙋 meni LAKO! 🎶
+Transparent English translation:
+««🎵 Everyone Thinks I Have It Easy! 🎶»»
 
 Founder Responsibilities — The jAna JOBs Edition 😎🌳
 
@@ -343,19 +345,19 @@ The wording may be playful.
 
 The responsibilities are not.
 
-And YES: its Croatian title is:
 
+And YES: its Croatian title is:
 ««🎵 Misli svatko da je meni LAKO! 🎶»»
 
 Transparent English translation:
-
 ««🎵 Everyone Thinks I Have It Easy! 🎶»»
 
 Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
-Ana Kovačević πJAnica 🛹 Tesla ⚡ Zrinski⚔️
+Ana Kovačević 
+πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
-"🌳 TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
+🌴 https://TreeOfKnowledge.eu
 Core of XAI — Explainable AI
 
 📧 JAnicaTZ@TreeOfKnowledge.eu
