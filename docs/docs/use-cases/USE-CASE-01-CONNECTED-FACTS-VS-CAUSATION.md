@@ -34,3 +34,6 @@ OLITI još sažetije / kraće:
 Gates ➩ Gates foundation ➩ MAJOR WHO donor
 pandemic ➩ remote work / schooling ➩ enoemous demand for Collaboration software
 Gates ➩ MS Teams!-.-?
+
+
+Gates ➩ WHO ➩ pandemic ➩ Teams ➩ Gates
