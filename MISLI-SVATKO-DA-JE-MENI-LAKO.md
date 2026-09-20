@@ -249,3 +249,16 @@ My role as the newly self-appointed Steve JOBs(jAna) is therefore:
 The wording may be playful.
 
 The responsibilities are not.
+
+
+And YES:
+Its Croatian title is:
+🎵 Misli svatko da je meni LAKO! 🎶
+
+Transparent English translation:
+🎵 Everyone Thinks I Have It Easy! 🎶
+
+
+Many KISSes FROM CROatian beaches‼️🤔🇭🇷🌊🌴🤔
+
+πJAnica🏂 Tesla⚡ Zrinski⚔️
