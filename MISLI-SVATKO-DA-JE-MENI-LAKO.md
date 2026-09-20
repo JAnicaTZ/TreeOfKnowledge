@@ -259,7 +259,6 @@ Transparent English translation:
 🎵 Everyone Thinks I Have It Easy! 🎶
 
 
-https://lnkd.in/p/dAeZzzDD 🤭
 
 Many KISSes FROM CROatian beaches‼️🤔🤔🇭🇷🌊🌴🤔
 
@@ -271,3 +270,8 @@ JAnicaTeslaZrinski@TreeOfKnowledge.eu
 🌴TreeOfKnowledge.eu
 Core of XAI (Explainable AI)
 JanicaTZ@TreeOfKnowledge.eu
+
+https://lnkd.in/p/dAeZzzDD 🤭
+
+PS.https://play.google.com/store/apps/details?id=com.simejikeyboard
+..with a great CLIPBOARD also!😁
