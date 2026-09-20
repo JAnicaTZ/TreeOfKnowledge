@@ -1,7 +1,7 @@
-🎵 Misli svatko 👤 da je 🙋 meni LAKO! 🎶
+🎵 Misli svatko 👤 da je 🙋 meni LAKO!-.-? 🎶
 
 Transparent English translation:
-««🎵 Everyone Thinks I Have It Easy! 🎶»»
+««🎵 Everyone Thinks I Have It Easy!-.-? 🎶»»
 
 Founder Responsibilities — The jAna JOBs Edition 😎🌳
 
@@ -348,10 +348,10 @@ The responsibilities are not.
 
 
 And YES: its Croatian title is:
-««🎵 Misli svatko da je meni LAKO! 🎶»»
+««🎵 Misli svatko da je meni LAKO!-.-? 🎶»»
 
 Transparent English translation:
-««🎵 Everyone Thinks I Have It Easy! 🎶»»
+««🎵 Everyone Thinks I Have It Easy!-.-? 🎶»»
 
 Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
