@@ -1,4 +1,5 @@
 🎵 Misli svatko 👤 da je 🙋 meni LAKO! 🎶
+
 Transparent English translation:
 ««🎵 Everyone Thinks I Have It Easy! 🎶»»
 
