@@ -3,7 +3,8 @@
 Transparent English translation:
 ««🎵 Everyone Thinks I Have It Easy!-.-? 🎶»»
 
-Founder Responsibilities — The jAna JOBs Edition 😎🌳
+
+FOUNDER RESPONSIBILITIES — The jAna JOBs Edition 😎🌳
 
 My present role is not to perform every technical, legal, organizational and commercial task personally.
 
