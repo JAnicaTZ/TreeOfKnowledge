@@ -259,6 +259,15 @@ Transparent English translation:
 🎵 Everyone Thinks I Have It Easy! 🎶
 
 
-Many KISSes FROM CROatian beaches‼️🤔🇭🇷🌊🌴🤔
+https://lnkd.in/p/dAeZzzDD 🤭
 
+Many KISSes FROM CROatian beaches‼️🤔🤔🇭🇷🌊🌴🤔
+
+Ana Kovačević
 πJAnica🏂 Tesla⚡ Zrinski⚔️
+📩
+JAnicaTeslaZrinski@TreeOfKnowledge.eu 
+
+🌴TreeOfKnowledge.eu
+Core of XAI (Explainable AI)
+JanicaTZ@TreeOfKnowledge.eu
