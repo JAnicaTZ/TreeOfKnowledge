@@ -213,7 +213,7 @@ A meaningful evaluation could examine:
 
 For now, this may be the least promising of my seven responsibilities—not because academic evaluation is unimportant, but because:
 
-«I already tried. 😅»
+«I already tried. 🥲»
 
 Previous outreach has produced only limited engagement. However, a lack of response is not evidence against the project’s value or correctness. It simply means that the right independent evaluator has not yet been found.
 
