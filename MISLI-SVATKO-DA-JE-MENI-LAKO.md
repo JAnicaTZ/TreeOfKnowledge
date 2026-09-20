@@ -244,12 +244,8 @@ Working Principle
 
 My role as the newly self-appointed Steve JOBs(jAna) is therefore:
 
-«TEST THE HUMANS → CONNECT THE SURVIVORS → PROTECT THE CODE → BUILD THE LEGAL STRUCTURE → TEACH THE LOGIC → FIND THE MONEY 😎🌳💰»
+«TEST THE HUMANS → CONNECT THE SURVIVORS → PROTECT THE CODE → BUILD THE LEGAL STRUCTURE → TEACH THE LOGIC → FIND THE MONEY → SEEK INDEPENDENT SCIENTIFIC EVALUATION 😎🌳🔬»
 
 The wording may be playful.
 
 The responsibilities are not.
-
-And yes:
-
-«Misli svatko da je meni lako. 🎵»
