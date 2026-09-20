@@ -1,5 +1,26 @@
 SIMPLE Propositional TREE — Quick Start
 
+Position on the Project Website
+
+The SIMPLE Propositional TREE is the second calculator displayed on the project website:
+
+https://TreeOfKnowledge.eu
+
+The more advanced First-Order Logic calculator is intentionally positioned first.
+
+This ordering does not indicate that new contributors should begin with First-Order Logic. The FOL calculator received the leading position because it represents the project’s original and academically more ambitious core—and because I still hope that, one fine day, it may attract the attention of a distinguished professor of mathematical logic. ☀️😅
+
+For learning, initial inspection and technical orientation, however, the recommended order is:
+
+1. SIMPLE Propositional TREE
+2. Propositional Minimization
+3. First-Order Logic
+
+In other words:
+
+FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳
+---
+
 Purpose
 
 The SIMPLE Propositional TREE is the most accessible starting point for understanding the basic reasoning mechanism behind the Tree of Knowledge.
@@ -9,6 +30,26 @@ It was designed to make the internal structure of a propositional formula visibl
 The process can be summarized as:
 
 REDUCE → TRANSFORM RECURSIVELY → ILLUMINATE THE SOLUTION
+
+Position on the Project Website
+
+The SIMPLE Propositional TREE is the second calculator displayed on the project website:
+
+https://TreeOfKnowledge.eu
+
+The more advanced First-Order Logic calculator is intentionally positioned first.
+
+This ordering does not indicate that new contributors should begin with First-Order Logic. The FOL calculator received the leading position because it represents the project’s original and academically more ambitious core—and because I still hope that, one fine day, it may attract the attention of a distinguished professor of mathematical logic. ☀️😅
+
+For learning, initial inspection and technical orientation, however, the recommended order is:
+
+1. SIMPLE Propositional TREE
+2. Propositional Minimization
+3. First-Order Logic
+
+In other words:
+
+FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳
 
 ---
 
