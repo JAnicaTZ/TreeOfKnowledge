@@ -1,19 +1,29 @@
 SIMPLE Propositional TREE — Quick Start
 
+Purpose
+
+The SIMPLE Propositional TREE is the most accessible starting point for understanding the basic reasoning mechanism behind the Tree of Knowledge.
+
+It was designed to make the internal structure of a propositional formula visible instead of returning only a final result.
+
+The process can be summarized as:
+
+REDUCE → TRANSFORM RECURSIVELY → ILLUMINATE THE SOLUTION
+
+---
+
 Position on the Project Website
 
 The SIMPLE Propositional TREE is the second calculator displayed on the project website:
 
-https://TreeOfKnowledge.eu
+"https://TreeOfKnowledge.eu" (https://treeofknowledge.eu/)
 
 The more advanced First-Order Logic calculator is intentionally positioned first.
 
 This ordering does not indicate that new contributors should begin with First-Order Logic. The FOL calculator received the leading position because it represents the project’s original and academically more ambitious core—and because I still hope that, one fine day, it may attract the attention of a distinguished professor of mathematical logic. ☀️😅
 
-In other words:
+«FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳»
 
-FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳
----
 For learning, inspection and technical orientation, the recommended order is:
 
 1. SIMPLE Propositional TREE
@@ -27,46 +37,15 @@ For learning, inspection and technical orientation, the recommended order is:
 
 In our slightly less formal MacroHARD™ terminology:
 
-MINIMIZATION = the search for the best EKO algorithms—saving logical steps, representation space and potentially computational effort without changing the meaning of the formula. ♻️😎
+«MINIMIZATION = the search for the best EKO algorithms—saving logical steps, representation space and potentially computational effort without changing the meaning of the formula. ♻️😎»
 
-This ordering reflects the learning path rather than the visual order of calculators on the website:
+This ordering reflects the recommended learning path rather than the visual order of calculators on the website:
 
 SIMPLE → FOL → MINIMIZATION
 
 In short:
 
-First understand the TREE. Then explore its full logical reach. Finally, investigate how much of it can be safely reduced.
-
-
-Purpose
-
-The SIMPLE Propositional TREE is the most accessible starting point for understanding the basic reasoning mechanism behind the Tree of Knowledge.
-
-It was designed to make the internal structure of a propositional formula visible instead of returning only a final result.
-
-The process can be summarized as:
-
-REDUCE → TRANSFORM RECURSIVELY → ILLUMINATE THE SOLUTION
-
-Position on the Project Website
-
-The SIMPLE Propositional TREE is the second calculator displayed on the project website:
-
-https://TreeOfKnowledge.eu
-
-The more advanced First-Order Logic calculator is intentionally positioned first.
-
-This ordering does not indicate that new contributors should begin with First-Order Logic. The FOL calculator received the leading position because it represents the project’s original and academically more ambitious core—and because I still hope that, one fine day, it may attract the attention of a distinguished professor of mathematical logic. ☀️😅
-
-For learning, initial inspection and technical orientation, however, the recommended order is:
-
-1. SIMPLE Propositional TREE
-2. Propositional Minimization
-3. First-Order Logic
-
-In other words:
-
-FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳
+«First understand the TREE. Then explore its full logical reach. Finally, investigate how much of it can be safely reduced.»
 
 ---
 
@@ -145,7 +124,7 @@ Input:
 Recursive transformation:
 
 ¬(A ∧ B)
-      ↓
+     ↓
 ¬A ∨ ¬B
 
 The resulting tree exposes the alternatives explicitly instead of hiding the transformation behind a single final output.
@@ -154,21 +133,21 @@ The resulting tree exposes the alternatives explicitly instead of hiding the tra
 
 6. Repository Structure
 
-Propositional-specific functionality
+Propositional-Specific Functionality
 
 The "propositional" package contains the functionality specific to the SIMPLE Propositional TREE:
 
-https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2Fpropositional
+"https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2Fpropositional" (https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2Fpropositional)
 
 The class currently located there is intentionally the only remaining class in this package.
 
 This does not mean that other propositional components are missing.
 
-Shared functionality
+Shared Functionality
 
 During a recent and deliberate refactoring, all components shared by the propositional-tree and propositional-minimization tools were moved into the "propCommon" package:
 
-https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2FpropCommon
+"https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2FpropCommon" (https://github.com/JAnicaTZ/TreeOfKnowledge/tree/main/java%2FpropCommon)
 
 Therefore:
 
@@ -182,17 +161,17 @@ This separation avoids duplicated logic and keeps the shared implementation of {
 
 7. Useful Starting Links
 
-Project website and working calculators
+Project Website and Working Calculators
 
-https://TreeOfKnowledge.eu
+"https://TreeOfKnowledge.eu" (https://treeofknowledge.eu/)
 
-Main GitHub repository
+Main GitHub Repository
 
-https://github.com/JAnicaTZ/TreeOfKnowledge
+"https://github.com/JAnicaTZ/TreeOfKnowledge" (https://github.com/JAnicaTZ/TreeOfKnowledge)
 
-Complete source-code bundle
+Complete Source-Code Bundle
 
-https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/AllSourceCode4UPloadToAI-TreeOfKnowledge-1.0.0.zip
+"Download the complete TREE source-code bundle" (https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/AllSourceCode4UPloadToAI-TreeOfKnowledge-1.0.0.zip)
 
 ---
 
@@ -207,6 +186,6 @@ For the first inspection, contributors are invited to examine only:
 5. construction of the explicit logical tree; and
 6. visual illumination of the resulting solution.
 
-Minimization, first-order logic and possible external integrations should be treated as separate later stages.
+First-Order Logic, propositional minimization and possible external integrations should be treated as separate later stages.
 
-For now, this should be quite enough to begin inspecting TREE—one small, explicit and verifiable step at a time. 🌳
+«For now, this should be quite enough to begin inspecting TREE—one small, explicit and verifiable step at a time. 🌳»
