@@ -195,6 +195,51 @@ TREE should never be sold cheaply merely because its present bank balance is sma
 
 ---
 
+7. Seeking Independent Scientific Evaluation
+
+Another continuing responsibility is to seek independent academic evaluation of TREE’s logical foundations, implementation and educational value.
+
+The objective is not to obtain a decorative certificate or a vague claim that the entire project has been “scientifically proven.”
+
+A meaningful evaluation could examine:
+
+- whether the logical transformations are formally correct;
+- whether the implementation corresponds to the stated mathematical rules;
+- whether the generated reasoning paths are complete and inspectable;
+- where the calculators have technical or conceptual limitations;
+- whether the educational presentation is useful;
+- whether any part of the work offers academic novelty; and
+- which claims should be strengthened, narrowed or corrected.
+
+For now, this may be the least promising of my seven responsibilities—not because academic evaluation is unimportant, but because:
+
+«I already tried. 😅»
+
+Previous outreach has produced only limited engagement. However, a lack of response is not evidence against the project’s value or correctness. It simply means that the right independent evaluator has not yet been found.
+
+Therefore, if any participant has a trusted or favourite professor, researcher or lecturer in:
+
+- mathematical logic;
+- formal methods;
+- automated reasoning;
+- symbolic AI;
+- logic in computer science; or
+- logic education,
+
+please consider informing them about our mission and inviting them to inspect TREE.
+
+The recommended starting point is:
+
+https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/TREE-HANDBOOK-SUMMARY.md
+
+We are not asking anyone to endorse claims they have not verified.
+
+We are asking for something more useful:
+
+«An honest, independent and evidence-based assessment of what TREE actually does, what it does correctly, where it is limited and what may deserve further development. 🌳»
+
+---
+
 Working Principle
 
 My role as the newly self-appointed Steve JOBs(jAna) is therefore:
