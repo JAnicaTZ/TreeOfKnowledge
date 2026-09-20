@@ -354,12 +354,15 @@ And YES: its Croatian title is:
 Transparent English translation:
 ««🎵 Everyone Thinks I Have It Easy!-.-? 🎶»»
 
+
 Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
 Ana Kovačević 
+
 πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
 🌴 https://TreeOfKnowledge.eu
+
 Core of XAI — Explainable AI
 
 📧 JAnicaTZ@TreeOfKnowledge.eu
