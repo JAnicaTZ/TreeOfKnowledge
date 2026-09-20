@@ -272,13 +272,11 @@ Core of XAI — Explainable AI
 🔗 https://lnkd.in/p/dAeZzzDD 🤭
 
 PS. "Simeji Keyboard" (https://play.google.com/store/apps/details?id=com.simejikeyboard) — its excellent CLIPBOARD is also one of my SUPERpowers! 🙋‍♀️😁
-⠀
-
-⠀🔶🏆🏆🏆🏆🔶
-🔶 🏆🏆  🏆🏆  🔶
- 🔶 🏆🏆🏆🏆  🔶
-    🔶🏆⭐🏆🔶
-           🏆🏆
-              🏆
-            🏆🏆
-         😎😎😎 
+💵💰💷✨💰💚
+💚✨💰💴💵💴
+ 💵💶💳💰💚
+   💰💵💶💳
+      💚💶💴
+        💵✨
+          💸
+       💁 
