@@ -10,16 +10,33 @@ The more advanced First-Order Logic calculator is intentionally positioned first
 
 This ordering does not indicate that new contributors should begin with First-Order Logic. The FOL calculator received the leading position because it represents the project’s original and academically more ambitious core—and because I still hope that, one fine day, it may attract the attention of a distinguished professor of mathematical logic. ☀️😅
 
-For learning, initial inspection and technical orientation, however, the recommended order is:
-
-1. SIMPLE Propositional TREE
-2. Propositional Minimization
-3. First-Order Logic
-
 In other words:
 
 FOL is positioned first for academic visibility; SIMPLE is the proper first step for understanding the system. 🌳
 ---
+For learning, inspection and technical orientation, the recommended order is:
+
+1. SIMPLE Propositional TREE
+   Begin with the smallest and clearest representation of TREE’s recursive reasoning mechanism.
+
+2. First-Order Logic
+   Continue here for a more complete conceptual understanding—and, hopefully, for your total knowledge satisfaction. 🌳🧠
+
+3. Propositional Minimization
+   Examine this stage when we are ready to investigate whether logically equivalent formulas can be represented more economically by reducing unnecessary complexity.
+
+In our slightly less formal MacroHARD™ terminology:
+
+MINIMIZATION = the search for the best EKO algorithms—saving logical steps, representation space and potentially computational effort without changing the meaning of the formula. ♻️😎
+
+This ordering reflects the learning path rather than the visual order of calculators on the website:
+
+SIMPLE → FOL → MINIMIZATION
+
+In short:
+
+First understand the TREE. Then explore its full logical reach. Finally, investigate how much of it can be safely reduced.
+
 
 Purpose
 
