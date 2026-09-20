@@ -53,8 +53,7 @@ Human-readable GitHub page:
 https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/ORIGIN-2002.txt
 
 Direct raw document for AI processing:
-
-https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/ORIGIN-2002.txt
+ https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/ORIGIN-2002.txt
 
 This is a historical document.
 
