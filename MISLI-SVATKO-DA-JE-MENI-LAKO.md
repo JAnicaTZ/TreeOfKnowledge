@@ -263,15 +263,34 @@ Transparent English translation:
 
 Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
-Ana Kovačević
-πJAnica 🛹 Tesla ⚡ Zrinski⚔️
+Ana Kovačević πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
-🌳 "TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
+"🌳 TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
 Core of XAI — Explainable AI
 
 📧 JAnicaTZ@TreeOfKnowledge.eu
 🔗 https://lnkd.in/p/dAeZzzDD 🤭
 
-
-PS.https://play.google.com/store/apps/details?id=com.simejikeyboard
-..with a great CLIPBOARD also is 🙋mySUPERpower!😁
+PS. "Simeji Keyboard" (https://play.google.com/store/apps/details?id=com.simejikeyboard) — its excellent CLIPBOARD is also one of my SUPERpowers! 🙋‍♀️😁
+⠀
+🎱➖✊➖➖✊➖🎱
+🌟        \         /          🌟
+⭐          \😁/            ⭐
+✨           🎽             ✨
+               /    \
+            👟    👟 
+▬▬▬▬▬▬►🍀
+DON'T WORRY,
+❤❤BE❤❤
+ ╗╔╔╗╔╗╔╗╗╔
+ ╠╣╠╣╠╝╠╝╚╣
+ ╝╚╝╚╝ ╩ ╩ ❕
+ 😞➔❌😃➔⭕
+🌸◄▬▬▬▬▬▬ 
+✨💖💖✨✨✨💖💖✨
+🧡🧡🧡🧡🌈🧡🧡🧡🧡
+..💛💛💛 𝙇𝙊𝙑𝙀 💛💛💛..
+✨💚💚 𝘼𝙇𝙒𝘼𝙔𝙎 💚💚✨
+✨✨💙... 𝙒𝙄𝙉 ... 💙✨✨
+✨✨✨💜💜💜✨✨✨
+✨✨✨✨💖✨✨✨✨ 
