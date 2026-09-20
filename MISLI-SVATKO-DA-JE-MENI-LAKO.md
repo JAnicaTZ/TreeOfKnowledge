@@ -251,27 +251,27 @@ The wording may be playful.
 The responsibilities are not.
 
 
-And YES:
-Its Croatian title is:
-🎵 Misli svatko da je meni LAKO! 🎶
+---
+
+And YES: its Croatian title is:
+
+«🎵 Misli svatko da je meni LAKO! 🎶»
 
 Transparent English translation:
-🎵 Everyone Thinks I Have It Easy! 🎶
 
+«🎵 Everyone Thinks I Have It Easy! 🎶»
 
-
-Many KISSes FROM CROatian beaches‼️🤔🤔🇭🇷🌊🌴🤔
+Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
 Ana Kovačević
-πJAnica🏂 Tesla⚡ Zrinski⚔️
-📩
-JAnicaTeslaZrinski@TreeOfKnowledge.eu 
+πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
-🌴TreeOfKnowledge.eu
-Core of XAI (Explainable AI)
-JanicaTZ@TreeOfKnowledge.eu
+🌳 "TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
+Core of XAI — Explainable AI
 
-https://lnkd.in/p/dAeZzzDD 🤭
+📧 JAnicaTZ@TreeOfKnowledge.eu
+🔗 https://lnkd.in/p/dAeZzzDD 🤭
+
 
 PS.https://play.google.com/store/apps/details?id=com.simejikeyboard
-..with a great CLIPBOARD also!😁
+..with a great CLIPBOARD also is 🙋mySUPERpower!😁
