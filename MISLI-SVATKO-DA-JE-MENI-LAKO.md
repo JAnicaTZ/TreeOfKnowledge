@@ -279,6 +279,7 @@ PS. "Simeji Keyboard" (https://play.google.com/store/apps/details?id=com.simejik
 ✨           🎽             ✨
                /    \
             👟    👟 
+
 ▬▬▬▬▬▬►🍀
 DON'T WORRY,
 ❤❤BE❤❤
@@ -287,6 +288,7 @@ DON'T WORRY,
  ╝╚╝╚╝ ╩ ╩ ❕
  😞➔❌😃➔⭕
 🌸◄▬▬▬▬▬▬ 
+
 ✨💖💖✨✨✨💖💖✨
 🧡🧡🧡🧡🌈🧡🧡🧡🧡
 ..💛💛💛 𝙇𝙊𝙑𝙀 💛💛💛..
