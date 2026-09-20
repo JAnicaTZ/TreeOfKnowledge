@@ -6,13 +6,29 @@ My present role is not to perform every technical, legal, organizational and com
 
 My responsibility is to find suitable people, establish clear boundaries, connect complementary capabilities and protect TREE’s long-term continuity.
 
-In slightly less formal MacroHARD™ terminology, my principal duties are:
+In slightly less formal MacroHARD™ terminology, my seven principal duties are:
 
 ---
 
-1. Testing Human Compatibility
+1. Find as Many Suitable Collaborators and Interested Parties as Possible
 
-I reserve the right to test the patience, clarity, integrity, intelligence and sense of humor of potential collaborators—preferably without causing permanent psychological damage. 😅
+My first responsibility is to find developers, researchers, mathematical logicians, legal experts, business partners, sponsors and other people who may recognize genuine value in TREE.
+
+The objective is not to collect impressive titles or fill a discussion group with passive observers.
+
+The objective is to find people with sufficient:
+
+- intellectual curiosity;
+- integrity;
+- patience;
+- independent judgment;
+- sense of responsibility;
+- sense of humor; and
+- willingness to investigate what genuinely exists before announcing what they believe it should become.
+
+Finding people necessarily includes testing human compatibility.
+
+I therefore reserve the right to test the patience, clarity, integrity, intelligence and sense of humor of potential collaborators—preferably without causing permanent psychological damage. 😅
 
 The purpose is to identify people who can:
 
@@ -20,129 +36,127 @@ The purpose is to identify people who can:
 - ask precise and useful questions;
 - disagree without creating unnecessary conflict;
 - respect technical and personal boundaries;
-- remain patient during an early and imperfect project stage; and
+- remain patient during an early and imperfect project stage;
+- inspect existing materials before proposing enormous new structures;
+- accept one small, explicit and verifiable step at a time; and
 - contribute because they recognize possible value in the work—not exclusively because they expect immediate payment.
 
 This does not mean that compensation is unimportant or that anyone should provide unlimited unpaid work.
 
-Fair compensation, revenue sharing, licensing, equity or another success-based arrangement must eventually be defined explicitly and separately in writing.
+Fair compensation, revenue sharing, licensing, equity or another success-based arrangement must eventually be defined explicitly and separately in writing before substantial work begins.
 
 However, experience has shown that I separate relatively quickly and peacefully from people whose first—or only—substantive question is:
 
-«“And where is MY money?”»
+«“And WHERE is MY money?”»
 
-At the present stage, TREE needs people who first ask:
+At the present stage, TREE primarily needs people who first ask:
 
 «“What genuinely exists, what can I verify, and what useful contribution could I make?”»
 
-Passing this stage does not require obedience or personal agreement.
+Passing this stage does not require obedience, flattery or personal agreement.
 
 It requires intellectual honesty, patience and the ability to collaborate constructively.
 
 ---
 
-2. Connecting Compatible Team Members
+2. Connect Compatible Team Members
 
-When participants demonstrate genuine interest and successfully pass the initial compatibility stage, my responsibility is to connect people whose skills may complement one another.
+When participants demonstrate genuine interest and pass the initial compatibility stage, my responsibility is to connect people whose capabilities may complement one another.
 
 This includes:
 
 - introducing technical and non-technical contributors;
+- connecting people who are investigating related questions;
 - preventing unnecessary duplication of work;
 - defining small and independently reviewable tasks;
 - keeping responsibilities and system boundaries explicit;
-- ensuring that relevant findings reach the appropriate participants; and
+- ensuring that relevant findings reach the appropriate participants;
+- identifying disagreements before they become expensive misunderstandings; and
 - allowing every participant to remain professionally independent.
 
-No participant receives unrestricted authority over TREE merely by joining a discussion group, receiving access or contributing one artifact.
+No participant receives unrestricted authority over TREE merely by joining a discussion group, receiving access to materials or contributing one artifact.
+
+No organization becomes an official TREE partner merely because someone proposed a possible use case or technical connection.
 
 Collaboration should remain:
 
 «VOLUNTARY → BOUNDED → WRITTEN → VERIFIABLE»
 
+The preferred collaboration sequence is:
+
+«INSPECT → MAP → CLASSIFY → DEFINE THE SMALLEST BOUNDARY → TEST ONE ARTIFACT»
+
+Or, even more simply:
+
+«One small, explicit and verifiable step at a time. 🌳»
+
 ---
 
-3. Finding Appropriate Legal Support
+3. Find Appropriate Legal Support
 
 One of my highest priorities is to identify suitable lawyers who can help prepare the first written collaboration frameworks.
 
-These should address:
+These frameworks should address:
 
 - intellectual-property ownership;
 - permitted access to and use of the source code;
 - confidentiality where genuinely necessary;
 - contributor rights and responsibilities;
 - compensation and success-based arrangements;
+- revenue sharing;
 - licensing and commercialization;
+- attribution;
 - limits of authority;
 - withdrawal from collaboration;
-- preservation of attribution; and
+- ownership of newly created artifacts;
+- preservation of the project’s original purpose; and
 - TREE’s long-term continuity.
 
 A particularly important objective is to ensure that the code and essential project knowledge remain lawfully available for continued development and responsible collaboration regardless of any future change in my health or ability to participate.
 
 This requires proper legal continuity and succession planning—not informal assumptions, invented titles or unrestricted access.
 
+The objective is to preserve both:
+
+- the author’s rights; and
+- the project’s ability to survive its author.
+
+No substantial implementation, ownership transfer, exclusive commercial arrangement or permanent integration should depend entirely on verbal promises or enthusiastic LinkedIn messages.
+
+Important conditions must be:
+
+«DEFINED SEPARATELY → EXPLICITLY → IN WRITING»
+
 ---
 
-4. Identifying People for a Croatian MacroHARD™ Structure
+4. Identify People for a Croatian MacroHARD™ Structure
 
-I am looking for trustworthy and appropriately qualified people who could investigate the lawful establishment and operation of a Croatian MacroHARD™ branch or another suitable organizational structure.
+I am looking for trustworthy and appropriately qualified people who could investigate the lawful establishment and operation of a Croatian MacroHARD™ branch—or another more suitable organizational structure.
 
-Its purpose could include:
+Its possible purposes could include:
 
 - applying for Croatian and European innovation funding;
 - establishing research and educational partnerships;
 - managing licensing and commercialization;
+- receiving sponsorships or donations;
 - handling administrative and financial responsibilities;
-- contracting international collaborators; and
+- contracting international collaborators;
+- organizing legally compliant compensation; and
 - protecting TREE’s intellectual property and original mission.
 
-Because of my personal health, disability-pension and inclusion-allowance circumstances, I do not intend to assume unnecessary public, administrative or operational exposure.
+Because of my personal health, disability-pension and inclusion-allowance circumstances, I do not intend to assume unnecessary public, administrative, financial or operational exposure.
 
 Any future structure must therefore be designed lawfully and transparently—and only after obtaining appropriate legal, accounting and benefits-related advice.
 
 The objective is not to establish a company merely for appearance’s sake.
 
-The objective is to create the smallest legitimate structure capable of supporting TREE without endangering either the project or its author.
+The objective is to create:
+
+«The smallest legitimate structure capable of supporting TREE without endangering either the project or its author.»
 
 ---
 
-5. Providing Basic Mathematical-Logic Orientation
-
-After successfully avoiding this duty for more than two decades—largely because the number of interested students was identical to the project’s budget: ZERO—I have finally begun providing basic mathematical-logic orientation on demand. 😅
-
-The recommended learning path is:
-
-1. SIMPLE Propositional TREE
-   Understand the smallest and clearest form of TREE’s recursive reasoning.
-
-2. First-Order Logic
-   Explore TREE’s broader logical reach and, hopefully, obtain total knowledge satisfaction. 🌳🧠
-
-3. Propositional Minimization
-   Investigate whether equivalent formulas can be represented more economically through our informally named EKO algorithms. ♻️
-
-The standard TREE notation is:
-
-«{¬ (NOT), ∧ (AND), ∨ (OR)}»
-
-The initial conceptual sequence is:
-
-«REDUCE → TRANSFORM RECURSIVELY → ILLUMINATE THE SOLUTION»
-
-My responsibility is not to demand blind acceptance of my explanations.
-
-Every theoretical and technical claim should remain open to inspection against:
-
-- the source code;
-- executable behavior;
-- explicit examples; and
-- independent review.
-
----
-
-6. Finding Sponsors and Funding Partners
+5. Find Sponsors and Funding Partners
 
 Another essential responsibility is to identify suitable sponsors and funding partners who may help TREE progress beyond its historically consistent startup budget of:
 
@@ -157,8 +171,9 @@ Potential support may include:
 - public-sector support;
 - private investment;
 - commercial pilot funding;
-- licensing advances; and
-- in-kind legal, technical, administrative or infrastructure support.
+- licensing advances;
+- technical infrastructure; and
+- in-kind legal, technical, administrative or organizational support.
 
 These forms of support must not be treated as interchangeable.
 
@@ -183,7 +198,15 @@ Every financial arrangement must therefore define in writing:
 - how long the arrangement remains valid; and
 - how either party may end it.
 
-The preferred supporters are those who understand that TREE is not merely another fashionable AI label, but an existing logic project with original source code, working calculators and a long-term educational and explainability mission.
+The preferred supporters are those who understand that TREE is not merely another fashionable AI label.
+
+It is an existing logic project with:
+
+- original source code;
+- working calculators;
+- explicit reasoning procedures;
+- more than two decades of history; and
+- a long-term educational and explainability mission.
 
 The immediate objective is not unlimited funding.
 
@@ -195,11 +218,11 @@ TREE should never be sold cheaply merely because its present bank balance is sma
 
 ---
 
-7. Seeking Independent Scientific Evaluation
+6. Seek Independent Scientific Evaluation
 
 Another continuing responsibility is to seek independent academic evaluation of TREE’s logical foundations, implementation and educational value.
 
-The objective is not to obtain a decorative certificate or a vague claim that the entire project has been “scientifically proven.”
+The objective is not to obtain a decorative certificate or make a vague claim that the entire project has been “scientifically proven.”
 
 A meaningful evaluation could examine:
 
@@ -215,7 +238,9 @@ For now, this may be the least promising of my seven responsibilities—not beca
 
 «I already tried. 🥲»
 
-Previous outreach has produced only limited engagement. However, a lack of response is not evidence against the project’s value or correctness. It simply means that the right independent evaluator has not yet been found.
+Previous outreach has produced only limited engagement.
+
+However, a lack of response is not evidence against the project’s value or correctness. It simply means that the appropriate independent evaluator has not yet been found.
 
 Therefore, if any participant has a trusted or favourite professor, researcher or lecturer in:
 
@@ -230,13 +255,81 @@ please consider informing them about our mission and inviting them to inspect TR
 
 The recommended starting point is:
 
-https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/TREE-HANDBOOK-SUMMARY.md
+"🌳 TREE Handbook — Essential Summary" (https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/TREE-HANDBOOK-SUMMARY.md)
 
 We are not asking anyone to endorse claims they have not verified.
 
-We are asking for something more useful:
+We are asking for something much more useful:
 
 «An honest, independent and evidence-based assessment of what TREE actually does, what it does correctly, where it is limited and what may deserve further development. 🌳»
+
+---
+
+7. Teach Mathematical Logic—At the End, of Course 😎
+
+After successfully avoiding this duty for more than two decades—largely because the number of genuinely interested students was identical to the project’s budget:
+
+«ZERO 😅»
+
+—I have finally begun providing basic mathematical-logic orientation on demand.
+
+This task remains last on the list not because mathematical logic is unimportant, but because useful teaching requires someone who is genuinely interested in learning.
+
+My responsibility is not to transform every collaborator into a professional mathematical logician overnight.
+
+It is to provide the minimum conceptual foundation needed to understand:
+
+- what TREE receives as input;
+- how a formula is decomposed;
+- which logical transformations are applied;
+- how the explicit reasoning tree is constructed;
+- which branches remain possible;
+- which branches are eliminated; and
+- how the displayed solution follows from the original formula.
+
+The standard logical basis used throughout the code and GUI is:
+
+«{¬ (NOT), ∧ (AND), ∨ (OR)}»
+
+Other connectives are first reduced to this basis.
+
+Negations are then transformed recursively by applying De Morgan’s laws, and double negations are eliminated.
+
+The initial conceptual sequence is:
+
+«REDUCE → TRANSFORM RECURSIVELY → ILLUMINATE THE SOLUTION»
+
+The recommended technical learning order is:
+
+1. SIMPLE Propositional TREE
+
+Begin with the smallest and clearest representation of TREE’s recursive reasoning mechanism.
+
+2. First-Order Logic
+
+Continue here—entirely optionally—for a broader conceptual understanding and, hopefully, for your total knowledge satisfaction. 🌳🧠
+
+3. Propositional Minimization
+
+Investigate whether logically equivalent formulas can be represented more economically by reducing unnecessary complexity through our informally named EKO algorithms. ♻️
+
+Although the calculators are visually positioned differently on the project website, the recommended learning path remains:
+
+«SIMPLE → FOL → MINIMIZATION»
+
+In terms of their website positions:
+
+«Start with the 2nd calculator; then, IF your curiosity survives, ENTIRELY OPTIONALLY continue with the 1st; and finish with the 3rd. 😎»
+
+My responsibility is not to demand blind acceptance of my explanations.
+
+Every theoretical and technical claim should remain open to inspection against:
+
+- the source code;
+- executable behaviour;
+- explicit examples;
+- mathematical rules; and
+- independent review.
 
 ---
 
@@ -244,39 +337,28 @@ Working Principle
 
 My role as the newly self-appointed Steve JOBs(jAna) is therefore:
 
-«TEST THE HUMANS → CONNECT THE SURVIVORS → PROTECT THE CODE → BUILD THE LEGAL STRUCTURE → TEACH THE LOGIC → FIND THE MONEY → SEEK INDEPENDENT SCIENTIFIC EVALUATION 😎🌳🔬»
+«FIND AND TEST THE HUMANS → CONNECT THE COMPATIBLE SURVIVORS → PROTECT THE CODE → BUILD THE LEGAL STRUCTURE → FIND THE MONEY → SEEK INDEPENDENT SCIENTIFIC EVALUATION → TEACH MATHEMATICAL LOGIC—AT THE END, OF COURSE 😎🌳🔬»
 
 The wording may be playful.
 
 The responsibilities are not.
 
-
----
-
 And YES: its Croatian title is:
 
-«🎵 Misli svatko da je meni LAKO! 🎶»
+««🎵 Misli svatko da je meni LAKO! 🎶»»
 
 Transparent English translation:
 
-«🎵 Everyone Thinks I Have It Easy! 🎶»
+««🎵 Everyone Thinks I Have It Easy! 🎶»»
 
 Many KISSes FROM CROatian beaches‼️ 🤔🤔🇭🇷🌊🌴🤔
 
 Ana Kovačević πJAnica 🛹 Tesla ⚡ Zrinski⚔️
 
-🌴 https://TreeOfKnowledge.eu
+"🌳 TreeOfKnowledge.eu" (https://TreeOfKnowledge.eu)
 Core of XAI — Explainable AI
 
 📧 JAnicaTZ@TreeOfKnowledge.eu
 🔗 https://lnkd.in/p/dAeZzzDD 🤭
 
 PS. "Simeji Keyboard" (https://play.google.com/store/apps/details?id=com.simejikeyboard) — its excellent CLIPBOARD is also one of my SUPERpowers! 🙋‍♀️😁
-💵💰💷✨💰💚
-💚✨💰💴💵💴
- 💵💶💳💰💚
-   💰💵💶💳
-      💚💶💴
-        💵✨
-          💸
-       💁 
