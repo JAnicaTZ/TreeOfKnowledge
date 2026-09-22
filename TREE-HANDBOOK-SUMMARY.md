@@ -396,22 +396,23 @@ Any collaboration, licensing, compensation, sponsorship, investment or developme
 
 ---
 
-Shortest Possible Summary
-**Recommended reading:**
+## Shortest Possible Summary
 
 «First understand what TREE already is. Then verify it. Only afterward propose what it might become. 🌳»
 
+**Recommended reading:**
+
 «README → ORIGIN → PROPOSITIONAL QUICK START → FOUNDER RESPONSIBILITIES → USE CASE 01 → SOURCE CODE»
 
-Supplementary collaboration context:
+**Supplementary collaboration context:**
 
 «TREE GROUP CHRONICLE»
 
-Recommended technical learning:
+**Recommended technical learning:**
 
 «SIMPLE → FOL → MINIMIZATION»
 
-Recommended collaboration method:
+**Recommended collaboration method:**
 
 «INSPECT → MAP → CLASSIFY → DEFINE THE SMALLEST BOUNDARY → TEST ONE ARTIFACT»
 
