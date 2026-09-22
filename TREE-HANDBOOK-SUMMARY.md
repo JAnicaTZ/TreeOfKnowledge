@@ -223,8 +223,6 @@ https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/collaboration/TR
 
 Direct raw document for AI processing:
 
-https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/docs/docs/collaboration/TREE-GROUP-CHRONICLE.md
-
 The Chronicle is supplementary organizational and cultural context.
 
 It is not:
@@ -311,6 +309,8 @@ Then retrieve and examine the linked documents in the specified reading order:
 2. ORIGIN-2002.txt
 3. PROPOSITIONAL-QUICK-START.md
 4. MISLI-SVATKO-DA-JE-MENI-LAKO.md
+5.https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/docs/docs/collaboration/TREE-GROUP-CHRONICLE.md
+
 
 After reading the documentation, inspect the linked source-code packages in this order:
 
