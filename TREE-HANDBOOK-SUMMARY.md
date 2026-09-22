@@ -162,6 +162,85 @@ In informal MacroHARD™ terminology, this is the search for EKO algorithms: red
 This informal expression must not be interpreted as a claim that the present implementation has been independently proven to be globally optimal in time, memory use or computational complexity.
 
 ---
+---
+
+5. First Bounded Use Case
+
+USE CASE 01 — Connected Facts vs. Causation
+
+Purpose: Examine how TREE may represent and transform a small four-variable propositional case while preserving the distinction between:
+
+- connected facts;
+- formal logical implication;
+- real-world causation;
+- factual verification; and
+- speculation.
+
+Human-readable GitHub page:
+
+https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md
+
+Direct raw document for AI processing:
+
+https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md
+
+The use case is a bounded reasoning example—not proof of the complete real-world narrative.
+
+A successful logical transformation demonstrates only that the entered formula was processed according to the calculator’s implemented rules.
+
+It does not, by itself:
+
+- prove that the propositions assigned to the variables are factually true;
+- establish real-world causation;
+- prove motive, intention, liability or wrongdoing;
+- validate the completeness of the selected facts; or
+- replace independent legal, scientific or historical investigation.
+
+The associated four-variable formula can be tested with the third calculator displayed at:
+
+https://TreeOfKnowledge.eu
+
+Select:
+
+PROPOSITIONAL logic — MINIMAL NORMAL FORMS
+→ Download 4 PC & RUN
+
+Any future test record should identify the exact formula, variable meanings, assumptions, expected output, actual output, execution environment and supporting evidence.
+
+Do not claim that a test result has been formally archived in this repository unless the corresponding record and evidence files are actually present.
+
+---
+
+6. Collaboration Chronicle
+
+TREE GROUP CHRONICLE
+
+Purpose: Preserve a curated record of important project decisions, contributions, experiments and selected moments from the TREE discussion group.
+
+Human-readable GitHub page:
+
+https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/collaboration/TREE-GROUP-CHRONICLE.md
+
+Direct raw document for AI processing:
+
+https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/docs/docs/collaboration/TREE-GROUP-CHRONICLE.md
+
+The Chronicle is supplementary organizational and cultural context.
+
+It is not:
+
+- a technical source of truth;
+- a complete chat transcript;
+- proof that a proposal was implemented;
+- a contract or compensation agreement;
+- a transfer of intellectual property;
+- a grant of authority; or
+- independent verification of claims mentioned in group discussions.
+
+When the Chronicle conflicts with executable behaviour, source code, current technical documentation or an explicit written agreement, the higher-ranked source controls.
+
+Humorous entries, superhero titles and MacroHARD™ terminology should be interpreted as voluntary expressions of group culture unless explicitly stated otherwise.
+---
 
 Working Project Resources
 
