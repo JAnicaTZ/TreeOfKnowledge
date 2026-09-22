@@ -402,9 +402,11 @@ Shortest Possible Summary
 
 «First understand what TREE already is. Then verify it. Only afterward propose what it might become. 🌳»
 
-Recommended reading:
+«README → ORIGIN → PROPOSITIONAL QUICK START → FOUNDER RESPONSIBILITIES → USE CASE 01 → SOURCE CODE»
 
-«README → ORIGIN → PROPOSITIONAL QUICK START → FOUNDER RESPONSIBILITIES → SOURCE CODE»
+Supplementary collaboration context:
+
+«TREE GROUP CHRONICLE»
 
 Recommended technical learning:
 
