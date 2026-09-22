@@ -297,27 +297,27 @@ Do not infer authority, licensing rights, ownership or compensation from technic
 
 ---
 
-Minimum AI Review Instructions
+## Minimum AI Review Instructions
 
 When this document is provided to an AI system, use the following instructions:
 
-Read TREE-HANDBOOK-SUMMARY.md first.
+1. Read `TREE-HANDBOOK-SUMMARY.md` first.
 
-Then retrieve and examine the linked documents in the specified reading order:
+2. Then retrieve and examine the linked documents in this order:
 
-1. README.md
-2. ORIGIN-2002.txt
-3. PROPOSITIONAL-QUICK-START.md
-4. MISLI-SVATKO-DA-JE-MENI-LAKO.md
-5.https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/docs/docs/collaboration/TREE-GROUP-CHRONICLE.md
+   - `README.md`
+   - `docs/ORIGIN-2002.txt`
+   - `PROPOSITIONAL-QUICK-START.md`
+   - `MISLI-SVATKO-DA-JE-MENI-LAKO.md`
+   - `docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md`
+   - `docs/docs/collaboration/TREE-GROUP-CHRONICLE.md` — supplementary context only
 
+3. After reading the documentation, inspect the linked source-code packages in this order:
 
-After reading the documentation, inspect the linked source-code packages in this order:
-
-1. java/propositional
-2. java/propCommon
-3. java/firstorder
-4. java/minimization
+   - `java/propositional`
+   - `java/propCommon`
+   - `java/firstorder`
+   - `java/minimization`
 
 Distinguish clearly among:
 
@@ -336,8 +336,6 @@ For every important technical conclusion, identify the document, source file, cl
 
 If evidence is missing or ambiguous, state that explicitly instead of filling the gap with an assumption.
 
-- docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md
-- docs/docs/collaboration/TREE-GROUP-CHRONICLE.md — supplementary context only
 ---
 
 Requested AI Output
