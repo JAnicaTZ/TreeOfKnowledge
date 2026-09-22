@@ -336,6 +336,8 @@ For every important technical conclusion, identify the document, source file, cl
 
 If evidence is missing or ambiguous, state that explicitly instead of filling the gap with an assumption.
 
+- docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md
+- docs/docs/collaboration/TREE-GROUP-CHRONICLE.md — supplementary context only
 ---
 
 Requested AI Output
