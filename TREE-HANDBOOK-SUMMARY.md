@@ -399,6 +399,7 @@ Any collaboration, licensing, compensation, sponsorship, investment or developme
 ---
 
 Shortest Possible Summary
+**Recommended reading:**
 
 «First understand what TREE already is. Then verify it. Only afterward propose what it might become. 🌳»
 
