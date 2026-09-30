@@ -3,9 +3,11 @@
 **Project:** Tree of Knowledge (TREE)  
 **Website:** [TreeOfKnowledge.eu](https://TreeOfKnowledge.eu)  
 **Repository:** [github.com/JAnicaTZ/TreeOfKnowledge](https://github.com/JAnicaTZ/TreeOfKnowledge)  
-**Document status:** Public working draft v0.1 — under construction  
-**Assessment date:** 27 September 2026  
+**Document status:** Public working draft v0.2 — under construction  
+**Assessment date:** 30 September 2026  
 **Document type:** Preliminary project-continuity, IP-readiness and business-readiness assessment
+
+> **EVIDENCE BOUNDARY — SYNTHETIC / DEMO ONLY:** The proposed TREE–OMNIX–Fidacy–SignalLink end-to-end flow described here is a synthetic demonstration. It does not use the native runtimes of those systems and does not establish production integration, authorization, external causation, legal admissibility or customer validation. The documented TREE baseline execution is a separate test.
 
 > **A routine good-governance practice for every serious software project — not an emergency measure.**
 
@@ -22,9 +24,9 @@ The project already has several assets that distinguish it from a concept-only i
 - propositional reasoning and minimization functionality;
 - explicit intermediate representations and reasoning traces;
 - at least one documented external execution of the current software;
-- an independent verification exercise using a separate trust/provenance layer;
-- early experimental applications and proposed interfaces with complementary systems;
-- a small international group of active or prospective collaborators.
+- a documented truth-table result for one propositional formula, alongside separate synthetic provenance-demo materials;
+- exploratory examples and proposed interfaces with complementary systems, whose implementation status varies;
+- public collaboration discussions, without formal roles or commitments established by this document.
 
 TREE is therefore assessed as **technically real and worthy of continued development**, but **not yet commercially validated**. Its principal risks are no longer whether any software exists. They are now:
 
@@ -36,13 +38,13 @@ TREE is therefore assessed as **technically real and worthy of continued develop
 
 ### Preliminary conclusion
 
-**Technical-development viability:** high  
-**Continuity viability:** moderate and improving  
+**Continued technical development:** justified as a bounded next test; product reliability and production readiness are not established  
+**Continuity readiness:** partial; independent operation remains to be demonstrated  
 **IP/legal readiness:** incomplete; professional review recommended  
-**Commercial readiness:** early  
-**Suitability for a bounded pilot:** plausible after completion of the minimum documentation and interface contract
+**Commercial readiness:** early; customer demand and revenue are unverified  
+**Pilot readiness:** not yet established; any future pilot should be bounded, non-critical and separately agreed
 
-This document does **not** claim that commercial success is mathematically proved. It provides a transparent, revisable estimate based on currently available evidence, explicitly stated assumptions and identifiable milestones.
+The percentages below are the author’s preliminary, uncalibrated planning judgments. They are not statistically validated forecasts, valuations or evidence that an outcome is likely. Their assumptions and limitations are stated below.
 
 ---
 
@@ -111,17 +113,13 @@ TREE transformed it to:
 
 `¬A ∨ ¬B ∨ ¬C ∨ D`
 
-The execution was documented by an external collaborator using Debian 12 and Temurin OpenJDK 21.0.6. This is evidence that the distributed software can be executed outside the founder’s original environment.
+The execution was documented by an external collaborator using Debian 12 and Temurin OpenJDK 21.0.6 ([test report](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/test-results/USE-CASE-01/2026-09-22-SEBASTIAN-OGEYINGBO.md); [screenshot](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/evidence/sebastian-result-01.png)). This supports external execution of this particular scenario. The report also records Clear-button and Backspace issues; one scenario does not establish broad reliability, security or production readiness.
 
-### 4.3 Independent verification exercise
+### 4.3 Formula check and synthetic provenance demonstration
 
-A separate SignalLink demonstration independently evaluated the reduced expression as contingent:
+The published [Use Case 01](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md) documents the truth table for the formula: it is true in 15 of 16 assignments and false only when `A`, `B` and `C` are true and `D` is false. This is a property of the formula under all equally counted truth assignments. It does not verify the real-world propositions assigned to those variables or independently validate TREE’s implementation.
 
-- true in 15 of 16 valuations (93.75%);
-- false only when `A`, `B` and `C` are true and `D` is false;
-- accompanied by a timestamped SHA-256-style integrity receipt in the demonstration layer.
-
-This supports logical consistency and traceability for the selected baseline. It does **not** by itself establish production integration, external causation, legal admissibility or market demand.
+Separately, the project status document links to a SignalLink working set describing a **SYNTHETIC / DEMO ONLY** test and mutation check ([project status and boundary](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/PROJECT-STATUS.md); [SignalLink working set](https://github.com/Drewbiee123/Signallink-AI/blob/collaboration-living-docs-2026-09-16/docs/collaboration/README.md)). That description states the test did not invoke the native TREE, OMNIX or Fidacy runtimes and did not demonstrate production interoperability. The digest/mutation result concerns whether a changed record is detected; it does not prove the record’s substantive truth, external causation or authorization.
 
 ### 4.4 Emerging complementary architecture
 
@@ -138,11 +136,11 @@ The proposed flow is:
 
 `Propose → Reason → Determine Admissibility → Authorize or Deny → Execute or Remain Closed → Anchor → Verify`
 
-This remains an architectural direction until a minimum contract and synthetic end-to-end test are frozen and reproduced.
+This is a proposed architecture, not a completed integration. The described end-to-end test uses synthetic records and does not invoke native TREE, OMNIX or Fidacy runtimes. Proposed interface fields must not be described as current TREE capabilities until each is mapped to existing implementation and verified. See the [current project-status note](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/PROJECT-STATUS.md).
 
 ### 4.5 Experimental third-party application
 
-An independent experimental job-application example has also been developed around TREE-related material. It is useful evidence of external interest and practical experimentation, but its exact technical dependency, reuse boundaries, attribution and verification method should be documented before it is treated as a validated TREE integration.
+An experimental job-application example using TREE-related material has been discussed. Its technical dependency, reuse boundaries, attribution and verification method are not established here. It is not evidence of a validated integration, customer demand, endorsement or formal partnership.
 
 ---
 
@@ -154,7 +152,7 @@ Two different measures are used and must not be confused.
 
 The readiness index scores the project’s present condition. It is **not a probability of commercial success**.
 
-Each category is scored from 0 to 10 and multiplied by its weight. Scores are preliminary and should be revised when new evidence appears.
+Each category is scored from 0 to 10 and multiplied by its weight. The scores and weights are a provisional, subjective project-readiness rubric; they have not been independently assessed or validated against a reference standard. The total is a planning index, not a probability, valuation or quality certification. The external test report also records specific interface defects (see 4.2).
 
 | Dimension | Weight | Current score | Weighted contribution | Current interpretation |
 |---|---:|---:|---:|---|
@@ -163,23 +161,14 @@ Each category is scored from 0 to 10 and multiplied by its weight. Scores are pr
 | Documentation | 10% | 7/10 | 7.0 | Considerable public material exists, but navigation, terminology and status labels still require consolidation. |
 | Integration readiness | 10% | 4/10 | 4.0 | Responsibilities are conceptually separated; the minimum machine-readable contract is not yet frozen. |
 | IP and legal clarity | 15% | 3/10 | 4.5 | Original authorship is asserted and historically grounded, but formal chain-of-title and contributor terms require legal review. |
-| Team and continuity | 10% | 5/10 | 5.0 | Multiple collaborators exist, but roles, commitments and replacement coverage are not yet formalized. |
+| Team and continuity | 10% | 5/10 | 5.0 | Collaboration discussions exist, but formal roles, commitments and replacement coverage are not established. |
 | Commercial validation | 15% | 2/10 | 3.0 | Potential applications are visible; no paid pilot or validated buyer commitment exists. |
 | Governance and risk controls | 5% | 4/10 | 2.0 | Strong principles exist; operating rules and decision rights remain incomplete. |
 | **Total preliminary readiness** | **100%** |  | **54/100** | **Promising technical project; pre-pilot and legally under-structured.** |
 
 ### 5.2 Event-probability estimates
 
-Probability ranges below are structured judgments, not actuarial or statistically trained forecasts. They are derived from:
-
-- the current evidence inventory;
-- the project’s demonstrated technical maturity;
-- dependency on voluntary contributors;
-- unresolved legal and commercial questions;
-- the number and difficulty of milestones still required;
-- explicit assumptions listed below.
-
-The ranges are intentionally broad to avoid false precision.
+Probability ranges below are the author’s uncalibrated judgments for planning. No reference class, historical dataset, elicitation protocol or calibration record was used; they should not be read as statistically reliable probabilities. Each estimate is conditional on the stated scenario and assumptions. Outcomes can overlap, so the percentages should not be added together.
 
 ---
 
@@ -209,15 +198,15 @@ Assuming regular small deliverables, documented contributor terms and active out
 | S5 — First paid pilot, licence or sponsored development | **25–40%** |
 | Material institutional or commercial agreement | **10–20%** |
 
-If coordination, documentation, legal clarification and outreach continue to depend almost entirely on the founder, the estimated probability of first revenue within 12 months falls to approximately **10–20%**.
+If coordination, documentation, legal clarification and outreach continue to depend almost entirely on the founder, the planning estimate for first revenue within 12 months is **10–20%**.
 
 ### 6.3 Overall viability judgment
 
-- **Probability that TREE has sufficient technical and intellectual substance to justify continued development:** **80–90%**
-- **Probability of a measurable first commercial result within 12 months under disciplined role separation and milestone ownership:** **35–45%**
-- **Probability of commercial success without legal clarification, owned deliverables and direct market testing:** **below 20%**
+- **Technical development:** the documented source and external execution support continuing with bounded tests; no percentage is assigned to the subjective question of whether the project is “worthwhile.”
+- **First revenue within 12 months:** **25–40%** under the assumptions above. This is the same event as S5 in section 6.2: a paid pilot, licence, professional service or sponsored development contribution, with written terms and payment received.
+- **Commercial success:** no probability is assigned because “success” beyond first revenue is not defined here and has not been validated by market evidence.
 
-These estimates should be updated after every material milestone. A successful external pilot, completed IP review or first payment would substantially change the forecast.
+Update these planning estimates after material milestones; a pilot commitment or payment is evidence to revise them, not proof of sustainable commercial success.
 
 ---
 
@@ -382,9 +371,10 @@ Suitable support could fund:
 |---|---|---|
 | Original academic work and authorship history | Partly documented | Consolidate dated records and third-party confirmations. |
 | Current source and releases | Publicly available | Record licences and hashes by release. |
-| Baseline external execution | Documented | Standardize as a reproducibility package. |
-| Independent logical verification | Demonstrated | Preserve exact artifact, method and limitation statement. |
-| TREE–OMNIX boundary | Conceptually defined | Freeze minimum schema and decision semantics. |
+| Baseline external execution | Documented for one scenario; report notes UI defects | [Test report](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/test-results/USE-CASE-01/2026-09-22-SEBASTIAN-OGEYINGBO.md); package environment, inputs and output. |
+| Formula truth-table result | Documented for one formula; does not verify input facts or TREE implementation | [Use Case 01](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/docs/docs/use-cases/USE-CASE-01-CONNECTED-FACTS-VS-CAUSATION.md); preserve exact artifact and limitations. |
+| SignalLink provenance demo | Synthetic; no native multi-system runtime integration | [Project status](https://github.com/JAnicaTZ/TreeOfKnowledge/blob/main/PROJECT-STATUS.md) and linked working set; label every related artifact **SYNTHETIC / DEMO ONLY**. |
+| TREE–OMNIX boundary | Proposed and conceptually defined | Map proposed fields to implemented capabilities; freeze a minimum schema only after review. |
 | Contributor rights | Incomplete | Create ledger and written terms. |
 | Independent experimental application | Available | Clarify dependency, attribution and validation status. |
 | Customer demand | Unverified | Conduct written interviews and seek a bounded pilot commitment. |
@@ -417,7 +407,7 @@ Each revision should preserve:
 
 ## 16. Final assessment
 
-TREE has crossed the threshold from a private historical project into a publicly inspectable technical initiative with early external execution, verification and collaboration signals.
+TREE is a publicly inspectable technical initiative with a documented external execution of one bounded scenario, a formula-level truth-table example and exploratory collaboration materials. These artifacts do not establish product reliability, production integration, formal partnership or customer demand.
 
 It has **not yet crossed the threshold into a legally structured, commercially validated or sustainably operated product**.
 
@@ -439,7 +429,7 @@ The rational next step is neither a grand rewrite nor an unsupported valuation. 
 
 ## 17. Important notice
 
-This is a preliminary internal/public planning assessment, not legal, financial, investment or safety advice. Probability ranges are transparent judgment estimates based on incomplete information; they are not guarantees, valuations or statistically validated predictions. References to proposed collaborations or components do not imply signed partnerships, production integrations or endorsements unless separately documented.
+This is a preliminary public planning assessment, not legal, financial, investment or safety advice. The readiness scores are subjective and the probability ranges are uncalibrated judgments based on incomplete information; they are not guarantees, valuations or statistically validated predictions. Technical examples are limited to the linked artifacts and their stated test conditions. The proposed multi-component flow is synthetic and does not establish native runtime integration, production readiness, authorization, legal admissibility or customer demand. References to people, projects or components do not imply signed partnerships, endorsements, shared ownership or formal roles unless separately documented.
 
 ---
 
@@ -450,5 +440,6 @@ This is a preliminary internal/public planning assessment, not legal, financial,
 - AI-friendly project summary: [TREE-HANDBOOK-SUMMARY.md](https://raw.githubusercontent.com/JAnicaTZ/TreeOfKnowledge/main/TREE-HANDBOOK-SUMMARY.md)
 
 **Project originator:** Ana Kovačević (JAnicaTZ)  
+**Revision note:** v0.2 clarifies evidence boundaries, adds links to the baseline artifacts and revises the probability language.
 **Preferred communication:** written communication
 
