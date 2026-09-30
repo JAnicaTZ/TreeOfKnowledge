@@ -28,7 +28,7 @@ The project already has several assets that distinguish it from a concept-only i
 - exploratory examples and proposed interfaces with complementary systems, whose implementation status varies;
 - public collaboration discussions, without formal roles or commitments established by this document.
 
-TREE is therefore assessed as **technically real and worthy of continued development**, but **not yet commercially validated**. Its principal risks are no longer whether any software exists. They are now:
+TREE is a working logic-software project with a documented external run of one bounded scenario. That establishes a technical baseline, not broad reliability or production readiness. The project is not yet commercially validated, and its main open risks include:
 
 1. formal clarification of intellectual-property ownership and contributor rights;
 2. reduction of founder dependency;
@@ -157,7 +157,7 @@ Each category is scored from 0 to 10 and multiplied by its weight. The scores an
 | Dimension | Weight | Current score | Weighted contribution | Current interpretation |
 |---|---:|---:|---:|---|
 | Working technical core | 20% | 9/10 | 18.0 | Existing and executable software, not merely a proposal. |
-| External reproducibility | 15% | 7/10 | 10.5 | Baseline execution and independent logical checking exist; broader test coverage is needed. |
+| External reproducibility | 15% | 7/10 | 10.5 | One documented external run and a formula-level truth-table result are available; broader reproducibility testing is needed. |
 | Documentation | 10% | 7/10 | 7.0 | Considerable public material exists, but navigation, terminology and status labels still require consolidation. |
 | Integration readiness | 10% | 4/10 | 4.0 | Responsibilities are conceptually separated; the minimum machine-readable contract is not yet frozen. |
 | IP and legal clarity | 15% | 3/10 | 4.5 | Original authorship is asserted and historically grounded, but formal chain-of-title and contributor terms require legal review. |
